@@ -118,6 +118,10 @@ interface NewTemplateProps extends HTMLAttributes<HTMLDivElement> {
 }
 declare function NewTemplate(props: NewTemplateProps): React.JSX.Element;
 
+interface AdminSidebarProps {
+}
+declare function AdminSidebar(props: AdminSidebarProps): React.JSX.Element;
+
 declare function useOutsideClick(ref: any, callback: (e: any) => void): void;
 
 interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -131,4 +135,4 @@ interface LabelProps {
 }
 declare function Label(props: LabelProps): React.JSX.Element;
 
-export { BadgeCollection, Button, InputDropdown, InputText, Label, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, ProgressValue, ProgressValueThree, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, useOutsideClick };
+export { AdminSidebar, BadgeCollection, Button, InputDropdown, InputText, Label, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, ProgressValue, ProgressValueThree, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, useOutsideClick };

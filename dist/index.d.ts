@@ -114,7 +114,6 @@ interface NewTemplateProps extends HTMLAttributes<HTMLDivElement> {
     titleIconUrl?: string;
     mode: RoleSBType;
     setSidebarMode(mode: RoleSBType): void;
-    removeTokenCookie(): void;
 }
 declare function NewTemplate(props: NewTemplateProps): React.JSX.Element;
 

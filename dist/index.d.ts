@@ -88,7 +88,7 @@ declare function Table<T>(props: TableProps<T>): React.JSX.Element;
 interface NewHeaderProps {
     iconUrl?: string;
     title?: string;
-    removeTokenCookie(): void;
+    hideAI?: boolean;
 }
 declare function NewHeader(props: NewHeaderProps): React.JSX.Element;
 

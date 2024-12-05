@@ -141,4 +141,4 @@ interface LabelProps {
 }
 declare function Label(props: LabelProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, BadgeCollection, Button, InputDropdown, InputText, Label, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, ProgressValue, ProgressValueThree, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, useOutsideClick };
+export { AdminSidebar, AdminTemplate, BadgeCollection, Button, InputDropdown, InputText, Label, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, useOutsideClick };

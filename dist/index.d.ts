@@ -3,6 +3,7 @@ import React, { ButtonHTMLAttributes, HTMLAttributes, InputHTMLAttributes } from
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     leftIconURL?: string;
     rightIconURL?: string;
+    childClassName?: string;
     outline?: boolean;
 }
 declare function Button(props: ButtonProps): React.JSX.Element;
@@ -48,6 +49,8 @@ interface InputDropdownProps {
     className?: string;
     placeholder?: string;
     multivalue?: boolean;
+    noFilter?: boolean;
+    noPlaceholder?: boolean;
 }
 declare function InputDropdown(props: InputDropdownProps): React.JSX.Element;
 

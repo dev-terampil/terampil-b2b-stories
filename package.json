@@ -8,7 +8,8 @@
   ],
   "scripts": {
     "build": "tsup --dts",
-    "ladle": "BROWSER=none ladle serve"
+    "ladle": "BROWSER=none ladle serve",
+    "deploy": "npm run build && git add dist package.json && git commit -m 'deploy' && git push origin master"
   },
   "peerDependencies": {
     "react": "^16.8 || ^17 || ^18 || 19.0.0-rc-66855b96-20241106",

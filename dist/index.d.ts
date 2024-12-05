@@ -88,6 +88,65 @@ interface TableProps<T> {
 }
 declare function Table<T>(props: TableProps<T>): React.JSX.Element;
 
+declare namespace OrgTreeData {
+    interface Tree<T> {
+        id: string;
+        data: T;
+        children: Tree<T>[];
+    }
+}
+declare enum PaddingMode {
+    I = "I",
+    T = "T",
+    L = "L",
+    O = "O"
+}
+interface OrganizationTreeProps<T> {
+    renderView(data: OrgTreeData.Tree<T>): JSX.Element;
+    data: OrgTreeData.Tree<T>;
+    level?: number;
+    padding?: PaddingMode[];
+    configSpaceWidth?: number;
+    configSpaceHeight?: number;
+    configBorderSize?: number;
+}
+declare function OrganizationTree<T>(props: OrganizationTreeProps<T>): React.JSX.Element;
+
+interface PaginationProps {
+    limit?: number;
+    page: number;
+    totalItems: number;
+    onChange(page: number, limit: number): void;
+}
+declare function Pagination(props: PaginationProps): React.JSX.Element;
+
+interface GradientCardProps extends HTMLAttributes<HTMLDivElement> {
+}
+declare function GradientCard(props: GradientCardProps): React.JSX.Element;
+
+interface ModalAction {
+    open(): void;
+    close(): void;
+    isOpen(): boolean;
+}
+interface BaseModalProps {
+    children?: any;
+    childClassName?: string;
+    onDismiss?(): void;
+    preventDismiss?: boolean;
+}
+declare const BaseModal: React.ForwardRefExoticComponent<BaseModalProps & React.RefAttributes<ModalAction>>;
+
+interface TreeNodeV1Props {
+    photoUrl?: string;
+    division?: string;
+    name: string;
+    onTambah?(): void;
+    onHapus?(): void;
+    onDetail?(): void;
+}
+declare function TreeNodeV1(props: TreeNodeV1Props): React.JSX.Element;
+
 interface NewHeaderProps {
     iconUrl?: string;
     title?: string;
@@ -143,4 +202,22 @@ interface LabelProps {
 }
 declare function Label(props: LabelProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, BadgeCollection, Button, InputDropdown, InputText, Label, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, useOutsideClick };
+interface ModalInfoProps {
+    title?: string;
+    description?: string;
+    labelOK?: string;
+    onOK?(): void;
+}
+declare function ModalInfo(props: ModalInfoProps): React.JSX.Element;
+
+interface ModalYesNoProps {
+    title?: string;
+    description?: string;
+    labelYes?: string;
+    labelNo?: string;
+    onYes?(): void;
+    onNo?(): void;
+}
+declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
+
+export { AdminSidebar, AdminTemplate, BadgeCollection, BaseModal, type BaseModalProps, Button, GradientCard, InputDropdown, InputText, Label, type ModalAction, ModalInfo, ModalYesNo, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };

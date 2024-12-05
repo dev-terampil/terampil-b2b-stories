@@ -10,6 +10,10 @@
     "build": "tsup --dts",
     "ladle": "BROWSER=none ladle serve"
   },
+  "peerDependencies": {
+    "react": "^16.8 || ^17 || ^18 || 19.0.0-rc-66855b96-20241106",
+    "react-dom": "^16.8 || ^17 || ^18 || 19.0.0-rc-66855b96-20241106"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

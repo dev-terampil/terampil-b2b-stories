@@ -8,7 +8,6 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     outline?: boolean;
     loading?: boolean;
 }
-
 declare function Button(props: ButtonProps): React.JSX.Element;
 
 interface ProgressValueProps {

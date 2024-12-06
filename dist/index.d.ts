@@ -1,11 +1,14 @@
-import React, { ButtonHTMLAttributes, HTMLAttributes, InputHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, HTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     leftIconURL?: string;
     rightIconURL?: string;
+    containerClassName?: string;
     childClassName?: string;
     outline?: boolean;
+    loading?: boolean;
 }
+
 declare function Button(props: ButtonProps): React.JSX.Element;
 
 interface ProgressValueProps {
@@ -195,6 +198,15 @@ interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 }
 declare function InputText(props: InputTextProps): React.JSX.Element;
 
+interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+}
+declare function InputTextarea(props: InputTextareaProps): React.JSX.Element;
+
+interface FormContainerProps extends HTMLAttributes<HTMLDivElement> {
+    title?: string;
+}
+declare function FormContainer(props: FormContainerProps): React.JSX.Element;
+
 interface LabelProps {
     label: string;
     required?: boolean;
@@ -220,4 +232,4 @@ interface ModalYesNoProps {
 }
 declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, BadgeCollection, BaseModal, type BaseModalProps, Button, GradientCard, InputDropdown, InputText, Label, type ModalAction, ModalInfo, ModalYesNo, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };
+export { AdminSidebar, AdminTemplate, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };

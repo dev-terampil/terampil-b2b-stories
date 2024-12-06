@@ -176,8 +176,8 @@ declare function NewSidebar(props: NewSidebarProps): React.JSX.Element;
 interface NewTemplateProps extends HTMLAttributes<HTMLDivElement> {
     title?: string;
     titleIconUrl?: string;
-    mode: RoleSBType;
-    setSidebarMode(mode: RoleSBType): void;
+    mode?: RoleSBType;
+    setSidebarMode?(mode: RoleSBType): void;
 }
 declare function NewTemplate(props: NewTemplateProps): React.JSX.Element;
 

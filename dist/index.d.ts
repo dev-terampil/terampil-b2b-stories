@@ -221,6 +221,13 @@ interface LabelProps {
 }
 declare function Label(props: LabelProps): React.JSX.Element;
 
+interface InputRadioProps {
+    options: OptionData[];
+    onChange?(value: any): void;
+    value?: any;
+}
+declare function InputRadio(props: InputRadioProps): React.JSX.Element;
+
 interface ModalInfoProps {
     title?: string;
     description?: string;
@@ -239,4 +246,4 @@ interface ModalYesNoProps {
 }
 declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };
+export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };

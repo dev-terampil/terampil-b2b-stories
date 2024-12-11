@@ -61,6 +61,7 @@ interface InputDropdownProps {
     multivalue?: boolean;
     noFilter?: boolean;
     noPlaceholder?: boolean;
+    dismissAfterSelection?: boolean;
 }
 declare function InputDropdown(props: InputDropdownProps): React.JSX.Element;
 

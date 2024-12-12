@@ -238,6 +238,14 @@ interface MultipleInputWrapperProps<T> {
 }
 declare function MultipleInputWrapper<T>(props: MultipleInputWrapperProps<T>): React.JSX.Element;
 
+interface InputDropdownBubbleProps {
+    options: OptionData[];
+    onChanges?(value: any[]): void;
+    values?: any[];
+    placeholder?: string;
+}
+declare function InputDropdownBubble(props: InputDropdownBubbleProps): React.JSX.Element;
+
 interface ModalInfoProps {
     title?: string;
     description?: string;
@@ -256,4 +264,4 @@ interface ModalYesNoProps {
 }
 declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };
+export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, useOutsideClick };

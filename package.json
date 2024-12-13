@@ -1,6 +1,6 @@
 {
   "name": "terampil-b2b-stories",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -15,6 +15,9 @@
     "react": "^16.8 || ^17 || ^18 || 19.0.0-rc-66855b96-20241106",
     "react-dom": "^16.8 || ^17 || ^18 || 19.0.0-rc-66855b96-20241106"
   },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -27,7 +30,6 @@
     "@types/react-dom": "^18.3.1",
     "autoprefixer": "^10.4.20",
     "axios": "^1.7.9",
-    "lodash": "^4.17.21",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.16",

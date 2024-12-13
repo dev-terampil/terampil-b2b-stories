@@ -264,10 +264,10 @@ interface ModalYesNoProps {
 }
 declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
 
+declare function r(): React.JSX.Element;
 declare namespace Utility {
     function formatNumber(n: number | string): string;
     function formatRp(n: number | string): string;
 }
-declare function r(): React.JSX.Element;
 
 export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, Utility, r, useOutsideClick };

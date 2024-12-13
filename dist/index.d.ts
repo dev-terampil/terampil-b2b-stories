@@ -195,6 +195,8 @@ interface NewTemplateProps extends HTMLAttributes<HTMLDivElement> {
     titleIconUrl?: string;
     mode?: RoleSBType;
     setSidebarMode?(mode: RoleSBType): void;
+    stickyTopElement?: JSX.Element;
+    stickyBottomElement?: JSX.Element;
 }
 declare function NewTemplate(props: NewTemplateProps): React.JSX.Element;
 

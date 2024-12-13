@@ -273,7 +273,7 @@ interface ModalYesNoProps {
 declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
 
 declare function r(): React.JSX.Element;
-declare const Utility: {
+declare function Utility(): {
     formatNumber: (n: number | string) => string;
     formatRp: (n: number | string) => string;
 };

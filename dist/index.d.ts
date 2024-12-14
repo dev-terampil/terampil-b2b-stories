@@ -233,6 +233,7 @@ interface LabelProps {
     label: string;
     required?: boolean;
     children?: any;
+    labelClassName?: string;
 }
 declare function Label(props: LabelProps): React.JSX.Element;
 

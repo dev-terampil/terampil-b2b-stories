@@ -1,6 +1,6 @@
 {
   "name": "terampil-b2b-stories",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -16,7 +16,13 @@
     "react-dom": "^16.8 || ^17 || ^18 || 19.0.0-rc-66855b96-20241106"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.2.0",
+    "@mui/styled-engine-sc": "^6.2.0",
+    "@mui/x-charts": "^7.23.2",
+    "lodash": "^4.17.21",
+    "styled-components": "^6.1.13"
   },
   "keywords": [],
   "author": "",

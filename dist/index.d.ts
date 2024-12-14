@@ -274,9 +274,30 @@ interface ModalYesNoProps {
 }
 declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
 
+interface BasicChartItemData {
+    label: string;
+    value: number;
+}
+interface PieChartItemData extends BasicChartItemData {
+    color?: string;
+}
+
+interface ChartLegendProps {
+    data: PieChartItemData[];
+    formatValue?(value: number): string;
+}
+declare function ChartLegend(props: ChartLegendProps): React.JSX.Element;
+
+interface PieChartProps {
+    diameter?: number;
+    data: PieChartItemData[];
+}
+declare function PieChart(props: PieChartProps): React.JSX.Element;
+
 declare namespace Utility {
     function formatNumber(n: number | string): string;
     function formatRp(n: number | string): string;
+    function generateRandomColorHex(): string;
 }
 
-export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, Button, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, ProgressValue, ProgressValueThree, RoleSBType, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

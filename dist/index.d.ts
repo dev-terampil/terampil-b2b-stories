@@ -259,9 +259,10 @@ declare function InputRadio(props: InputRadioProps): React.JSX.Element;
 interface MultipleInputWrapperProps<T> {
     data: T[];
     setData(data: T[]): void;
-    renderItem(value: T, onValueChange: (t: T | Partial<T>) => void, i: number): JSX.Element;
+    renderItem(value: T, onValueChange: (t: T | Partial<T>) => void, i: number, removeItem: () => void): JSX.Element;
     newItemValue: T;
     prefixTitle?: string;
+    simple?: boolean;
 }
 declare function MultipleInputWrapper<T>(props: MultipleInputWrapperProps<T>): React.JSX.Element;
 

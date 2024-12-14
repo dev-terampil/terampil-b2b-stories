@@ -26,7 +26,7 @@ declare function ProgressValue(props: ProgressValueProps): React.JSX.Element;
 interface ProgressValueThreeProps {
     valueComplete: number;
     valueProgress: number;
-    valuePending: number;
+    valuePending?: number;
 }
 declare function ProgressValueThree(props: ProgressValueThreeProps): React.JSX.Element;
 
@@ -169,6 +169,18 @@ declare function TreeNodeV2(props: TreeNodeV2Props): React.JSX.Element;
 interface ShadowContainerProps extends HTMLAttributes<HTMLDivElement> {
 }
 declare function ShadowContainer(props: ShadowContainerProps): React.JSX.Element;
+
+interface OKRDPSummaryCardProps {
+    label: string;
+    badgeType: BadgeCollectionType;
+    badgeLabel: string;
+    totalComplete: number;
+    totalProgress: number;
+    totalPending: number;
+    change: string;
+    useWhiteBg?: boolean;
+}
+declare function OKRDPSummaryCard(props: OKRDPSummaryCardProps): React.JSX.Element;
 
 interface NewHeaderProps {
     iconUrl?: string;
@@ -313,4 +325,4 @@ declare namespace Utility {
     function generateRandomColorHex(): string;
 }
 
-export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

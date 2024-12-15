@@ -39,6 +39,9 @@ interface BadgeCollectionProps {
 declare function BadgeCollection(props: BadgeCollectionProps): React.JSX.Element;
 
 interface TabV1Props {
+    tabs: string[];
+    activeTab: string;
+    onTabChange(tab: string): void;
 }
 declare function TabV1(props: TabV1Props): React.JSX.Element;
 

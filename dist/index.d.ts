@@ -334,6 +334,7 @@ interface LineChartProps {
     data: LineChartItemData[];
     noTooltip?: boolean;
     formatLabel?(label: any): string;
+    formatValue?(value: any): string;
 }
 declare function LineChart(props: LineChartProps): React.JSX.Element;
 

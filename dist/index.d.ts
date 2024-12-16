@@ -329,10 +329,18 @@ interface PieChartSingleValueProps {
 }
 declare function PieChartSingleValue(props: PieChartSingleValueProps): React.JSX.Element;
 
+interface LineChartProps {
+    height?: number;
+    data: LineChartItemData[];
+    noTooltip?: boolean;
+    formatLabel?(label: any): string;
+}
+declare function LineChart(props: LineChartProps): React.JSX.Element;
+
 declare namespace Utility {
     function formatNumber(n: number | string): string;
     function formatRp(n: number | string): string;
     function generateRandomColorHex(): string;
 }
 
-export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, type LineChartItemData, type LineItem, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

@@ -185,7 +185,12 @@ interface OKRDPSummaryCardProps {
 }
 declare function OKRDPSummaryCard(props: OKRDPSummaryCardProps): React.JSX.Element;
 
-interface NewHeaderProps {
+interface ProfileButtonProps {
+    profileUrl?: string;
+    logoutUrl?: string;
+}
+
+interface NewHeaderProps extends ProfileButtonProps {
     iconUrl?: string;
     title?: string;
     hideAI?: boolean;

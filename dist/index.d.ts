@@ -170,6 +170,7 @@ interface TreeNodeV2Props {
 declare function TreeNodeV2(props: TreeNodeV2Props): React.JSX.Element;
 
 interface ShadowContainerProps extends HTMLAttributes<HTMLDivElement> {
+    noPadding?: boolean;
 }
 declare function ShadowContainer(props: ShadowContainerProps): React.JSX.Element;
 

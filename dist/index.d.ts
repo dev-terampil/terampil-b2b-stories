@@ -225,6 +225,7 @@ interface NewTemplateProps extends HTMLAttributes<HTMLDivElement> {
 declare function NewTemplate(props: NewTemplateProps): React.JSX.Element;
 
 interface AdminSidebarProps {
+    homepageUrl?: string;
 }
 declare function AdminSidebar(props: AdminSidebarProps): React.JSX.Element;
 

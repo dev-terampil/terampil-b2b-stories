@@ -359,4 +359,21 @@ declare namespace Utility {
     function simpleNumber(num: number): string;
 }
 
-export { AdminSidebar, AdminTemplate, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+interface AgendaCardProps {
+    colorClass?: string;
+    priority: string;
+    title: string;
+    datetime: string;
+}
+declare function AgendaCard(props: AgendaCardProps): React.JSX.Element;
+
+interface SideOKRCardProps {
+    title: string;
+    badge?: JSX.Element;
+    description: string;
+    value: number;
+    onSubmit?(): void;
+}
+declare function SideOKRCard(props: SideOKRCardProps): React.JSX.Element;
+
+export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

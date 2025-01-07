@@ -352,6 +352,14 @@ interface LineChartProps {
 }
 declare function LineChart(props: LineChartProps): React.JSX.Element;
 
+interface ModalContextValue {
+    showModalYesNo(props: ModalYesNoProps): void;
+    showModalInformation(props: ModalInfoProps): void;
+    hideModal(): void;
+}
+declare const ModalContext: React.Context<ModalContextValue>;
+declare function ModalContextProvider(props: any): React.JSX.Element;
+
 declare namespace Utility {
     function formatNumber(n: number | string): string;
     function formatRp(n: number | string): string;
@@ -376,4 +384,4 @@ interface SideOKRCardProps {
 }
 declare function SideOKRCard(props: SideOKRCardProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalInfo, ModalYesNo, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalContext, ModalContextProvider, ModalInfo, type ModalInfoProps, ModalYesNo, type ModalYesNoProps, MultipleInputWrapper, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

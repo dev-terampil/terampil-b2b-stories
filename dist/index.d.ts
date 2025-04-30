@@ -407,4 +407,16 @@ interface NDDashboardProps {
 }
 declare function NDDashboard(props: NDDashboardProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalContext, ModalContextProvider, ModalInfo, type ModalInfoProps, ModalYesNo, type ModalYesNoProps, MultipleInputWrapper, NDDashboard, NDNavbar, NDSidebar, type NDSidebarOptions, NDTemplate, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+interface LoginData {
+    company_code: string;
+    email: string;
+    password: string;
+}
+interface LoginPageProps {
+    forgotPasswordURL?: string;
+    onSubmit(data: LoginData): void;
+    error?: string;
+}
+declare function LoginPage(props: LoginPageProps): React.JSX.Element;
+
+export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type LoginData, LoginPage, type ModalAction, ModalContext, ModalContextProvider, ModalInfo, type ModalInfoProps, ModalYesNo, type ModalYesNoProps, MultipleInputWrapper, NDDashboard, NDNavbar, NDSidebar, type NDSidebarOptions, NDTemplate, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

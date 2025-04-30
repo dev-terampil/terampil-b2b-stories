@@ -416,6 +416,7 @@ interface LoginPageProps {
     forgotPasswordURL?: string;
     onSubmit(data: LoginData): void;
     error?: string;
+    loading?: boolean;
 }
 declare function LoginPage(props: LoginPageProps): React.JSX.Element;
 

@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, HTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
+import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, CSSProperties, HTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     leftIconURL?: string;
@@ -20,6 +20,10 @@ declare function Anchor(props: AnchorProps): React.JSX.Element;
 
 interface ProgressValueProps {
     value: number;
+    style1?: CSSProperties;
+    style2?: CSSProperties;
+    class1?: string;
+    class2?: string;
 }
 declare function ProgressValue(props: ProgressValueProps): React.JSX.Element;
 
@@ -386,9 +390,15 @@ declare function SideOKRCard(props: SideOKRCardProps): React.JSX.Element;
 
 declare function NDNavbar(): React.JSX.Element;
 
-declare function NDSidebar(): React.JSX.Element;
+type NDSidebarOptions = 'dashboard' | 'organization' | 'okr' | 'training-event' | 'library' | 'training-budget';
+interface NDSidebarProps {
+    active: NDSidebarOptions;
+    onHover(sidebar: NDSidebarOptions): void;
+}
+declare function NDSidebar(props: NDSidebarProps): React.JSX.Element;
 
 interface NDTemplateProps {
+    active: NDSidebarOptions;
     children?: any;
 }
 declare function NDTemplate(props: NDTemplateProps): React.JSX.Element;
@@ -397,4 +407,4 @@ interface NDDashboardProps {
 }
 declare function NDDashboard(props: NDDashboardProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalContext, ModalContextProvider, ModalInfo, type ModalInfoProps, ModalYesNo, type ModalYesNoProps, MultipleInputWrapper, NDDashboard, NDNavbar, NDSidebar, NDTemplate, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type ModalAction, ModalContext, ModalContextProvider, ModalInfo, type ModalInfoProps, ModalYesNo, type ModalYesNoProps, MultipleInputWrapper, NDDashboard, NDNavbar, NDSidebar, type NDSidebarOptions, NDTemplate, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };

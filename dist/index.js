@@ -1706,6 +1706,54 @@ function EmptyOKR(props) {
   ));
 }
 
+// src/new-design/general/KeyResultCard.tsx
+
+function KeyResultCard(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `overflow-hidden relative border border-[1.5px] border-[#EAEFF5] bg-[#F6FBFF] p-[12px_18px] rounded-[8px] border-l-0 flex flex-col gap-2 font-[Poppins]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#0066B9] w-[4px] absolute top-0 left-0 h-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Improve the quality or system products"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onEdit,
+      className: `w-[16px] h-[16px] object-contain cursor-pointer`,
+      src: EditSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onDelete,
+      className: `w-[16px] h-[16px] object-contain cursor-pointer`,
+      src: TrashSVG
+    }
+  ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `grid grid-cols-2 gap-2` }, [
+    ["Period", "Monthly"],
+    ["Target", "Rp. 5.000.000.000"],
+    ["Division", "Sales"],
+    ["Target/Period", "Rp. 1.000.000.000"],
+    ["Competency List", "-"],
+    ["Early Warning", "Active Set"]
+  ].map(([label, value], i) => /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      key: i,
+      className: `flex items-center gap-3 text-[13px]`
+    },
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] w-[120px]` }, label),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4]` }, ":"),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `` }, value)
+  ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      className: `text-[14px]`
+    },
+    "KR Weight"
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      className: `text-slate-300`
+    },
+    "TODO: Add Slider"
+  )));
+}
+
 // src/new-design/onboarding/CompanyTemplate.tsx
 
 function CompanyTemplate(props) {
@@ -1780,5 +1828,6 @@ function CompanyTemplate(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
 //# sourceMappingURL=index.js.map

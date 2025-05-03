@@ -194,8 +194,14 @@ interface EmptyOKRProps {
 }
 declare function EmptyOKR(props: EmptyOKRProps): React.JSX.Element;
 
+interface KeyResultCardProps {
+    onEdit?(): void;
+    onDelete?(): void;
+}
+declare function KeyResultCard(props: KeyResultCardProps): React.JSX.Element;
+
 interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, SuccessModal, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, KeyResultCard, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, SuccessModal, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };

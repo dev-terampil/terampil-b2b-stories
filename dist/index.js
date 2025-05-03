@@ -1818,7 +1818,7 @@ function ItemKeyResult(props) {
 
 function CascadingTree(props) {
   const tree_depth_level = getMaxTreeLevel(props.root);
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex overflow-x-auto grid-dots-bg` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `w-8 min-w-8` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 flex-col gap-4 py-8` }, props.topView, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex gap-3` }, Array(tree_depth_level).fill(0).map((_2, i) => /* @__PURE__ */ _react2.default.createElement("div", { key: i }, props.headView(i)))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex overflow-x-auto grid-dots-bg` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `w-8 min-w-8` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 flex-col gap-4 py-8` }, props.topView, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex gap-3` }, Array(tree_depth_level).fill(0).map((_2, i) => /* @__PURE__ */ _react2.default.createElement("div", { key: i }, props.headView(i)))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement(
     CascadingTreeItem,
     {
       tree: props.root,

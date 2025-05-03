@@ -512,7 +512,7 @@ function NDTemplateGeneral(props) {
   return /* @__PURE__ */ _react2.default.createElement(
     "div",
     __spreadProps(__spreadValues({}, props), {
-      className: `flex bg-[#FAFDFF] min-h-screen ${props.className || ""}`
+      className: `flex bg-white min-h-screen ${props.className || ""}`
     }),
     /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0  z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarGeneral, __spreadValues({}, props.navbar))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 h-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 w-0 overflow-auto` }, props.children)))
   );

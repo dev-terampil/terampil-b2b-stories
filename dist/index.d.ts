@@ -7,6 +7,48 @@ declare namespace Utility {
     function simpleNumber(num: number): string;
 }
 
+declare const BackSVG: string;
+
+declare const Character2PNG: string;
+
+declare const CharacterPNG: string;
+
+declare const CheckSVG: string;
+
+declare const ChevronRightSVG: string;
+
+declare const CloseOutlineSVG: string;
+
+declare const CloseSVG: string;
+
+declare const DashboardIS1SVG: string;
+
+declare const DashboardIS2SVG: string;
+
+declare const DashboardISBG1SVG: string;
+
+declare const DashboardISBG2SVG: string;
+
+declare const DoubleChevronRightSVG: string;
+
+declare const EditSVG: string;
+
+declare const LogoPNG: string;
+
+declare const LogoSingleSVG: string;
+
+declare const MailSVG: string;
+
+declare const PasswordSVG: string;
+
+declare const SearchSVG: string;
+
+declare const SuccessSVG: string;
+
+declare const TrashSVG: string;
+
+declare const UserSVG: string;
+
 interface AgendaCardProps {
     colorClass?: string;
     priority: string;
@@ -221,4 +263,4 @@ interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, KeyResultCard, Label, type LoginData, LoginPage, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, SuccessModal, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, BackSVG, Button, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };

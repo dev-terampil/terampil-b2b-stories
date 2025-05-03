@@ -32,6 +32,13 @@ interface NDNavbarOnboardingProps {
 }
 declare function NDNavbarOnboarding(props: NDNavbarOnboardingProps): React.JSX.Element;
 
+interface NDNavbarOnboardingOKRProps {
+    onBack?(): void;
+    onCancel?(): void;
+    onSave?(): void;
+}
+declare function NDNavbarOnboardingOKR(props: NDNavbarOnboardingOKRProps): React.JSX.Element;
+
 type NDSidebarOptions = 'dashboard' | 'organization' | 'okr' | 'training-event' | 'library' | 'training-budget';
 interface NDSidebarProps {
     active: NDSidebarOptions;
@@ -51,6 +58,12 @@ interface NDTemplateOnboardingProps extends HTMLAttributes<HTMLDivElement> {
     children?: any;
 }
 declare function NDTemplateOnboarding(props: NDTemplateOnboardingProps): React.JSX.Element;
+
+interface NDTemplateOnboardingOKRProps extends HTMLAttributes<HTMLDivElement> {
+    navbar: NDNavbarOnboardingOKRProps;
+    children?: any;
+}
+declare function NDTemplateOnboardingOKR(props: NDTemplateOnboardingOKRProps): React.JSX.Element;
 
 interface NDDashboardProps {
 }
@@ -165,4 +178,4 @@ interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, OrganizationTree, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };

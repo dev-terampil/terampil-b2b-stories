@@ -164,6 +164,68 @@ function NDNavbarOnboarding(props) {
   ))), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4" }, /* @__PURE__ */ _react2.default.createElement("select", { className: `border border-[1.5px] border-[#8DA6C4] rounded-[10px] bg-transparent text-[14px] font-medium p-[8px_19px] font-[Poppins] text-[#121D26]` }, /* @__PURE__ */ _react2.default.createElement("option", null, "English"), /* @__PURE__ */ _react2.default.createElement("option", null, "Indonesia"))));
 }
 
+// src/new-design/NDNavbarOnboardingOKR.tsx
+
+
+// src/new-design/b64-images/BackSVG.ts
+var BackSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQiIGhlaWdodD0iMzQiIHZpZXdCb3g9IjAgMCAzNCAzNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3QgeD0iMC41IiB5PSIwLjUiIHdpZHRoPSIzMyIgaGVpZ2h0PSIzMyIgcng9IjExLjUiIHN0cm9rZT0iI0VBRUZGNSIvPgo8cGF0aCBkPSJNMjMuMTU4NSAxNi4wMTk4QzIzLjEwMTIgMTYuMDEwNSAyMy4wNDMzIDE2LjAwNjIgMjIuOTg1MyAxNi4wMDdIMTMuMTA4NUwxMy4zMjM5IDE1LjkwNzFDMTMuNTM0NCAxNS44MDc3IDEzLjcyNTkgMTUuNjcyNCAxMy44ODk5IDE1LjUwNzRMMTYuNjU5NSAxMi43NDQ2QzE3LjAyNDMgMTIuMzk3MyAxNy4wODU2IDExLjgzODUgMTYuODA0OCAxMS40MjA3QzE2LjQ3OCAxMC45NzU0IDE1Ljg1MTIgMTAuODc4OCAxNS40MDQ4IDExLjIwNDhDMTUuMzY4NyAxMS4yMzExIDE1LjMzNDUgMTEuMjU5OSAxNS4zMDIzIDExLjI5MDhMMTAuMjkzOCAxNi4yODY4QzkuOTAyMzcgMTYuNjc2OCA5LjkwMjAzIDE3LjMwOTQgMTAuMjkzIDE3LjY5OTlDMTAuMjkzMyAxNy43MDAxIDEwLjI5MzUgMTcuNzAwNCAxMC4yOTM4IDE3LjcwMDZMMTUuMzAyMyAyMi42OTY2QzE1LjY5NCAyMy4wODYzIDE2LjMyODIgMjMuMDg1NCAxNi43MTg5IDIyLjY5NDZDMTYuNzQ5NiAyMi42NjM5IDE2Ljc3ODMgMjIuNjMxMiAxNi44MDQ4IDIyLjU5NjdDMTcuMDg1NiAyMi4xNzg5IDE3LjAyNDMgMjEuNjIwMSAxNi42NTk1IDIxLjI3MjhMMTMuODk0OSAxOC41MDVDMTMuNzQ3OSAxOC4zNTgyIDEzLjU3ODkgMTguMjM1MiAxMy4zOTQgMTguMTQwM0wxMy4wOTM1IDE4LjAwNTRIMjIuOTMwMUMyMy40NDE5IDE4LjAyNDMgMjMuODkwOCAxNy42Njc4IDIzLjk4NjkgMTcuMTY2MUMyNC4wNzU1IDE2LjYyMTMgMjMuNzA0NiAxNi4xMDgyIDIzLjE1ODUgMTYuMDE5OFoiIGZpbGw9IiMxMjFEMjYiLz4KPC9zdmc+Cg==";
+
+// src/new-design/general/Button.tsx
+
+function Button(props) {
+  if (props.smaller) {
+    return /* @__PURE__ */ _react2.default.createElement(
+      "button",
+      __spreadProps(__spreadValues({}, props), {
+        className: `relative border border-px border-[#0066B9] text-white bg-[#0066B9] rounded-[10px] text-[13px] p-[8px_28px] font-[Poppins] ${props.className || ""}`
+      }),
+      props.children,
+      props.loading && /* @__PURE__ */ _react2.default.createElement("div", { className: `absolute bg-white flex items-center justify-center w-full h-full left-0 top-0 bg-[#FFFD] rounded-full` }, /* @__PURE__ */ _react2.default.createElement("div", { className: "tloading" }))
+    );
+  }
+  return /* @__PURE__ */ _react2.default.createElement(
+    "button",
+    __spreadProps(__spreadValues({}, props), {
+      className: `bg-[#0066B9] text-white rounded-full p-[10px_20px] text-[18px] font-semibold relative ${props.className || ""}`
+    }),
+    props.children,
+    props.loading && /* @__PURE__ */ _react2.default.createElement("div", { className: `absolute bg-white flex items-center justify-center w-full h-full left-0 top-0 bg-[#FFFD] rounded-full` }, /* @__PURE__ */ _react2.default.createElement("div", { className: "tloading" }))
+  );
+}
+
+// src/new-design/NDNavbarOnboardingOKR.tsx
+function NDNavbarOnboardingOKR(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-4 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins'] flex items-center gap-4" }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onBack,
+      className: `w-[30px] h-[30px] object-contain cursor-pointer`,
+      src: BackSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[40px] h-[40px] object-contain`,
+      src: LogoSingleSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[28px] w-[2px] bg-[#EAEFF5]` }), /* @__PURE__ */ _react2.default.createElement("span", null, "Add New OKR Company")), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center gap-8 font-[Poppins]" }), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4" }, /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      onClick: props.onCancel,
+      className: `!bg-[#EAEFF5] !border-[#EAEFF5] !text-[#8DA6C4]`,
+      smaller: true
+    },
+    "Cancel"
+  ), /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      onClick: props.onSave,
+      smaller: true
+    },
+    "Save"
+  )));
+}
+
 // src/new-design/NDSidebar.tsx
 
 function NDSidebar(props) {
@@ -367,6 +429,18 @@ function NDTemplateOnboarding(props) {
       className: `flex bg-[#FAFDFF] min-h-screen ${is_height_screen_full ? "h-screen overflow-hidden" : ""} ${props.className || ""}`
     }),
     /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0  z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarOnboarding, __spreadValues({}, props.navbar))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 h-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 w-0 overflow-auto` }, props.children), is_height_screen_full && /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky right-0 h-full` }, props.stickyRightChildren)))
+  );
+}
+
+// src/new-design/NDTemplateOnboardingOKR.tsx
+
+function NDTemplateOnboardingOKR(props) {
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: `flex bg-[#FAFDFF] min-h-screen ${props.className || ""}`
+    }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0  z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarOnboardingOKR, __spreadValues({}, props.navbar))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 h-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 w-0 overflow-auto` }, props.children)))
   );
 }
 
@@ -1062,29 +1136,6 @@ function InputText(props) {
   ), icon && /* @__PURE__ */ _react2.default.createElement("img", { src: icon, className: `absolute w-[17px] h-[17px] ml-[18px] object-contain` }));
 }
 
-// src/new-design/general/Button.tsx
-
-function Button(props) {
-  if (props.smaller) {
-    return /* @__PURE__ */ _react2.default.createElement(
-      "button",
-      __spreadProps(__spreadValues({}, props), {
-        className: `relative border border-px border-[#0066B9] text-white bg-[#0066B9] rounded-[10px] text-[13px] p-[8px_28px] font-[Poppins] ${props.className || ""}`
-      }),
-      props.children,
-      props.loading && /* @__PURE__ */ _react2.default.createElement("div", { className: `absolute bg-white flex items-center justify-center w-full h-full left-0 top-0 bg-[#FFFD] rounded-full` }, /* @__PURE__ */ _react2.default.createElement("div", { className: "tloading" }))
-    );
-  }
-  return /* @__PURE__ */ _react2.default.createElement(
-    "button",
-    __spreadProps(__spreadValues({}, props), {
-      className: `bg-[#0066B9] text-white rounded-full p-[10px_20px] text-[18px] font-semibold relative ${props.className || ""}`
-    }),
-    props.children,
-    props.loading && /* @__PURE__ */ _react2.default.createElement("div", { className: `absolute bg-white flex items-center justify-center w-full h-full left-0 top-0 bg-[#FFFD] rounded-full` }, /* @__PURE__ */ _react2.default.createElement("div", { className: "tloading" }))
-  );
-}
-
 // src/new-design/auth-pages/LoginPage.tsx
 function LoginPage(props) {
   const [data, setData] = _react.useState.call(void 0, {
@@ -1643,5 +1694,7 @@ function CompanyTemplate(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
+
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
 //# sourceMappingURL=index.js.map

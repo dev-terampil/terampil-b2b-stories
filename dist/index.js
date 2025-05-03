@@ -1573,6 +1573,39 @@ function WelcomeModal(props) {
   )));
 }
 
+// src/new-design/general/SuccessModal.tsx
+
+
+// src/new-design/b64-images/SuccessSVG.ts
+var SuccessSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iMTAwIiBmaWxsPSIjRTdGNEZGIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjEwMCIgcj0iODUiIGZpbGw9IiNCQkRERjkiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTAwIiByPSI3MCIgZmlsbD0iIzAwNjZCOSIvPgo8cGF0aCBkPSJNOTMuOTM5MSAxMjQuNTlDOTEuMTkxMSAxMjcuNDcgODcuODQxOSAxMjguMTIgODIuNTU4IDEyNC41OUM3Ny4yNzQxIDEyMS4wNiA3My4zNTc1IDExNS41NTcgNzEuMTc3IDExMi4wMzlDNjguMjU5NCAxMDcuMzMyIDY3LjQ2NDIgMTAzLjQxOSA2OC4zMzE3IDEwMC42NjRDNjkuNzUyNiA5Ny41NTEzIDcxLjIyOTcgOTcuNDA2NCA3NC44MzUyIDk5LjQ4NzdDNzkuMzk4IDEwMi40NDIgODEuOTgyNiAxMDQuOTIyIDg2LjYyMjcgMTEwLjA3OEM4Ny42NzQ5IDExMS4zNjMgODguMzMwMiAxMTEuMzU4IDg5LjQ2OCAxMTAuMDc4QzEwOC41NjUgODkuMTQ4MiAxMjEuOTIyIDc0LjAzMTggMTI1LjIzNyA3My4yMDg3QzEyNy40IDcyLjY3MTcgMTMwLjExNSA3My4yMDg3IDEzMC45MjggNzQuMzg1NEMxMzIuNTU0IDc2LjM0NjUgMTMyLjE0NyA4MC4yNjg3IDEzMC45MjggODEuODM3N0MxMTEuMDE5IDEwNS43NjQgMTAxLjI5MiAxMTcuMjggOTMuOTM5MSAxMjQuNTlaIiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4K";
+
+// src/new-design/general/SuccessModal.tsx
+function SuccessModal(props) {
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      style: __spreadValues({
+        background: "linear-gradient(138deg, rgba(10, 133, 233, 1) 0%, rgba(30, 231, 253, 1) 100%)"
+      }, props.style),
+      className: `rounded-[24px] p-[4px] font-[Poppins] ${props.className || ""}`
+    }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `rounded-[20px] p-[32px_24px] flex flex-col gap-4 bg-white items-center` }, /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        className: `h-[150px] object-contain`,
+        src: SuccessSVG
+      }
+    ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[24px] font-bold text-center` }, props.title), props.description && /* @__PURE__ */ _react2.default.createElement("div", { className: `text-center text-[15px] text-[#8DA6C4]` }, props.description), /* @__PURE__ */ _react2.default.createElement(
+      Button,
+      {
+        className: `!border-[#8DA6C4] !text-[#8DA6C4] !bg-transparent mt-10`,
+        smaller: true
+      },
+      "Close"
+    ))
+  );
+}
+
 // src/new-design/general/OrganizationTree.tsx
 
 function OrganizationTree(props) {
@@ -1745,5 +1778,6 @@ function CompanyTemplate(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
 //# sourceMappingURL=index.js.map

@@ -1364,6 +1364,59 @@ function _Popup(props, ref) {
 }
 var Popup = _react.forwardRef.call(void 0, _Popup);
 
+// src/new-design/general/TableActions.tsx
+
+
+// src/new-design/b64-images/EditSVG.ts
+var EditSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzExMV8xMTkyMikiPgo8cGF0aCBkPSJNMTguMzIwMyAxMC4zMzJDMTguMzIwMyAxNi44ODg4IDE2LjMwNzQgMTguOTA2MyA5Ljc2NTYyIDE4LjkwNjNDMy4yMjM4MSAxOC45MDYzIDEuMjEwOTQgMTYuODg4OCAxLjIxMDk0IDEwLjMzMkMxLjIxMDk0IDMuNzc1MjggMy4yMjM4MSAxLjc1NzgxIDkuNzY1NjIgMS43NTc4MSIgc3Ryb2tlPSIjOERBNkM0IiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8cGF0aCBkPSJNMTguMTQ3OCA0LjUxMDQyTDEwLjg4MiAxMS43NzUyQzEwLjE1ODQgMTIuNDk4NiA4LjAxMDY0IDEyLjgzMzYgNy41MzA4MSAxMi4zNTM5QzcuMDUwOTkgMTEuODc0MSA3LjM3ODQ5IDkuNzI2NyA4LjEwMjAzIDkuMDAzMjdMMTUuMzc1NSAxLjczMDlDMTUuNTU0OSAxLjUzNTIzIDE1Ljc3MiAxLjM3Nzk1IDE2LjAxMzkgMS4yNjg1MkMxNi4yNTU3IDEuMTU5MSAxNi41MTczIDEuMDk5NzcgMTYuNzgyNyAxLjA5NDE4QzE3LjA0OCAxLjA4ODYgMTcuMzExOSAxLjEzNjg0IDE3LjU1ODEgMS4yMzU5OUMxNy44MDQzIDEuMzM1MTUgMTguMDI4IDEuNDgzMTkgMTguMjE1NCAxLjY3MTEyQzE4LjQwMjggMS44NTkwNiAxOC41NTAzIDIuMDgzMDIgMTguNjQ4NyAyLjMyOTQ5QzE4Ljc0NzIgMi41NzU5NyAxOC43OTQ4IDIuODM5ODMgMTguNzg4NSAzLjEwNTE4QzE4Ljc4MjIgMy4zNzA1MyAxOC43MjIxIDMuNjMxODcgMTguNjEyIDMuODczMzhDMTguNTAxOSA0LjExNDg5IDE4LjM0NCA0LjMzMTYxIDE4LjE0NzggNC41MTA0MloiIHN0cm9rZT0iIzhEQTZDNCIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xMTFfMTE5MjIiPgo8cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==";
+
+// src/new-design/b64-images/TrashSVG.ts
+var TrashSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNjgzNjkgNC44MDQ2OUgxOC4yNzczQzE4LjM1MDggNC44MDQ2NCAxOC40MjE0IDQuNzc1MzcgMTguNDczNCA0LjcyMzMxQzE4LjUyNTQgNC42NzEyNSAxOC41NTQ2IDQuNjAwNjYgMTguNTU0NyA0LjUyNzA0QzE4LjU1NDcgNC4yODk0IDE4LjUwOCA0LjA1NDA4IDE4LjQxNzEgMy44MzQ1M0MxOC4zMjYzIDMuNjE0OTcgMTguMTkzMSAzLjQxNTQ4IDE4LjAyNTIgMy4yNDc0NUMxNy44NTczIDMuMDc5NDEgMTcuNjU3OSAyLjk0NjEyIDE3LjQzODUgMi44NTUyQzE3LjIxOTIgMi43NjQyNyAxNi45ODQgMi43MTc0OSAxNi43NDY2IDIuNzE3NTJIMTMuOTkzNVYxLjk3Nzc2QzEzLjk5MjkgMS40NTM0MSAxMy43ODQ1IDAuOTUwNyAxMy40MTQgMC41Nzk5MjVDMTMuMDQzNSAwLjIwOTE1MSAxMi41NDEyIDAuMDAwNTkwNTQ3IDEyLjAxNzIgMEg3Ljk0MzczQzcuNDE5NzggMC4wMDA1OTIyODkgNi45MTc0NiAwLjIwOTE1MyA2LjU0Njk3IDAuNTc5OTI3QzYuMTc2NDggMC45NTA3MDEgNS45NjgwOCAxLjQ1MzQxIDUuOTY3NDkgMS45Nzc3NlYyLjcxNzUySDMuMjE0MzdDMi45NzY5MiAyLjcxNzQ5IDIuNzQxNzggMi43NjQyNyAyLjUyMjQgMi44NTUyQzIuMzAzMDEgMi45NDYxMiAyLjEwMzY4IDMuMDc5NDEgMS45MzU3NyAzLjI0NzQ1QzEuNzY3ODcgMy40MTU0OCAxLjYzNDY4IDMuNjE0OTcgMS41NDM4MyAzLjgzNDUzQzEuNDUyOTcgNC4wNTQwOCAxLjQwNjIyIDQuMjg5NCAxLjQwNjI1IDQuNTI3MDRDMS40MDYzIDQuNjAwNjYgMS40MzU1NSA0LjY3MTI1IDEuNDg3NTcgNC43MjMzMUMxLjUzOTU4IDQuNzc1MzcgMS42MTAxMiA0LjgwNDY0IDEuNjgzNjkgNC44MDQ2OVpNOC40MjY0MyAxLjI0NDY0SDExLjUzNDVDMTEuODU2OCAxLjI0NDY0IDEyLjE2NTkgMS4zNzI3OCAxMi4zOTM4IDEuNjAwODZDMTIuNjIxNyAxLjgyODk0IDEyLjc0OTggMi4xMzgyOSAxMi43NDk4IDIuNDYwODRWMi43MTc1Mkg3LjIxMTE3VjIuNDYwODRDNy4yMTExNyAyLjEzODI5IDcuMzM5MiAxLjgyODk0IDcuNTY3MTEgMS42MDA4NkM3Ljc5NTAyIDEuMzcyNzggOC4xMDQxMiAxLjI0NDY0IDguNDI2NDMgMS4yNDQ2NFoiIGZpbGw9IiNGRjQzNDMiLz4KPHBhdGggZD0iTTE3LjU1NDcgNi45NzY1NlY3LjIwMjE1QzE3LjU1MzQgNy4yMDc2NiAxNy41NTIzIDcuMjEzNTYgMTcuNTUwOCA3LjIxOTczQzE3LjUzMTIgNy4zMDA2IDE3LjUwMDkgNy40MTkzNyAxNy40NjE5IDcuNTcyMjdDMTcuMzg0MiA3Ljg3Njk2IDE3LjI3MzIgOC4zMDYzOSAxNy4xMzg3IDguODE5MzRDMTYuODY5NyA5Ljg0NDg2IDE2LjUxMDYgMTEuMTk4NiAxNi4xNTE0IDEyLjU0ODhDMTUuNzkyMiAxMy44OTkgMTUuNDMyNSAxNS4yNDQ5IDE1LjE2MzEgMTYuMjUyOUMxNS4wMjg0IDE2Ljc1NjkgMTQuOTE2NSAxNy4xNzcxIDE0LjgzNzkgMTcuNDcwN0MxNC43OTg3IDE3LjYxNzEgMTQuNzY3MSAxNy43MzIgMTQuNzQ2MSAxNy44MTA1QzE0LjczNTYgMTcuODQ5NiAxNC43MjgxIDE3Ljg4MDEgMTQuNzIyNyAxNy45MDA0QzE0LjcxOTkgMTcuOTEwNSAxNC43MTcyIDE3LjkxODcgMTQuNzE1OCAxNy45MjM4QzE0LjcxNTIgMTcuOTI2MyAxNC43MTUyIDE3LjkyODQgMTQuNzE0OCAxNy45Mjk3TDE0LjcxMzkgMTcuOTMwN1YxNy45MzE2QzE0LjcwNjIgMTcuOTYwMyAxNC42OTk0IDE3Ljk4OTMgMTQuNjk0MyAxOC4wMTg2TDE0LjY4MzYgMTguMTA2NEMxNC42NjU3IDE4LjMxOTcgMTQuNTc4MyAxOC41MjAyIDE0LjQzNjUgMTguNjc3N0wxNC4zNzIxIDE4Ljc0MzJDMTQuMTkyNSAxOC45MDg0IDEzLjk1NzUgMTguOTk5OSAxMy43MTM5IDE5SDYuMjQ3MDdMNi4xNTYyNSAxOC45OTYxQzUuOTQ1NjMgMTguOTc2MiA1Ljc0NjAxIDE4Ljg4NzggNS41ODg4NyAxOC43NDMyQzUuNDA5MTkgMTguNTc3OCA1LjI5NzgzIDE4LjM1MDMgNS4yNzczNCAxOC4xMDY0QzUuMjc0ODcgMTguMDc3IDUuMjcxNjcgMTguMDQ3NiA1LjI2NjYgMTguMDE4Nkw1LjI0NzA3IDE3LjkzMTZWMTcuOTMwN0w1LjI0NjA5IDE3LjkyOTdDNS4yNDU3NiAxNy45Mjg0IDUuMjQ1NzggMTcuOTI2MyA1LjI0NTEyIDE3LjkyMzhDNS4yNDM3NCAxNy45MTg3IDUuMjQxIDE3LjkxMDUgNS4yMzgyOCAxNy45MDA0QzUuMjMyODUgMTcuODgwMSA1LjIyNTMgMTcuODQ5NiA1LjIxNDg0IDE3LjgxMDVDNS4xOTM4MSAxNy43MzIgNS4xNjIyNCAxNy42MTcxIDUuMTIzMDUgMTcuNDcwN0M1LjA0NDQ2IDE3LjE3NzEgNC45MzI1OCAxNi43NTY5IDQuNzk3ODUgMTYuMjUyOUM0LjUyODQgMTUuMjQ0OSA0LjE2ODc2IDEzLjg5OSAzLjgwOTU3IDEyLjU0ODhDMy40NTAzNyAxMS4xOTg2IDMuMDkxMjggOS44NDQ4NiAyLjgyMjI3IDguODE5MzRDMi42ODc3MSA4LjMwNjM5IDIuNTc2NzggNy44NzY5NiAyLjQ5OTAyIDcuNTcyMjdDMi40NjAwMSA3LjQxOTM3IDIuNDI5NzMgNy4zMDA2IDIuNDEwMTYgNy4yMTk3M0MyLjQwODY2IDcuMjEzNTYgMi40MDc1NyA3LjIwNzY2IDIuNDA2MjUgNy4yMDIxNVY2Ljk3NjU2SDE3LjU1NDdaIiBzdHJva2U9IiNGRjQzNDMiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K";
+
+// src/new-design/general/TableActions.tsx
+function TableActions(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-3` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-4 object-contain`, src: EditSVG }), /* @__PURE__ */ _react2.default.createElement("img", { className: `w-4 object-contain`, src: TrashSVG }));
+}
+
+// src/new-design/general/TablePagination.tsx
+
+
+// src/new-design/b64-images/ChevronRightSVG.ts
+var ChevronRightSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTggMTRMMTIgMTBMOCA2IiBzdHJva2U9IiMxMjFEMjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIi8+Cjwvc3ZnPgo=";
+
+// src/new-design/b64-images/DoubleChevronRightSVG.ts
+var DoubleChevronRightSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUgMTRMOSAxMEw1IDYiIHN0cm9rZT0iIzEyMUQyNiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPHBhdGggZD0iTTExIDE0TDE1IDEwTDExIDYiIHN0cm9rZT0iIzEyMUQyNiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+Cg==";
+
+// src/new-design/general/TablePagination.tsx
+function TablePagination(props) {
+  const max_page = Math.ceil(props.total / props.limit);
+  const page_number = Math.round(props.offset / props.limit) + 1;
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-center text-[14px] relative font-[Poppins]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `z-[2] flex items-center gap-3` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#EAEFF5] p-2 rounded-[12px] rotate-180` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-6 object-contain`, src: DoubleChevronRightSVG })), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#EAEFF5] p-2 rounded-[12px] rotate-180` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-6 object-contain`, src: ChevronRightSVG })), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#0066B9] bg-[#0066B9] text-white text-center p-[8px_16px] rounded-[12px]` }, "1"), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#F9FAFB] bg-[#F9FAFB] text-[#8DA6C4] text-center p-[8px_16px] rounded-[12px]` }, "2"), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#F9FAFB] bg-[#F9FAFB] text-[#8DA6C4] text-center p-[8px_16px] rounded-[12px]` }, "3"), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#F9FAFB] bg-[#F9FAFB] text-[#8DA6C4] text-center p-[8px_16px] rounded-[12px]` }, "4"), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#F9FAFB] bg-[#F9FAFB] text-[#8DA6C4] text-center p-[8px_16px] rounded-[12px]` }, "5"), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#EAEFF5] p-2 rounded-[12px]` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-6 object-contain`, src: ChevronRightSVG })), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#EAEFF5] p-2 rounded-[12px]` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-6 object-contain`, src: DoubleChevronRightSVG }))), /* @__PURE__ */ _react2.default.createElement("div", { className: `w-full absolute flex items-center justify-between z-1 text-[#8DA6C4]` }, /* @__PURE__ */ _react2.default.createElement("div", null, "Showing ", /* @__PURE__ */ _react2.default.createElement("b", null, "10"), " of 100 data"), /* @__PURE__ */ _react2.default.createElement("div", null, "Page 1 from 10")));
+}
+
+// src/new-design/general/TableSearchFilter.tsx
+
+
+// src/new-design/b64-images/SearchSVG.ts
+var SearchSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzExMV8xMTgwNCkiPgo8cGF0aCBkPSJNNy42OTMzNiAxQzExLjM5OTUgMS4wMDAwOSAxNC4zODY3IDMuOTcxNTYgMTQuMzg2NyA3LjYxNTIzQzE0LjM4NjYgMTEuMjU4OCAxMS4zOTk0IDE0LjIyOTQgNy42OTMzNiAxNC4yMjk1QzMuOTg3MjQgMTQuMjI5NSAxLjAwMDE1IDExLjI1ODggMSA3LjYxNTIzQzEgMy45NzE1MSAzLjk4NzE1IDEgNy42OTMzNiAxWiIgc3Ryb2tlPSIjQTFBRkMwIiBzdHJva2Utd2lkdGg9IjIiLz4KPHJlY3Qgd2lkdGg9IjUuMzcyNjQiIGhlaWdodD0iMi4yMDc5MyIgcng9IjEuMTAzOTciIHRyYW5zZm9ybT0ibWF0cml4KDAuNzEwNzExIDAuNzAzNDg0IC0wLjcxMDcxMSAwLjcwMzQ4NCAxNC4xODE2IDEyLjY2OCkiIGZpbGw9IiNBMUFGQzAiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xMTFfMTE4MDQiPgo8cmVjdCB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==";
+
+// src/new-design/general/TableSearchFilter.tsx
+function TableSearchFilter(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", null, props.leftItem), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `absolute left-[16px] h-[16px] object-contain`,
+      src: SearchSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "input",
+    {
+      className: `pl-[42px] outline-none bg-[#F9FAFB] p-[12px_16px] text-[13px] font-[Poppins] rounded-[12px]`,
+      placeholder: "Search id or name title",
+      type: "text"
+    }
+  ))));
+}
 
 
 
@@ -1383,5 +1436,9 @@ var Popup = _react.forwardRef.call(void 0, _Popup);
 
 
 
-exports.AgendaCard = AgendaCard; exports.Button = Button; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.Utility = Utility;
+
+
+
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility;
 //# sourceMappingURL=index.js.map

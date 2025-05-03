@@ -124,4 +124,20 @@ interface PopupProps extends HTMLAttributes<HTMLDivElement> {
 }
 declare const Popup: React.ForwardRefExoticComponent<PopupProps & React.RefAttributes<PopupAction>>;
 
-export { AgendaCard, Button, DashboardInformationSummary, EmployeeFormCard, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, Popup, type PopupAction, SideOKRCard, Utility };
+interface TableActionsProps {
+}
+declare function TableActions(props: TableActionsProps): React.JSX.Element;
+
+interface TablePaginationProps {
+    total: number;
+    offset: number;
+    limit: number;
+}
+declare function TablePagination(props: TablePaginationProps): React.JSX.Element;
+
+interface TableSearchFilterProps {
+    leftItem?: JSX.Element;
+}
+declare function TableSearchFilter(props: TableSearchFilterProps): React.JSX.Element;
+
+export { AgendaCard, Button, DashboardInformationSummary, EmployeeFormCard, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility };

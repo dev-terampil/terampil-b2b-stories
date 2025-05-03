@@ -1463,7 +1463,21 @@ var CharacterPNG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQgAAADECAYAAA
 
 // src/new-design/general/WelcomeModal.tsx
 function WelcomeModal(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col p-[40px_24px] rounded-[12px] bg-white shadow-[0px_1px_25px_1px_rgba(0,0,0,.1)] w-[380px] font-[Poppins] items-center gap-4 text-center` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `h-[130px] object-contain`, src: CharacterPNG }), /* @__PURE__ */ _react2.default.createElement("div", { className: `font-bold mt-5` }, "Welcome to B2B Platform"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] text-[#8DA6C4] px-5` }, "Let's start with a few simple steps to understand this system."), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4 mt-12` }, /* @__PURE__ */ _react2.default.createElement("button", { className: `border border-px border-[#8DA6C4] text-[#8DA6C4] rounded-[10px] text-[13px] p-[8px_15px] font-[Poppins]` }, "Skip, Explore Later"), /* @__PURE__ */ _react2.default.createElement("button", { className: `border border-px border-[#0066B9] text-white bg-[#0066B9] rounded-[10px] text-[13px] p-[8px_15px] font-[Poppins]` }, "Start Onboard")));
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col p-[40px_24px] rounded-[12px] bg-white shadow-[0px_1px_25px_1px_rgba(0,0,0,.1)] w-[380px] font-[Poppins] items-center gap-4 text-center` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `h-[130px] object-contain`, src: CharacterPNG }), /* @__PURE__ */ _react2.default.createElement("div", { className: `font-bold mt-5` }, "Welcome to B2B Platform"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] text-[#8DA6C4] px-5` }, "Let's start with a few simple steps to understand this system."), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4 mt-12` }, /* @__PURE__ */ _react2.default.createElement(
+    "button",
+    {
+      onClick: props.onSkip,
+      className: `border border-px border-[#8DA6C4] text-[#8DA6C4] rounded-[10px] text-[13px] p-[8px_15px] font-[Poppins]`
+    },
+    "Skip, Explore Later"
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "button",
+    {
+      onClick: props.onStartOnboard,
+      className: `border border-px border-[#0066B9] text-white bg-[#0066B9] rounded-[10px] text-[13px] p-[8px_15px] font-[Poppins]`
+    },
+    "Start Onboard"
+  )));
 }
 
 // src/new-design/onboarding/CompanyTemplate.tsx

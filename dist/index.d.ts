@@ -146,6 +146,8 @@ interface VerticalStepProps {
 declare function VerticalStep(props: VerticalStepProps): React.JSX.Element;
 
 interface WelcomeModalProps {
+    onSkip?(): void;
+    onStartOnboard?(): void;
 }
 declare function WelcomeModal(props: WelcomeModalProps): React.JSX.Element;
 

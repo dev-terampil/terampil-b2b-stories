@@ -181,6 +181,7 @@ declare function WelcomeModal(props: WelcomeModalProps): React.JSX.Element;
 interface SuccessModalProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     description?: string;
+    onClose?(): void;
 }
 declare function SuccessModal(props: SuccessModalProps): React.JSX.Element;
 

@@ -1598,6 +1598,7 @@ function SuccessModal(props) {
     ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[24px] font-bold text-center` }, props.title), props.description && /* @__PURE__ */ _react2.default.createElement("div", { className: `text-center text-[15px] text-[#8DA6C4]` }, props.description), /* @__PURE__ */ _react2.default.createElement(
       Button,
       {
+        onClick: props.onClose,
         className: `!border-[#8DA6C4] !text-[#8DA6C4] !bg-transparent mt-10`,
         smaller: true
       },

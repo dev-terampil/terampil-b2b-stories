@@ -113,6 +113,7 @@ declare function GeneralTab(props: GeneralTabProps): React.JSX.Element;
 type InputIconType = 'user' | 'email' | 'password';
 
 interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
+    containerClassName?: string;
     icon?: InputIconType;
     v2?: boolean;
     v3?: boolean;
@@ -120,6 +121,7 @@ interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
 declare function InputText(props: InputTextProps): React.JSX.Element;
 
 interface InputSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+    containerClassName?: string;
     icon?: InputIconType;
     v2?: boolean;
     v3?: boolean;
@@ -127,6 +129,7 @@ interface InputSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 declare function InputSelect(props: InputSelectProps): React.JSX.Element;
 
 interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+    containerClassName?: string;
     icon?: InputIconType;
     v2?: boolean;
     v3?: boolean;

@@ -1126,7 +1126,7 @@ function InputText(props) {
     version = "v3";
   }
   let icon = props.icon ? getIcon(props.icon) : null;
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center ${props.containerClassName || ""}` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
     "input",
     __spreadProps(__spreadValues({}, props), {
       className: `border border-[1.5px] text-[13px] bg-[#F9FAFB] border-[#EAEFF5] w-full p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
@@ -1383,7 +1383,7 @@ function InputSelect(props) {
     version = "v3";
   }
   let icon = props.icon ? getIcon(props.icon) : null;
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center ${props.containerClassName || ""}` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
     "select",
     __spreadProps(__spreadValues({}, props), {
       className: `border border-[1.5px] text-[13px] bg-[#F9FAFB] border-[#EAEFF5] w-full p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
@@ -1412,7 +1412,7 @@ function InputTextarea(props) {
     version = "v3";
   }
   let icon = props.icon ? getIcon(props.icon) : null;
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center ${props.containerClassName || ""}` }, /* @__PURE__ */ _react2.default.createElement(
     "textarea",
     __spreadProps(__spreadValues({
       rows: 3

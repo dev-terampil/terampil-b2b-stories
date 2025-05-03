@@ -226,6 +226,19 @@ function NDNavbarOnboardingOKR(props) {
   )));
 }
 
+// src/new-design/NDNavbarGeneral.tsx
+
+function NDNavbarGeneral(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-4 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins'] flex items-center gap-4" }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onBack,
+      className: `w-[30px] h-[30px] object-contain cursor-pointer`,
+      src: BackSVG
+    }
+  ), props.leftItem), props.rightItem);
+}
+
 // src/new-design/NDSidebar.tsx
 
 function NDSidebar(props) {
@@ -441,6 +454,18 @@ function NDTemplateOnboardingOKR(props) {
       className: `flex bg-[#FAFDFF] min-h-screen ${props.className || ""}`
     }),
     /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0  z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarOnboardingOKR, __spreadValues({}, props.navbar))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 h-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 w-0 overflow-auto` }, props.children)))
+  );
+}
+
+// src/new-design/NDTemplateGeneral.tsx
+
+function NDTemplateGeneral(props) {
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: `flex bg-[#FAFDFF] min-h-screen ${props.className || ""}`
+    }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0  z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarGeneral, __spreadValues({}, props.navbar))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 h-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 w-0 overflow-auto` }, props.children)))
   );
 }
 
@@ -1830,5 +1855,7 @@ function CompanyTemplate(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDBOKRTable = NDBOKRTable; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
+
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDBOKRTable = NDBOKRTable; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
 //# sourceMappingURL=index.js.map

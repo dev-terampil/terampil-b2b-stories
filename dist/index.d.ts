@@ -1,4 +1,4 @@
-import React, { HTMLAttributes, ButtonHTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
+import React, { HTMLAttributes, ButtonHTMLAttributes, InputHTMLAttributes, SelectHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
 declare namespace Utility {
     function formatNumber(n: number | string): string;
@@ -97,6 +97,7 @@ interface EmployeeFormCardProps {
 declare function EmployeeFormCard(props: EmployeeFormCardProps): React.JSX.Element;
 
 interface GeneralFormCardProps extends HTMLAttributes<HTMLDivElement> {
+    title: string;
     onCancel?(): void;
     onSave?(): void;
 }
@@ -116,6 +117,12 @@ interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
     v2?: boolean;
 }
 declare function InputText(props: InputTextProps): React.JSX.Element;
+
+interface InputSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+    icon?: InputIconType;
+    v2?: boolean;
+}
+declare function InputSelect(props: InputSelectProps): React.JSX.Element;
 
 interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     icon?: InputIconType;
@@ -179,4 +186,4 @@ interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };

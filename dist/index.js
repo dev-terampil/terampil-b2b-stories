@@ -1314,12 +1314,13 @@ var CloseSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIH
 
 // src/new-design/general/GeneralFormCard.tsx
 function GeneralFormCard(props) {
+  var _a;
   return /* @__PURE__ */ _react2.default.createElement(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: `bg-white flex flex-col font-[Poppins] rounded-[20px] overflow-hidden shadow-[0px_1px_25px_1px_rgba(0,0,0,.1)] ${props.className || ""}`
     }),
-    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between bg-[#F9FAFB] p-[12px_20px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1` }, "Edit Data Employee"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-[12px]` }, /* @__PURE__ */ _react2.default.createElement(
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between bg-[#F9FAFB] p-[12px_20px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1` }, (_a = props.title) != null ? _a : "Untitled"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-[12px]` }, /* @__PURE__ */ _react2.default.createElement(
       "img",
       {
         onClick: props.onCancel,
@@ -1361,6 +1362,27 @@ function GeneralTab(props) {
       /* @__PURE__ */ _react2.default.createElement("div", { className: active ? "bg-[#0066B9] h-[3px]" : "bg-transparent h-[3px]" })
     );
   }));
+}
+
+// src/new-design/general/InputSelect.tsx
+
+function InputSelect(props) {
+  let version = "v1";
+  if (props.v2) {
+    version = "v2";
+  }
+  let icon = props.icon ? getIcon(props.icon) : null;
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
+    "select",
+    __spreadProps(__spreadValues({}, props), {
+      className: `border border-[1.5px] text-[13px] bg-[#F9FAFB] border-[#EAEFF5] w-full p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
+    })
+  ), version == "v2" && /* @__PURE__ */ _react2.default.createElement(
+    "select",
+    __spreadProps(__spreadValues({}, props), {
+      className: `border border-[1.5px] text-[13px] placeholder-[#8DA6C4] border-[#8DA6C4] p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
+    })
+  ), icon && /* @__PURE__ */ _react2.default.createElement("img", { src: icon, className: `absolute w-[17px] h-[17px] ml-[18px] object-contain` }));
 }
 
 // src/new-design/general/InputTextarea.tsx
@@ -1703,5 +1725,6 @@ function CompanyTemplate(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.CompanyTemplate = CompanyTemplate; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OrganizationTree = OrganizationTree; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
 //# sourceMappingURL=index.js.map

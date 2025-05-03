@@ -1,368 +1,4 @@
-import React, { ButtonHTMLAttributes, AnchorHTMLAttributes, CSSProperties, HTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    leftIconURL?: string;
-    rightIconURL?: string;
-    containerClassName?: string;
-    childClassName?: string;
-    outline?: boolean;
-    loading?: boolean;
-}
-declare function Button(props: ButtonProps): React.JSX.Element;
-
-interface AnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-    leftIconURL?: string;
-    rightIconURL?: string;
-    childClassName?: string;
-    outline?: boolean;
-}
-declare function Anchor(props: AnchorProps): React.JSX.Element;
-
-interface ProgressValueProps {
-    value: number;
-    style1?: CSSProperties;
-    style2?: CSSProperties;
-    class1?: string;
-    class2?: string;
-}
-declare function ProgressValue(props: ProgressValueProps): React.JSX.Element;
-
-interface ProgressValueThreeProps {
-    valueComplete: number;
-    valueProgress: number;
-    valuePending?: number;
-}
-declare function ProgressValueThree(props: ProgressValueThreeProps): React.JSX.Element;
-
-type BadgeCollectionType = 'check' | 'timeout' | 'half-star' | 'red' | 'yellow' | 'green';
-interface BadgeCollectionProps {
-    type: BadgeCollectionType;
-    children?: any;
-    bigger?: boolean;
-}
-declare function BadgeCollection(props: BadgeCollectionProps): React.JSX.Element;
-
-interface TabV1Props {
-    tabs: string[];
-    activeTab: string;
-    onTabChange(tab: string): void;
-}
-declare function TabV1(props: TabV1Props): React.JSX.Element;
-
-interface TabV2Props {
-}
-declare function TabV2(props: TabV2Props): React.JSX.Element;
-
-interface OptionData {
-    label: string;
-    value: any;
-}
-interface InputDropdownProps {
-    options: OptionData[];
-    onChange?(value: any): void;
-    onChanges?(value: any[]): void;
-    value?: any;
-    values?: any[];
-    className?: string;
-    placeholder?: string;
-    multivalue?: boolean;
-    noFilter?: boolean;
-    noPlaceholder?: boolean;
-    dismissAfterSelection?: boolean;
-}
-declare function InputDropdown(props: InputDropdownProps): React.JSX.Element;
-
-interface TableMeta<T> {
-    columns: TableMetaColumn[];
-    renderRow(row: T, i: number): JSX.Element;
-}
-interface TableMetaColumn {
-    label: string;
-    filter?: TableMetaColumnFilter;
-}
-type TableMetaColumnFilter = TableMetaColumnFilterText | TableMetaColumnFilterOptionSingleValue | TableMetaColumnFilterOptionMultiValue;
-interface TableMetaColumnFilterText {
-    type: 'text';
-    placeholder?: string;
-    onSubmit(value: any): void;
-}
-interface TableMetaColumnFilterOptionSingleValue {
-    type: 'option-single-value';
-    placeholder?: string;
-    options: OptionData[];
-    onSubmit(value: any): void;
-}
-interface TableMetaColumnFilterOptionMultiValue {
-    type: 'option-multi-value';
-    placeholder?: string;
-    options: OptionData[];
-    onSubmit(values: any[]): void;
-}
-
-interface TableProps<T> {
-    meta: TableMeta<T>;
-    data: T[];
-    numActions?: number;
-}
-declare function Table<T>(props: TableProps<T>): React.JSX.Element;
-
-declare namespace OrgTreeData {
-    interface Tree<T> {
-        id: string;
-        data: T;
-        children: Tree<T>[];
-    }
-}
-declare enum PaddingMode {
-    I = "I",
-    T = "T",
-    L = "L",
-    O = "O"
-}
-interface OrganizationTreeProps<T> {
-    renderView(data: OrgTreeData.Tree<T>): JSX.Element;
-    data: OrgTreeData.Tree<T>;
-    level?: number;
-    padding?: PaddingMode[];
-    configSpaceWidth?: number;
-    configSpaceHeight?: number;
-    configBorderSize?: number;
-}
-declare function OrganizationTree<T>(props: OrganizationTreeProps<T>): React.JSX.Element;
-
-interface PaginationProps {
-    limit?: number;
-    page: number;
-    totalItems: number;
-    onChange(page: number, limit: number): void;
-}
-declare function Pagination(props: PaginationProps): React.JSX.Element;
-
-interface GradientCardProps extends HTMLAttributes<HTMLDivElement> {
-}
-declare function GradientCard(props: GradientCardProps): React.JSX.Element;
-
-interface ModalAction {
-    open(): void;
-    close(): void;
-    isOpen(): boolean;
-}
-interface BaseModalProps {
-    children?: any;
-    childClassName?: string;
-    onDismiss?(): void;
-    preventDismiss?: boolean;
-}
-declare const BaseModal: React.ForwardRefExoticComponent<BaseModalProps & React.RefAttributes<ModalAction>>;
-
-interface TreeNodeV1Props {
-    photoUrl?: string;
-    division?: string;
-    name: string;
-    onTambah?(): void;
-    onHapus?(): void;
-    onDetail?(): void;
-}
-declare function TreeNodeV1(props: TreeNodeV1Props): React.JSX.Element;
-
-interface TreeNodeV2Props {
-    photoUrl?: string;
-    division?: string;
-    budget: number;
-    onDetail?(): void;
-}
-declare function TreeNodeV2(props: TreeNodeV2Props): React.JSX.Element;
-
-interface ShadowContainerProps extends HTMLAttributes<HTMLDivElement> {
-    noPadding?: boolean;
-}
-declare function ShadowContainer(props: ShadowContainerProps): React.JSX.Element;
-
-interface OKRDPSummaryCardProps {
-    label: string;
-    badgeType: BadgeCollectionType;
-    badgeLabel: string;
-    totalComplete: number;
-    totalProgress: number;
-    totalPending: number;
-    change: string;
-    useWhiteBg?: boolean;
-}
-declare function OKRDPSummaryCard(props: OKRDPSummaryCardProps): React.JSX.Element;
-
-interface ProfileButtonProps {
-    profileUrl?: string;
-    logoutUrl?: string;
-}
-
-interface NewHeaderProps extends ProfileButtonProps {
-    iconUrl?: string;
-    title?: string;
-    hideAI?: boolean;
-}
-declare function NewHeader(props: NewHeaderProps): React.JSX.Element;
-
-interface NewRightNavProps {
-}
-declare function NewRightNav(props: NewRightNavProps): React.JSX.Element;
-
-declare enum RoleSBType {
-    PERSONAL = "PERSONAL",
-    TEAM = "TEAM",
-    CEO = "CEO",
-    HR = "HR"
-}
-
-interface NewSidebarProps {
-    mode: RoleSBType;
-    setSidebarMode(mode: RoleSBType): void;
-}
-declare function NewSidebar(props: NewSidebarProps): React.JSX.Element;
-
-interface NewTemplateProps extends HTMLAttributes<HTMLDivElement> {
-    title?: string;
-    titleIconUrl?: string;
-    mode?: RoleSBType;
-    setSidebarMode?(mode: RoleSBType): void;
-    stickyTopElement?: JSX.Element;
-    stickyBottomElement?: JSX.Element;
-}
-declare function NewTemplate(props: NewTemplateProps): React.JSX.Element;
-
-interface AdminSidebarProps {
-    homepageUrl?: string;
-}
-declare function AdminSidebar(props: AdminSidebarProps): React.JSX.Element;
-
-interface AdminTemplateProps extends HTMLAttributes<HTMLDivElement> {
-    title?: string;
-    titleIconUrl?: string;
-}
-declare function AdminTemplate(props: AdminTemplateProps): React.JSX.Element;
-
-declare function useOutsideClick(ref: any, callback: (e: any) => void): void;
-
-interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
-}
-declare function InputText(props: InputTextProps): React.JSX.Element;
-
-interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
-}
-declare function InputTextarea(props: InputTextareaProps): React.JSX.Element;
-
-interface FormContainerProps extends HTMLAttributes<HTMLDivElement> {
-    title?: string;
-}
-declare function FormContainer(props: FormContainerProps): React.JSX.Element;
-
-interface LabelProps {
-    label: string;
-    required?: boolean;
-    children?: any;
-    labelClassName?: string;
-}
-declare function Label(props: LabelProps): React.JSX.Element;
-
-interface InputRadioProps {
-    options: OptionData[];
-    onChange?(value: any): void;
-    value?: any;
-}
-declare function InputRadio(props: InputRadioProps): React.JSX.Element;
-
-interface InputRadioBubbleProps {
-    options: OptionData[];
-    onChange?(value: any): void;
-    value?: any;
-}
-declare function InputRadioBubble(props: InputRadioBubbleProps): React.JSX.Element;
-
-interface MultipleInputWrapperProps<T> {
-    data: T[];
-    setData(data: T[]): void;
-    renderItem(value: T, onValueChange: (t: T | Partial<T>) => void, i: number, removeItem: () => void): JSX.Element;
-    newItemValue: T;
-    prefixTitle?: string;
-    simple?: boolean;
-}
-declare function MultipleInputWrapper<T>(props: MultipleInputWrapperProps<T>): React.JSX.Element;
-
-interface InputDropdownBubbleProps {
-    options: OptionData[];
-    onChanges?(value: any[]): void;
-    values?: any[];
-    placeholder?: string;
-}
-declare function InputDropdownBubble(props: InputDropdownBubbleProps): React.JSX.Element;
-
-interface ModalInfoProps {
-    title?: string;
-    description?: string;
-    labelOK?: string;
-    onOK?(): void;
-}
-declare function ModalInfo(props: ModalInfoProps): React.JSX.Element;
-
-interface ModalYesNoProps {
-    title?: string;
-    description?: string;
-    labelYes?: string;
-    labelNo?: string;
-    onYes?(): void;
-    onNo?(): void;
-}
-declare function ModalYesNo(props: ModalYesNoProps): React.JSX.Element;
-
-interface BasicChartItemData {
-    label: string;
-    value: number;
-}
-interface PieChartItemData extends BasicChartItemData {
-    color?: string;
-}
-interface LineItem extends BasicChartItemData {
-}
-interface LineChartItemData {
-    color?: string;
-    data: LineItem[];
-}
-
-interface ChartLegendProps {
-    data: PieChartItemData[];
-    formatValue?(value: number): string;
-}
-declare function ChartLegend(props: ChartLegendProps): React.JSX.Element;
-
-interface PieChartProps {
-    diameter?: number;
-    data: PieChartItemData[];
-    noTooltip?: boolean;
-}
-declare function PieChart(props: PieChartProps): React.JSX.Element;
-
-interface PieChartSingleValueProps {
-    diameter?: number;
-    value: number;
-    color?: string;
-}
-declare function PieChartSingleValue(props: PieChartSingleValueProps): React.JSX.Element;
-
-interface LineChartProps {
-    height?: number;
-    data: LineChartItemData[];
-    noTooltip?: boolean;
-    formatLabel?(label: any): string;
-    formatValue?(value: any): string;
-}
-declare function LineChart(props: LineChartProps): React.JSX.Element;
-
-interface ModalContextValue {
-    showModalYesNo(props: ModalYesNoProps): void;
-    showModalInformation(props: ModalInfoProps): void;
-    hideModal(): void;
-}
-declare const ModalContext: React.Context<ModalContextValue>;
-declare function ModalContextProvider(props: any): React.JSX.Element;
+import React, { HTMLAttributes, ButtonHTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
 declare namespace Utility {
     function formatNumber(n: number | string): string;
@@ -390,6 +26,12 @@ declare function SideOKRCard(props: SideOKRCardProps): React.JSX.Element;
 
 declare function NDNavbar(): React.JSX.Element;
 
+interface NDNavbarOnboardingProps {
+    activeIndex: number;
+    onClose?(): void;
+}
+declare function NDNavbarOnboarding(props: NDNavbarOnboardingProps): React.JSX.Element;
+
 type NDSidebarOptions = 'dashboard' | 'organization' | 'okr' | 'training-event' | 'library' | 'training-budget';
 interface NDSidebarProps {
     active: NDSidebarOptions;
@@ -402,6 +44,13 @@ interface NDTemplateProps {
     children?: any;
 }
 declare function NDTemplate(props: NDTemplateProps): React.JSX.Element;
+
+interface NDTemplateOnboardingProps extends HTMLAttributes<HTMLDivElement> {
+    navbar: NDNavbarOnboardingProps;
+    stickyRightChildren?: JSX.Element;
+    children?: any;
+}
+declare function NDTemplateOnboarding(props: NDTemplateOnboardingProps): React.JSX.Element;
 
 interface NDDashboardProps {
 }
@@ -420,4 +69,92 @@ interface LoginPageProps {
 }
 declare function LoginPage(props: LoginPageProps): React.JSX.Element;
 
-export { AdminSidebar, AdminTemplate, AgendaCard, Anchor, BadgeCollection, type BadgeCollectionType, BaseModal, type BaseModalProps, type BasicChartItemData, Button, ChartLegend, FormContainer, GradientCard, InputDropdown, InputDropdownBubble, InputRadio, InputRadioBubble, InputText, InputTextarea, Label, LineChart, type LineChartItemData, type LineItem, type LoginData, LoginPage, type ModalAction, ModalContext, ModalContextProvider, ModalInfo, type ModalInfoProps, ModalYesNo, type ModalYesNoProps, MultipleInputWrapper, NDDashboard, NDNavbar, NDSidebar, type NDSidebarOptions, NDTemplate, NewHeader, NewRightNav, NewSidebar, NewTemplate, OKRDPSummaryCard, type OptionData, OrgTreeData, OrganizationTree, Pagination, PieChart, type PieChartItemData, PieChartSingleValue, ProgressValue, ProgressValueThree, RoleSBType, ShadowContainer, SideOKRCard, TabV1, TabV2, Table, type TableMeta, type TableMetaColumn, type TableMetaColumnFilter, type TableMetaColumnFilterOptionMultiValue, type TableMetaColumnFilterOptionSingleValue, type TableMetaColumnFilterText, TreeNodeV1, TreeNodeV2, Utility, useOutsideClick };
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    loading?: boolean;
+    smaller?: boolean;
+}
+declare function Button(props: ButtonProps): React.JSX.Element;
+
+interface DashboardInformationSummaryProps {
+}
+declare function DashboardInformationSummary(props: DashboardInformationSummaryProps): React.JSX.Element;
+
+interface EmployeeFormCardProps {
+}
+declare function EmployeeFormCard(props: EmployeeFormCardProps): React.JSX.Element;
+
+interface GeneralFormCardProps extends HTMLAttributes<HTMLDivElement> {
+    onCancel?(): void;
+    onSave?(): void;
+}
+declare function GeneralFormCard(props: GeneralFormCardProps): React.JSX.Element;
+
+interface GeneralTabProps {
+    tabs: string[];
+    active: string;
+    onTabChange(tab: string): void;
+}
+declare function GeneralTab(props: GeneralTabProps): React.JSX.Element;
+
+type InputIconType = 'user' | 'email' | 'password';
+
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
+    icon?: InputIconType;
+    v2?: boolean;
+}
+declare function InputText(props: InputTextProps): React.JSX.Element;
+
+interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+    icon?: InputIconType;
+    v2?: boolean;
+}
+declare function InputTextarea(props: InputTextareaProps): React.JSX.Element;
+
+interface LabelProps {
+    label?: string;
+    children: any;
+}
+declare function Label(props: LabelProps): React.JSX.Element;
+
+interface PopupAction {
+    open(): void;
+    close(): void;
+}
+interface PopupProps extends HTMLAttributes<HTMLDivElement> {
+}
+declare const Popup: React.ForwardRefExoticComponent<PopupProps & React.RefAttributes<PopupAction>>;
+
+interface TableActionsProps {
+}
+declare function TableActions(props: TableActionsProps): React.JSX.Element;
+
+interface TablePaginationProps {
+    total: number;
+    offset: number;
+    limit: number;
+}
+declare function TablePagination(props: TablePaginationProps): React.JSX.Element;
+
+interface TableSearchFilterProps {
+    leftItem?: JSX.Element;
+}
+declare function TableSearchFilter(props: TableSearchFilterProps): React.JSX.Element;
+
+interface TaskListAutogeneratedProps {
+}
+declare function TaskListAutogenerated(props: TaskListAutogeneratedProps): React.JSX.Element;
+
+interface VerticalStepProps {
+    activeIndex: number;
+}
+declare function VerticalStep(props: VerticalStepProps): React.JSX.Element;
+
+interface WelcomeModalProps {
+}
+declare function WelcomeModal(props: WelcomeModalProps): React.JSX.Element;
+
+interface CompanyTemplateProps {
+}
+declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
+
+export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, TaskListAutogenerated, Utility, VerticalStep, WelcomeModal };

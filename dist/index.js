@@ -283,7 +283,7 @@ function NDNavbarGeneral(props) {
     {
       onClick: props.onBack,
       className: `w-[30px] h-[30px] object-contain cursor-pointer`,
-      src: BackSVG
+      src: CloseSVG
     }
   ), props.leftItem), props.rightItem);
 }

@@ -157,8 +157,12 @@ interface OrganizationTreeProps {
 }
 declare function OrganizationTree(props: OrganizationTreeProps): React.JSX.Element;
 
+interface EmptyOKRProps {
+}
+declare function EmptyOKR(props: EmptyOKRProps): React.JSX.Element;
+
 interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, OrganizationTree, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, OrganizationTree, Popup, type PopupAction, SideOKRCard, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };

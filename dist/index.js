@@ -1350,7 +1350,7 @@ function _Popup(props, ref) {
     "div",
     {
       onMouseUp: (e) => setShow(false),
-      className: `fixed top-0 left-0 w-screen h-screen z-[9999] bg-[#0005] p-[12px] flex flex-col`
+      className: `fixed top-0 left-0 w-screen h-screen z-[9999] bg-[#0005] p-[12px] flex flex-col ${props.parentClassName || ""}`
     },
     /* @__PURE__ */ _react2.default.createElement(
       "div",

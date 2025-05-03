@@ -121,6 +121,7 @@ interface PopupAction {
     close(): void;
 }
 interface PopupProps extends HTMLAttributes<HTMLDivElement> {
+    parentClassName?: string;
 }
 declare const Popup: React.ForwardRefExoticComponent<PopupProps & React.RefAttributes<PopupAction>>;
 

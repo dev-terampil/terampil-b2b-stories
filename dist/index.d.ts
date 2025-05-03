@@ -259,8 +259,19 @@ interface KeyResultCardProps {
 }
 declare function KeyResultCard(props: KeyResultCardProps): React.JSX.Element;
 
+interface OKRDetailViewProps {
+}
+declare function OKRDetailView(props: OKRDetailViewProps): React.JSX.Element;
+interface ItemKeyResultProps {
+    onCascade?(): void;
+    onTree?(): void;
+    onEdit?(): void;
+    onDelete?(): void;
+}
+declare function ItemKeyResult(props: ItemKeyResultProps): React.JSX.Element;
+
 interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, BackSVG, Button, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, BackSVG, Button, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OKRDetailView, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };

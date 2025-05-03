@@ -442,6 +442,10 @@ video {
   margin-left: 10%;
   margin-right: 10%;
 }
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .my-6 {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
@@ -618,6 +622,9 @@ video {
 }
 .h-\[28px\] {
   height: 28px;
+}
+.h-\[2px\] {
+  height: 2px;
 }
 .h-\[30px\] {
   height: 30px;
@@ -916,6 +923,14 @@ video {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.rotate-90 {
+  --tw-rotate: 90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-\[-90deg\] {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .rotate-\[180deg\] {
   --tw-rotate: 180deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -1193,6 +1208,9 @@ video {
   --tw-border-opacity: 1 !important;
   border-color: rgb(245 158 11 / var(--tw-border-opacity, 1)) !important;
 }
+.border-\[\#0001\] {
+  border-color: #0001;
+}
 .border-\[\#0066B9\] {
   --tw-border-opacity: 1;
   border-color: rgb(0 102 185 / var(--tw-border-opacity, 1));
@@ -1352,6 +1370,10 @@ video {
 .bg-\[\#2C9CF7\] {
   --tw-bg-opacity: 1;
   background-color: rgb(44 156 247 / var(--tw-bg-opacity, 1));
+}
+.bg-\[\#8DA6C4\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(141 166 196 / var(--tw-bg-opacity, 1));
 }
 .bg-\[\#B8CADF\] {
   --tw-bg-opacity: 1;
@@ -1564,6 +1586,9 @@ video {
 .object-right {
   -o-object-position: right;
   object-position: right;
+}
+.p-1 {
+  padding: 0.25rem;
 }
 .p-2 {
   padding: 0.5rem;

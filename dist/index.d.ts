@@ -69,6 +69,10 @@ interface NDDashboardProps {
 }
 declare function NDDashboard(props: NDDashboardProps): React.JSX.Element;
 
+interface NDBOKRTableProps {
+}
+declare function NDBOKRTable(props: NDBOKRTableProps): React.JSX.Element;
+
 interface LoginData {
     company_code: string;
     email: string;
@@ -204,4 +208,4 @@ interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, KeyResultCard, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, SuccessModal, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, Button, CompanyTemplate, DashboardInformationSummary, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, KeyResultCard, Label, type LoginData, LoginPage, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, NDTemplateOnboardingOKR, OrganizationTree, Popup, type PopupAction, SideOKRCard, SuccessModal, TableActions, TablePagination, TableSearchFilter, Utility, VerticalStep, WelcomeModal };

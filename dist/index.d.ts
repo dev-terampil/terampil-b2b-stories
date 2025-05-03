@@ -124,7 +124,42 @@ interface NDDashboardProps {
 }
 declare function NDDashboard(props: NDDashboardProps): React.JSX.Element;
 
+interface NDBOKRTableRowProps {
+    id: string;
+    name: string;
+    pic: string;
+    progress: number;
+    ews: JSX.Element | string;
+    status: JSX.Element | string;
+    timeline: string;
+    list_key_result: NDOKRKeyResultData[];
+    onAction?(id: string): void;
+    onObjectiveContextMenu?(x: number, y: number, id: string): void;
+    onKeyResultContextMenu?(x: number, y: number, id_objective: string, id: string): void;
+}
+declare function NDBOKRTableRow(props: NDBOKRTableRowProps): React.JSX.Element;
+interface NDOKRKeyResultData {
+    id: string;
+    name: string;
+    pic: string;
+    progress: number;
+    ews: JSX.Element | string;
+    timeline: string;
+    status: JSX.Element | string;
+    onAction?(id: string): void;
+}
+
+type OKRContextMenuActionType = 'cascade' | 'cascading-tree' | 'edit' | 'delete';
+interface OKRContextMenuData {
+    x: number;
+    y: number;
+    id_objective?: string;
+    id_key_result?: string;
+    type: 'objective' | 'key-result' | 'none';
+}
 interface NDBOKRTableProps {
+    rows: NDBOKRTableRowProps[];
+    onAction(data: OKRContextMenuData, type: OKRContextMenuActionType): void;
 }
 declare function NDBOKRTable(props: NDBOKRTableProps): React.JSX.Element;
 
@@ -299,4 +334,4 @@ interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, BackSVG, Button, CascadingTree, type CascadingTreeDataType, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OKRDetailView, OKRTreeNode, type OKRTreeNodeData, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, BackSVG, Button, CascadingTree, type CascadingTreeDataType, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDBOKRTableRow, type NDBOKRTableRowProps, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, type NDOKRKeyResultData, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, type OKRContextMenuActionType, type OKRContextMenuData, OKRDetailView, OKRTreeNode, type OKRTreeNodeData, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };

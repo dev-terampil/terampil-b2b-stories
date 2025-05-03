@@ -171,6 +171,7 @@ interface OrganizationTreeProps {
 declare function OrganizationTree(props: OrganizationTreeProps): React.JSX.Element;
 
 interface EmptyOKRProps {
+    onCreateOKR?(): void;
 }
 declare function EmptyOKR(props: EmptyOKRProps): React.JSX.Element;
 

@@ -1621,7 +1621,14 @@ function EmptyOKR(props) {
       className: `w-[400px] object-contain`,
       src: Character2PNG
     }
-  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[14px] text-center` }, "Create your first OKR and achieve your work goals with more focus,", /* @__PURE__ */ _react2.default.createElement("br", null), "wth OKRs, you can focus on what matters most. Let's try now!"), /* @__PURE__ */ _react2.default.createElement(Button, { smaller: true }, "Create OKR"));
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[14px] text-center` }, "Create your first OKR and achieve your work goals with more focus,", /* @__PURE__ */ _react2.default.createElement("br", null), "wth OKRs, you can focus on what matters most. Let's try now!"), /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      onClick: props.onCreateOKR,
+      smaller: true
+    },
+    "Create OKR"
+  ));
 }
 
 // src/new-design/onboarding/CompanyTemplate.tsx

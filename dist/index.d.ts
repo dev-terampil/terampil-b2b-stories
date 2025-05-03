@@ -142,6 +142,7 @@ declare function TableSearchFilter(props: TableSearchFilterProps): React.JSX.Ele
 
 interface VerticalStepProps {
     activeIndex: number;
+    items?: string[];
 }
 declare function VerticalStep(props: VerticalStepProps): React.JSX.Element;
 

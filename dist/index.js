@@ -1421,7 +1421,8 @@ function TableSearchFilter(props) {
 // src/new-design/general/VerticalStep.tsx
 
 function VerticalStep(props) {
-  const list_item = [
+  var _a;
+  const list_item = (_a = props.items) != null ? _a : [
     [
       "Location",
       "List data location"

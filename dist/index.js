@@ -1814,6 +1814,64 @@ function ItemKeyResult(props) {
   ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[14px]` }, "Result"), /* @__PURE__ */ _react2.default.createElement("div", null, "TODO: Progress bar")), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-3` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-[16px] h-[16px] object-contain`, src: CascadeSVG }), /* @__PURE__ */ _react2.default.createElement("img", { className: `w-[16px] h-[16px] object-contain`, src: CascadeTreeSVG }), /* @__PURE__ */ _react2.default.createElement("img", { className: `w-[16px] h-[16px] object-contain`, src: EditSVG }), /* @__PURE__ */ _react2.default.createElement("img", { className: `w-[16px] h-[16px] object-contain`, src: TrashSVG })))));
 }
 
+// src/new-design/general/CascadingTree.tsx
+
+function CascadingTree(props) {
+  const tree_depth_level = getMaxTreeLevel(props.root);
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex overflow-x-auto grid-dots-bg` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `w-8 min-w-8` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-4 py-8` }, props.topView, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex gap-3` }, Array(tree_depth_level).fill(0).map((_2, i) => /* @__PURE__ */ _react2.default.createElement("div", { key: i }, props.headView(i)))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+    CascadingTreeItem,
+    {
+      tree: props.root,
+      nodeView: props.nodeView
+    }
+  ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `w-8 min-w-8` }));
+}
+function CascadingTreeItem(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-start gap-3` }, props.nodeView(props.tree.data), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-4 mt-[36px]` }, props.tree.children.map((item, i) => /* @__PURE__ */ _react2.default.createElement(
+    CascadingTreeItem,
+    {
+      nodeView: props.nodeView,
+      tree: item
+    }
+  ))));
+}
+function getMaxTreeLevel(tree, current_level = 1, max_depth_level = 20) {
+  if (current_level > max_depth_level) {
+    throw new Error(`getMaxTreeLevel function \`getMaxTreeLevel(tree: CascadingTreeDataType<any>, current_level: number = 1, max_depth_level = 20): number\` expects tree max level = 20, if you think this is a mistake pass your custom max_depth_level number`);
+  }
+  if (tree.children.length == 0) {
+    return current_level;
+  }
+  let level = current_level;
+  for (const child of tree.children) {
+    level = Math.max(level, getMaxTreeLevel(child, current_level + 1, max_depth_level));
+  }
+  return level;
+}
+
+// src/new-design/general/OKRTreeNode.tsx
+
+
+// src/new-design/b64-images/ThreeDotsSVG.ts
+var ThreeDotsSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSIyNiIgdmlld0JveD0iMCAwIDYgMjYiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik01IDQuOTkxNDhDNSA2LjA4OTM3IDQuMTAyODUgNi45ODI2OCAzIDYuOTgyNjhDMS44OTcxNSA2Ljk4MjY4IDEgNi4wODkzNCAxIDQuOTkxNDhDMSAzLjg5MzMxIDEuODk3MTUgMyAzIDNDNC4xMDI4NSAzIDUgMy44OTMzMSA1IDQuOTkxNDhaIiBmaWxsPSIjOERBNkM0Ii8+CjxwYXRoIGQ9Ik01IDEzLjAwMDFDNSAxNC4wOTggNC4xMDI4NSAxNC45OTEzIDMgMTQuOTkxM0MxLjg5NzE1IDE0Ljk5MTMgMSAxNC4wOTggMSAxMy4wMDAxQzEgMTEuOTAyIDEuODk3MTUgMTEuMDA4NyAzIDExLjAwODdDNC4xMDI4NSAxMS4wMDg3IDUgMTEuOTAyIDUgMTMuMDAwMVoiIGZpbGw9IiM4REE2QzQiLz4KPHBhdGggZD0iTTUgMjEuMDA4OEM1IDIyLjEwNjcgNC4xMDI4NSAyMyAzIDIzQzEuODk3MTUgMjMgMSAyMi4xMDY3IDEgMjEuMDA4OEMxIDE5LjkxMDYgMS44OTcxNSAxOS4wMTczIDMgMTkuMDE3M0M0LjEwMjg1IDE5LjAxNzMgNSAxOS45MTA2IDUgMjEuMDA4OFoiIGZpbGw9IiM4REE2QzQiLz4KPC9zdmc+Cg==";
+
+// src/new-design/general/OKRTreeNode.tsx
+function OKRTreeNode(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white border border-[1.5px] border-[#EAEFF5] flex flex-col gap-4 rounded-[9px] p-[10px_12px] font-[Poppins] ${props.className || ""}` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-3 flex-1` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[40px] h-[40px] rounded-full object-cover`,
+      src: props.data.photo
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[15px] font-medium` }, props.data.name), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[13px] text-[#8DA6C4]` }, props.data.position))), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `h-[20px] object-contain`,
+      src: ThreeDotsSVG
+    }
+  )), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-1` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 bg-[#E9F5FF] p-[4px_10px] rounded-[8px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#0066B9] w-[8px] h-[8px] rounded-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, "Rp 15.000.000")), props.data.cascading_percentage && /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 bg-[#E9FFF3] p-[4px_10px] rounded-[8px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#00EB61] w-[8px] h-[8px] rounded-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, "90%"))));
+}
+
 // src/new-design/onboarding/CompanyTemplate.tsx
 
 function CompanyTemplate(props) {
@@ -1915,5 +1973,7 @@ function CompanyTemplate(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.BackSVG = BackSVG; exports.Button = Button; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.NDBOKRTable = NDBOKRTable; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
+
+
+exports.AgendaCard = AgendaCard; exports.BackSVG = BackSVG; exports.Button = Button; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.NDBOKRTable = NDBOKRTable; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeModal = WelcomeModal;
 //# sourceMappingURL=index.js.map

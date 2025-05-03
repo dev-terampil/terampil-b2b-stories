@@ -270,8 +270,33 @@ interface ItemKeyResultProps {
 }
 declare function ItemKeyResult(props: ItemKeyResultProps): React.JSX.Element;
 
+interface CascadingTreeDataType<T> {
+    data: T;
+    children: CascadingTreeDataType<T>[];
+}
+interface CascadingTreeProps<T> {
+    root: CascadingTreeDataType<T>;
+    headView(level: number): JSX.Element;
+    nodeView(data: T): JSX.Element;
+    topView?: JSX.Element;
+}
+declare function CascadingTree<T>(props: CascadingTreeProps<T>): React.JSX.Element;
+
+interface OKRTreeNodeData {
+    photo: string;
+    name: string;
+    position: string;
+    okr_target: number;
+    cascading_percentage?: number;
+}
+interface OKRTreeNodeProps {
+    data: OKRTreeNodeData;
+    className?: string;
+}
+declare function OKRTreeNode(props: OKRTreeNodeProps): React.JSX.Element;
+
 interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
 
-export { AgendaCard, BackSVG, Button, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OKRDetailView, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };
+export { AgendaCard, BackSVG, Button, CascadingTree, type CascadingTreeDataType, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DoubleChevronRightSVG, EditSVG, EmployeeFormCard, EmptyOKR, GeneralFormCard, GeneralTab, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, NDBOKRTable, NDDashboard, NDNavbar, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, OKRDetailView, OKRTreeNode, type OKRTreeNodeData, OrganizationTree, PasswordSVG, Popup, type PopupAction, SearchSVG, SideOKRCard, SuccessModal, SuccessSVG, TableActions, TablePagination, TableSearchFilter, TrashSVG, UserSVG, Utility, VerticalStep, WelcomeModal };

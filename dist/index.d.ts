@@ -115,18 +115,21 @@ type InputIconType = 'user' | 'email' | 'password';
 interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
     icon?: InputIconType;
     v2?: boolean;
+    v3?: boolean;
 }
 declare function InputText(props: InputTextProps): React.JSX.Element;
 
 interface InputSelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
     icon?: InputIconType;
     v2?: boolean;
+    v3?: boolean;
 }
 declare function InputSelect(props: InputSelectProps): React.JSX.Element;
 
 interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     icon?: InputIconType;
     v2?: boolean;
+    v3?: boolean;
 }
 declare function InputTextarea(props: InputTextareaProps): React.JSX.Element;
 

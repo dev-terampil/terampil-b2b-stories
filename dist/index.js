@@ -1122,6 +1122,9 @@ function InputText(props) {
   if (props.v2) {
     version = "v2";
   }
+  if (props.v3) {
+    version = "v3";
+  }
   let icon = props.icon ? getIcon(props.icon) : null;
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
     "input",
@@ -1132,6 +1135,11 @@ function InputText(props) {
     "input",
     __spreadProps(__spreadValues({}, props), {
       className: `border border-[1.5px] text-[13px] placeholder-[#8DA6C4] border-[#8DA6C4] p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
+    })
+  ), version == "v3" && /* @__PURE__ */ _react2.default.createElement(
+    "input",
+    __spreadProps(__spreadValues({}, props), {
+      className: `border border-[1.5px] text-[13px] bg-white border-[#EAEFF5] p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
     })
   ), icon && /* @__PURE__ */ _react2.default.createElement("img", { src: icon, className: `absolute w-[17px] h-[17px] ml-[18px] object-contain` }));
 }
@@ -1371,6 +1379,9 @@ function InputSelect(props) {
   if (props.v2) {
     version = "v2";
   }
+  if (props.v3) {
+    version = "v3";
+  }
   let icon = props.icon ? getIcon(props.icon) : null;
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, version == "v1" && /* @__PURE__ */ _react2.default.createElement(
     "select",
@@ -1382,6 +1393,11 @@ function InputSelect(props) {
     __spreadProps(__spreadValues({}, props), {
       className: `border border-[1.5px] text-[13px] placeholder-[#8DA6C4] border-[#8DA6C4] p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
     })
+  ), version == "v3" && /* @__PURE__ */ _react2.default.createElement(
+    "select",
+    __spreadProps(__spreadValues({}, props), {
+      className: `border border-[1.5px] text-[13px] bg-white border-[#EAEFF5] p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
+    })
   ), icon && /* @__PURE__ */ _react2.default.createElement("img", { src: icon, className: `absolute w-[17px] h-[17px] ml-[18px] object-contain` }));
 }
 
@@ -1391,6 +1407,9 @@ function InputTextarea(props) {
   let version = "v1";
   if (props.v2) {
     version = "v2";
+  }
+  if (props.v3) {
+    version = "v3";
   }
   let icon = props.icon ? getIcon(props.icon) : null;
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, /* @__PURE__ */ _react2.default.createElement(

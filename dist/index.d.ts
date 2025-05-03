@@ -136,9 +136,8 @@ interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement>
 }
 declare function InputTextarea(props: InputTextareaProps): React.JSX.Element;
 
-interface LabelProps {
+interface LabelProps extends HTMLAttributes<HTMLDivElement> {
     label?: string;
-    children: any;
 }
 declare function Label(props: LabelProps): React.JSX.Element;
 

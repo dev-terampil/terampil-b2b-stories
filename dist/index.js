@@ -1089,7 +1089,7 @@ var LogoPNG = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAApYAAABgCAYAAACnpjI
 // src/new-design/general/Label.tsx
 
 function Label(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-2` }, props.label && /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px]` }, props.label), props.children);
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-2 ${props.className || ""}` }, props.label && /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px]` }, props.label), props.children);
 }
 
 // src/new-design/general/InputText.tsx

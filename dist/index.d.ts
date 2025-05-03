@@ -1,4 +1,4 @@
-import React, { HTMLAttributes } from 'react';
+import React, { HTMLAttributes, ButtonHTMLAttributes, InputHTMLAttributes, TextareaHTMLAttributes } from 'react';
 
 declare namespace Utility {
     function formatNumber(n: number | string): string;
@@ -69,4 +69,59 @@ interface LoginPageProps {
 }
 declare function LoginPage(props: LoginPageProps): React.JSX.Element;
 
-export { AgendaCard, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, SideOKRCard, Utility };
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+    loading?: boolean;
+    smaller?: boolean;
+}
+declare function Button(props: ButtonProps): React.JSX.Element;
+
+interface DashboardInformationSummaryProps {
+}
+declare function DashboardInformationSummary(props: DashboardInformationSummaryProps): React.JSX.Element;
+
+interface EmployeeFormCardProps {
+}
+declare function EmployeeFormCard(props: EmployeeFormCardProps): React.JSX.Element;
+
+interface GeneralFormCardProps extends HTMLAttributes<HTMLDivElement> {
+    onCancel?(): void;
+    onSave?(): void;
+}
+declare function GeneralFormCard(props: GeneralFormCardProps): React.JSX.Element;
+
+interface GeneralTabProps {
+    tabs: string[];
+    active: string;
+    onTabChange(tab: string): void;
+}
+declare function GeneralTab(props: GeneralTabProps): React.JSX.Element;
+
+type InputIconType = 'user' | 'email' | 'password';
+
+interface InputTextProps extends InputHTMLAttributes<HTMLInputElement> {
+    icon?: InputIconType;
+    v2?: boolean;
+}
+declare function InputText(props: InputTextProps): React.JSX.Element;
+
+interface InputTextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+    icon?: InputIconType;
+    v2?: boolean;
+}
+declare function InputTextarea(props: InputTextareaProps): React.JSX.Element;
+
+interface LabelProps {
+    label?: string;
+    children: any;
+}
+declare function Label(props: LabelProps): React.JSX.Element;
+
+interface PopupAction {
+    open(): void;
+    close(): void;
+}
+interface PopupProps extends HTMLAttributes<HTMLDivElement> {
+}
+declare const Popup: React.ForwardRefExoticComponent<PopupProps & React.RefAttributes<PopupAction>>;
+
+export { AgendaCard, Button, DashboardInformationSummary, EmployeeFormCard, GeneralFormCard, GeneralTab, InputText, InputTextarea, Label, type LoginData, LoginPage, NDDashboard, NDNavbar, NDNavbarOnboarding, type NDNavbarOnboardingProps, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateOnboarding, Popup, type PopupAction, SideOKRCard, Utility };

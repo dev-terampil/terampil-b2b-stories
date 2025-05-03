@@ -1153,6 +1153,216 @@ function LoginPage(props) {
   ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] text-[14px] text-center mt-4` }, "@2025 - Powered by Terampil Business")));
 }
 
+// src/new-design/general/DashboardInformationSummary.tsx
+
+
+// src/new-design/b64-images/DashboardIS1SVG.ts
+var DashboardIS1SVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjYiIGN5PSIyNiIgcj0iMjYiIGZpbGw9IiMwMDY2QjkiLz4KPHJlY3Qgd2lkdGg9IjMwIiBoZWlnaHQ9IjMwIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMSAxMSkiIGZpbGw9IiMwMDY2QjkiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xNiAxOC41QzE2IDE1LjczODYgMTguMjM4NiAxMy41IDIxIDEzLjVIMjguNVYxOC41QzI4LjUgMjEuMjYxNCAzMC43Mzg2IDIzLjUgMzMuNSAyMy41SDM2VjMzLjVDMzYgMzYuMjYxNCAzMy43NjE0IDM4LjUgMzEgMzguNUgyMUMxOC4yMzg2IDM4LjUgMTYgMzYuMjYxNCAxNiAzMy41VjE4LjVaTTIxIDI0Ljc1QzIwLjMwOTYgMjQuNzUgMTkuNzUgMjUuMzA5NiAxOS43NSAyNkMxOS43NSAyNi42OTA0IDIwLjMwOTYgMjcuMjUgMjEgMjcuMjVIMjMuNUMyNC4xOTA0IDI3LjI1IDI0Ljc1IDI2LjY5MDQgMjQuNzUgMjZDMjQuNzUgMjUuMzA5NiAyNC4xOTA0IDI0Ljc1IDIzLjUgMjQuNzVIMjFaTTIxIDI5Ljc1QzIwLjMwOTYgMjkuNzUgMTkuNzUgMzAuMzA5NiAxOS43NSAzMUMxOS43NSAzMS42OTA0IDIwLjMwOTYgMzIuMjUgMjEgMzIuMjVIMjZDMjYuNjkwNCAzMi4yNSAyNy4yNSAzMS42OTA0IDI3LjI1IDMxQzI3LjI1IDMwLjMwOTYgMjYuNjkwNCAyOS43NSAyNiAyOS43NUgyMVpNMzEuODUyMiAxNi4yNDg1TDMxLjY4ODYgMTguNzAzNkMzMS42MzgzIDE5LjQ1ODIgMzIuMjY0MyAyMC4wODQzIDMzLjAxODkgMjAuMDM0TDM1LjQ3NDEgMTkuODcwM0MzNi41NDU2IDE5Ljc5ODkgMzcuMDM0MiAxOC40OTg2IDM2LjI3NDggMTcuNzM5MkwzMy45ODM0IDE1LjQ0NzhDMzMuMjI0IDE0LjY4ODQgMzEuOTIzNyAxNS4xNzY5IDMxLjg1MjIgMTYuMjQ4NVoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=";
+
+// src/new-design/b64-images/DashboardIS2SVG.ts
+var DashboardIS2SVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTIiIGhlaWdodD0iNTIiIHZpZXdCb3g9IjAgMCA1MiA1MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjYiIGN5PSIyNiIgcj0iMjYiIGZpbGw9IiMwMERGQzAiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0zMS43ODI3IDE3LjU4MTdMMjcuNjU3OSAxOC4xNzA5QzI3LjAyNzcgMTguMjYwOSAyNi41MTI5IDE4LjU2MTMgMjYuMTQ1MiAxOC45NzY0TDE2LjUyMDkgMjguNjAwN0MxNS41NDQ2IDI5LjU3NyAxNS41NDQ2IDMxLjE1OTkgMTYuNTIwOSAzMi4xMzYyTDIwLjA1NjUgMzUuNjcxOEMyMS4wMzI4IDM2LjY0ODEgMjIuNjE1NyAzNi42NDgxIDIzLjU5MiAzNS42NzE4TDMzLjIxNjMgMjYuMDQ3NUMzMy42MzE0IDI1LjY3OTggMzMuOTMxOCAyNS4xNjUgMzQuMDIxOCAyNC41MzQ4TDM0LjYxMTEgMjAuNDFDMzQuODQ2OCAxOC43NjAyIDMzLjQzMjUgMTcuMzQ1OSAzMS43ODI3IDE3LjU4MTdaTTI4Ljg5NTMgMjMuMjk3NEMyOS4zODM0IDIzLjc4NTUgMzAuMTc0OSAyMy43ODU2IDMwLjY2MzEgMjMuMjk3NEMzMS4xNTEyIDIyLjgwOTIgMzEuMTUxMiAyMi4wMTc4IDMwLjY2MzEgMjEuNTI5NkMzMC4xNzQ5IDIxLjA0MTUgMjkuMzgzNSAyMS4wNDE1IDI4Ljg5NTMgMjEuNTI5NkMyOC40MDcxIDIyLjAxNzggMjguNDA3MiAyMi44MDkzIDI4Ljg5NTMgMjMuMjk3NFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=";
+
+// src/new-design/b64-images/DashboardISBG1SVG.ts
+var DashboardISBG1SVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQzIiBoZWlnaHQ9IjE4NSIgdmlld0JveD0iMCAwIDM0MyAxODUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzNDMiIGhlaWdodD0iMTg1IiByeD0iMTYiIGZpbGw9IiNFOEY1RkYiLz4KPHBhdGggZD0iTTMyNyAxODVDMzM2IDE4NSAzNDMgMTc3LjUgMzQzIDE2OVY4NUMzMzQuNSA3NyAzMjUuMDQxIDczLjM2OTggMzExIDcxLjVDMjkyLjAyMSA2OS4xNjAyIDI3NiA3MiAyNjguNSA3OC41QzI2Mi43MzEgODMuNSAyNDkuNSA5Mi41IDI0MiA4Ni41QzIyNiA3NS41IDIwMy4yMzkgNjkuODg2MyAxODIgNjlDMTczLjUgNjkgMTY2LjE2NCA3Mi41MTI1IDE1Ny41IDc4LjVDMTU0LjUgODAuNTczMiAxNDYgODAuNSAxNDIuNSA3OC41QzEzNS45MDUgNzQuMjExNyAxMzIuMTgzIDczLjE3MTIgMTI1LjUgNzNDMTE0LjI4NSA3My44MjcxIDEwNS43MzYgNzguODk2IDg1LjUgOThDODEgMTAyIDcxLjUgMTAyLjUgNjcuNSA5OEM1MS45Njg5IDgwLjUyNzYgMjYuNSA3Ny41IDAgNzcuOTk5OFYxNjlDMCAxNzggNy41IDE4NSAxNiAxODVIMzI3WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgo8L3N2Zz4K";
+
+// src/new-design/b64-images/DashboardISBG2SVG.ts
+var DashboardISBG2SVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzQzIiBoZWlnaHQ9IjE4NSIgdmlld0JveD0iMCAwIDM0MyAxODUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIzNDMiIGhlaWdodD0iMTg1IiByeD0iMTYiIGZpbGw9IiNEOEZCRjYiLz4KPHBhdGggZD0iTTM0MyAxNjkuMDM3Vjc3LjI1MzNDMzQwLjUgNzAuOTk5OSAzMjYuNSA2OC40OTk5IDMyMC41IDY4LjQ5OTlDMzIwLjUgNjguNDk5OSAyOTEgNjUuNDk5OSAyODMuNSA3Ny4yNTMzQzI3NiA4OS4wMDY3IDI1MC41IDEwNi4xOTEgMjQzLjUgOTYuOTk5OUMyMjYuMTYyIDc0LjIzNDggMjE2LjUxNyA2OS42NTA1IDE5OS41IDY4Ljk5OTlDMTg0IDY4Ljk5OTkgMTY4LjI4IDcxLjc2ODggMTU5LjUgNzcuMjUzM0MxNDkuNSA4My41IDE0NS42OCA4OCAxMzkgMTAzLjE0NUMxMzUuNTM2IDExMSAxMjIuNSAxMDkuNDc3IDEyMCAxMDMuMTQ1QzExMy42MjUgODYuOTk5OSAxMDcuNSA3OC4yNTExIDkyLjUgNzguMjUxMUM3Ny41IDc4LjI1MTEgNjguODk4MSA5Mi42OTU2IDU0LjUgMTA1LjE4OEM0OSAxMTAuMTc2IDQyLjUgMTExLjAwNyAzOSAxMDUuMTg4QzMxLjUgOTIuNzE3MSAxMCA3Ni4yNTU4IDAgNzUuMjU4MlYxNjkuMDM3QzAgMTc4LjAxNiA3LjUgMTg1IDE2IDE4NUgzMjdDMzM2LjUgMTg1IDM0MyAxNzcuNTE4IDM0MyAxNjkuMDM3WiIgZmlsbD0id2hpdGUiIGZpbGwtb3BhY2l0eT0iMC4zNiIvPgo8L3N2Zz4K";
+
+// src/common/ProgressValue.tsx
+
+function ProgressValue(props) {
+  const normalized_value = Math.round(Math.max(0, Math.min(100, props.value || 0)));
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      style: props.style1,
+      className: `bg-blue-100 h-[5px] overflow-hidden rounded-full ${props.class1}`
+    },
+    /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      {
+        style: __spreadValues({
+          width: `${normalized_value}%`
+        }, props.style2),
+        className: `bg-blue-500 h-full rounded-full ${props.class2}`
+      }
+    )
+  );
+}
+
+// src/new-design/general/DashboardInformationSummary.tsx
+function DashboardInformationSummary(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col gap-1 font-[Poppins]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium text-[18px]` }, "Information Summary"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[14px]` }, "Summary information data"), /* @__PURE__ */ _react2.default.createElement("div", { className: `rounded-[12px] flex gap-3 p-4 rounded-[16px] border border-[1.5px] border-gray-100 mt-2` }, [
+    [
+      DashboardIS1SVG,
+      DashboardISBG1SVG,
+      "Performance Progress",
+      0.2,
+      0.1,
+      "On Track",
+      "#0066B9"
+    ],
+    [
+      DashboardIS2SVG,
+      DashboardISBG2SVG,
+      "Development Plan",
+      0.4,
+      0.1,
+      "On Track",
+      "#00DFC0"
+    ]
+  ].map(([icon, bg, title, progress, change_value, change_label, color]) => /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 relative rounded-[12px] overflow-hidden` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `absolute w-full h-full object-cover z-1`,
+      src: bg
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex flex-col gap-5 z-[2] p-[18px_14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[48px] h-[48px] object-contain`,
+      src: icon
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `font-semibold text-[21px]` }, title)), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-1` }, /* @__PURE__ */ _react2.default.createElement("div", { style: { color }, className: `font-semibold text-[13px]` }, Math.round(+progress * 100), " %"), /* @__PURE__ */ _react2.default.createElement(
+    ProgressValue,
+    {
+      style1: { background: "#D5E6F3" },
+      style2: { background: color },
+      value: +progress * 100
+    }
+  )), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      style: { color },
+      className: `p-[2px_6px] text-[14px]`
+    },
+    +change_value >= 0 ? "+" : "-",
+    Math.round(+change_value * 100),
+    "%"
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[12px]` }, "than previous record")), /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      className: `text-[13px] font-medium`,
+      style: { color }
+    },
+    change_label
+  )))))));
+}
+
+// src/new-design/general/EmployeeFormCard.tsx
+
+function EmployeeFormCard(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex ` });
+}
+
+// src/new-design/general/GeneralFormCard.tsx
+
+
+// src/new-design/b64-images/CloseSVG.ts
+var CloseSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTgiIGhlaWdodD0iMTgiIHZpZXdCb3g9IjAgMCAxOCAxOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNzM3MDYgMy42NzM4NEMxLjIwMjIzIDMuMTM5MDEgMS4yMDIyMyAyLjI3MTg5IDEuNzM3MDYgMS43MzcwNkMyLjI3MTg5IDEuMjAyMjMgMy4xMzkwMSAxLjIwMjIzIDMuNjczODQgMS43MzcwNkwxNi4yNjI5IDE0LjMyNjJDMTYuNzk3OCAxNC44NjEgMTYuNzk3OCAxNS43MjgxIDE2LjI2MjkgMTYuMjYyOUMxNS43MjgxIDE2Ljc5NzggMTQuODYxIDE2Ljc5NzggMTQuMzI2MiAxNi4yNjI5TDEuNzM3MDYgMy42NzM4NFoiIGZpbGw9IiNBMUFGQzAiLz4KPHBhdGggZD0iTTE0LjMyNjIgMS43MzcwNkMxNC44NjEgMS4yMDIyMyAxNS43MjgxIDEuMjAyMjMgMTYuMjYyOSAxLjczNzA2QzE2Ljc5NzggMi4yNzE4OSAxNi43OTc4IDMuMTM5MDEgMTYuMjYyOSAzLjY3Mzg0TDMuNjczODUgMTYuMjYyOUMzLjEzOTAyIDE2Ljc5NzggMi4yNzE4OSAxNi43OTc4IDEuNzM3MDYgMTYuMjYyOUMxLjIwMjIzIDE1LjcyODEgMS4yMDIyMyAxNC44NjEgMS43MzcwNiAxNC4zMjYyTDE0LjMyNjIgMS43MzcwNloiIGZpbGw9IiNBMUFGQzAiLz4KPC9zdmc+Cg==";
+
+// src/new-design/general/GeneralFormCard.tsx
+function GeneralFormCard(props) {
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: `bg-white flex flex-col font-[Poppins] rounded-[20px] overflow-hidden shadow-[0px_1px_25px_1px_rgba(0,0,0,.1)] ${props.className || ""}`
+    }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between bg-[#F9FAFB] p-[12px_20px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1` }, "Edit Data Employee"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-[12px]` }, /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        onClick: props.onCancel,
+        className: `w-[16px] h-[16px] object-contain cursor-pointer`,
+        src: CloseSVG
+      }
+    ))),
+    props.children,
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-end gap-[12px] bg-[#F9FAFB] p-[12px_20px]` }, /* @__PURE__ */ _react2.default.createElement(
+      "button",
+      {
+        onClick: props.onCancel,
+        className: `outline-none bg-transparent rounded-[8px] text-[14px] p-[8px_24px] text-[#A1AFC0]`
+      },
+      "Cancel"
+    ), /* @__PURE__ */ _react2.default.createElement(
+      "button",
+      {
+        onClick: props.onSave,
+        className: `outline-none bg-[#0066B9] text-white rounded-[8px] text-[14px] p-[8px_24px]`
+      },
+      "Save"
+    ))
+  );
+}
+
+// src/new-design/general/GeneralTab.tsx
+
+function GeneralTab(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex overflow-x-auto font-[Poppins] border-b border-b-px border-b-[#EAEFF5]` }, props.tabs.map((tab, i) => {
+    const active = props.active == tab;
+    return /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      {
+        onClick: () => props.onTabChange(tab),
+        className: `flex flex-col flex-1 cursor-pointer`
+      },
+      /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] text-center p-[16px] ${active ? "text-[#0066B9] font-medium" : "text-[#8DA6C4]"}` }, tab),
+      /* @__PURE__ */ _react2.default.createElement("div", { className: active ? "bg-[#0066B9] h-[3px]" : "bg-transparent h-[3px]" })
+    );
+  }));
+}
+
+// src/new-design/general/InputTextarea.tsx
+
+function InputTextarea(props) {
+  let version = "v1";
+  if (props.v2) {
+    version = "v2";
+  }
+  let icon = props.icon ? getIcon(props.icon) : null;
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, /* @__PURE__ */ _react2.default.createElement(
+    "textarea",
+    __spreadProps(__spreadValues({
+      rows: 3
+    }, props), {
+      className: `border border-[1.5px] text-[13px] bg-[#F9FAFB] border-[#EAEFF5] w-full p-[12px_12px] rounded-[12px] ${icon ? "pl-[48px]" : ""} ${props.className || ""}`
+    })
+  ), icon && /* @__PURE__ */ _react2.default.createElement("img", { src: icon, className: `absolute w-[17px] h-[17px] ml-[18px] object-contain` }));
+}
+
+// src/new-design/general/Popup.tsx
+
+
+function _Popup(props, ref) {
+  const [show, setShow] = _react.useState.call(void 0, false);
+  _react.useImperativeHandle.call(void 0, ref, () => ({
+    open() {
+      setShow(true);
+    },
+    close() {
+      setShow(false);
+    }
+  }), []);
+  if (!show) {
+    return /* @__PURE__ */ _react2.default.createElement(_react2.default.Fragment, null);
+  }
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      onMouseUp: (e) => setShow(false),
+      className: `fixed top-0 left-0 w-screen h-screen z-[9999] bg-[#0005] p-[12px] flex flex-col`
+    },
+    /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      __spreadProps(__spreadValues({}, props), {
+        className: `fade-in-down ${props.className || ""}`,
+        onMouseUp: (e) => e.stopPropagation()
+      }),
+      props.children
+    )
+  );
+}
+var Popup = _react.forwardRef.call(void 0, _Popup);
 
 
 
@@ -1163,5 +1373,15 @@ function LoginPage(props) {
 
 
 
-exports.AgendaCard = AgendaCard; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.SideOKRCard = SideOKRCard; exports.Utility = Utility;
+
+
+
+
+
+
+
+
+
+
+exports.AgendaCard = AgendaCard; exports.Button = Button; exports.DashboardInformationSummary = DashboardInformationSummary; exports.EmployeeFormCard = EmployeeFormCard; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.Label = Label; exports.LoginPage = LoginPage; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.Popup = Popup; exports.SideOKRCard = SideOKRCard; exports.Utility = Utility;
 //# sourceMappingURL=index.js.map

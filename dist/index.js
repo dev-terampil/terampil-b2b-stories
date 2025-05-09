@@ -398,7 +398,7 @@ function NDInnerSidebar(props) {
     switch (props.active) {
       case "dashboard":
         return [
-          ["Dashboard", "/dashboard", false, null],
+          ["Dashboard", "/", false, null],
           ["Executive Summary", "/executive-summary", false, null],
           ["Indonesia Map", "/indonesia-map", false, null]
         ];

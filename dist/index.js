@@ -492,8 +492,10 @@ function NDTemplate(props) {
       const { height } = nav_ref.current.getBoundingClientRect();
       second_sticky.current.style.top = `${height}px`;
       second_sticky.current.style.height = `${window.innerHeight - height}px`;
-      right_sticky.current.style.top = `${height}px`;
-      right_sticky.current.style.height = `${window.innerHeight - height}px`;
+      if (right_sticky.current) {
+        right_sticky.current.style.top = `${height}px`;
+        right_sticky.current.style.height = `${window.innerHeight - height}px`;
+      }
     }
   }, []);
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0 left-0 z-[999]` }, /* @__PURE__ */ _react2.default.createElement(

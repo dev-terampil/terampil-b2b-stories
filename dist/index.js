@@ -1502,6 +1502,28 @@ function GeneralFormCard(props) {
 // src/new-design/general/GeneralTab.tsx
 
 function GeneralTab(props) {
+  var _a, _b;
+  if (props.v2) {
+    return /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      {
+        style: { paddingLeft: (_a = props.px) != null ? _a : 0, paddingRight: (_b = props.px) != null ? _b : 0 },
+        className: `flex gap-4 overflow-x-auto font-[Poppins] border-b border-b-[2px] border-b-[#EAEFF5]`
+      },
+      props.tabs.map((tab, i) => {
+        const active = props.active == tab;
+        return /* @__PURE__ */ _react2.default.createElement(
+          "div",
+          {
+            onClick: () => props.onTabChange(tab),
+            className: `flex flex-col cursor-pointer`
+          },
+          /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] flex-1 flex items-center text-center p-[5px_16px] text-[14px] ${active ? "text-[#0066B9] font-medium text-[17px]" : "text-[#8DA6C4]"}` }, tab),
+          /* @__PURE__ */ _react2.default.createElement("div", { className: active ? "bg-[#0066B9] h-[2px]" : "bg-transparent h-[2px]" })
+        );
+      })
+    );
+  }
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex overflow-x-auto font-[Poppins] border-b border-b-px border-b-[#EAEFF5]` }, props.tabs.map((tab, i) => {
     const active = props.active == tab;
     return /* @__PURE__ */ _react2.default.createElement(
@@ -1511,7 +1533,7 @@ function GeneralTab(props) {
         className: `flex flex-col flex-1 cursor-pointer`
       },
       /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] text-center p-[16px] ${active ? "text-[#0066B9] font-medium" : "text-[#8DA6C4]"}` }, tab),
-      /* @__PURE__ */ _react2.default.createElement("div", { className: active ? "bg-[#0066B9] h-[3px]" : "bg-transparent h-[3px]" })
+      /* @__PURE__ */ _react2.default.createElement("div", { className: active ? "bg-[#0066B9] h-[2px]" : "bg-transparent h-[2px]" })
     );
   }));
 }

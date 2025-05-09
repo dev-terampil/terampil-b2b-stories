@@ -227,9 +227,11 @@ interface GeneralFormCardProps extends HTMLAttributes<HTMLDivElement> {
 declare function GeneralFormCard(props: GeneralFormCardProps): React.JSX.Element;
 
 interface GeneralTabProps {
+    v2?: boolean;
     tabs: string[];
     active: string;
     onTabChange(tab: string): void;
+    px?: number;
 }
 declare function GeneralTab(props: GeneralTabProps): React.JSX.Element;
 

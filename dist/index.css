@@ -659,9 +659,6 @@ video {
 .h-\[36px\] {
   height: 36px;
 }
-.h-\[3px\] {
-  height: 3px;
-}
 .h-\[40px\] {
   height: 40px;
 }
@@ -1850,6 +1847,9 @@ video {
 .p-\[4px_8px\] {
   padding: 4px 8px;
 }
+.p-\[5px_16px\] {
+  padding: 5px 16px;
+}
 .p-\[5px_8px\] {
   padding: 5px 8px;
 }
@@ -2081,6 +2081,9 @@ video {
 }
 .text-\[16px\] {
   font-size: 16px;
+}
+.text-\[17px\] {
+  font-size: 17px;
 }
 .text-\[18px\] {
   font-size: 18px;

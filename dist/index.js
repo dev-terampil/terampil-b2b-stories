@@ -484,6 +484,7 @@ function NDTemplate(props) {
   var _a, _b;
   const nav_ref = _react.useRef.call(void 0, null);
   const second_sticky = _react.useRef.call(void 0, null);
+  const right_sticky = _react.useRef.call(void 0, null);
   const [is_collapse, setIsCollapse] = _react.useState.call(void 0, false);
   const [hover_sidebar, setHoverSidebar] = _react.useState.call(void 0, props.active);
   _react.useLayoutEffect.call(void 0, () => {
@@ -491,6 +492,8 @@ function NDTemplate(props) {
       const { height } = nav_ref.current.getBoundingClientRect();
       second_sticky.current.style.top = `${height}px`;
       second_sticky.current.style.height = `${window.innerHeight - height}px`;
+      right_sticky.current.style.top = `${height}px`;
+      right_sticky.current.style.height = `${window.innerHeight - height}px`;
     }
   }, []);
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0 left-0 z-[999]` }, /* @__PURE__ */ _react2.default.createElement(
@@ -541,7 +544,14 @@ function NDTemplate(props) {
       className: `flex-1 w-0`
     },
     props.children
-  ))));
+  ), props.rightStickyElement && /* @__PURE__ */ _react2.default.createElement("div", { className: `relative` }, /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      ref: right_sticky,
+      className: `sticky top-0 bg-[#F8FCFF] h-full border border-[#EAEFF5]`
+    },
+    props.rightStickyElement
+  )))));
 }
 
 // src/new-design/NDTemplateOnboarding.tsx

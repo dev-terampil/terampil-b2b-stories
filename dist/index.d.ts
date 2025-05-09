@@ -140,6 +140,7 @@ declare function NDSidebar(props: NDSidebarProps): React.JSX.Element;
 interface NDTemplateProps {
     active: NDSidebarOptions;
     children?: any;
+    rightStickyElement?: JSX.Element;
 }
 declare function NDTemplate(props: NDTemplateProps): React.JSX.Element;
 

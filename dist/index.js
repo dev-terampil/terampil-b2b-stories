@@ -664,7 +664,7 @@ function NDBDoughnutChart(props) {
   const stroke_ratio = (_a = props.strokeRatio) != null ? _a : 0.5;
   const inner_radius_1 = props.r - props.stroke * stroke_ratio;
   const inner_radius_2 = props.r - props.stroke;
-  const linear_gd_id = "idx";
+  const linear_gd_id = _react.useId.call(void 0, );
   let d1_bg = (_b = props.d1BackgroundColor) != null ? _b : "#CCC";
   let d2_bg_g1 = (_c = props.d2BackgroundColorG1) != null ? _c : "#01E400";
   let d2_bg_g2 = (_d = props.d2BackgroundColorG1) != null ? _d : "#FEFF01";

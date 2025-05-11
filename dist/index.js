@@ -1484,17 +1484,20 @@ function GeneralFormCard(props) {
     ))),
     props.children,
     /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-end gap-[12px] bg-[#F9FAFB] p-[12px_20px]` }, /* @__PURE__ */ _react2.default.createElement(
-      "button",
+      Button,
       {
-        onClick: props.onCancel,
-        className: `outline-none bg-transparent rounded-[8px] text-[14px] p-[8px_24px] text-[#A1AFC0]`
+        smaller: true,
+        className: `!outline-none !bg-transparent !rounded-[8px] !text-[14px] !p-[8px_24px] !text-[#A1AFC0]`,
+        onClick: props.onCancel
       },
       "Cancel"
     ), /* @__PURE__ */ _react2.default.createElement(
-      "button",
+      Button,
       {
-        onClick: props.onSave,
-        className: `outline-none bg-[#0066B9] text-white rounded-[8px] text-[14px] p-[8px_24px]`
+        smaller: true,
+        className: `!outline-none !bg-[#0066B9] !text-white !rounded-[8px] !text-[14px] !p-[8px_24px]`,
+        loading: props.loadingSave,
+        onClick: props.onSave
       },
       "Save"
     ))
@@ -2192,7 +2195,7 @@ function OKRTreeNode(props) {
 // src/new-design/general/OrganizationTree.tsx
 
 function OrganizationTree(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-[1.5px] border-[#EAEFF5] bg-[#F9FAFB] flex flex-col rounded-[12px] flex flex-col items-center justify-center w-full h-full min-w-full min-h-full font-[Poppins] overflow-auto` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0"), /* @__PURE__ */ _react2.default.createElement(TreeView, { childs: [] }), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0")), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }));
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-[1.5px] border-[#EAEFF5] bg-[#F9FAFB] flex flex-col rounded-[12px] flex flex-col items-center justify-center w-full h-full min-w-full min-h-full font-[Poppins] overflow-auto` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0"), /* @__PURE__ */ _react2.default.createElement(TreeView, { childs: [1, 2] }), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0")), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }));
 }
 function TreeCard(props) {
   return /* @__PURE__ */ _react2.default.createElement(
@@ -2330,7 +2333,21 @@ function SuccessModal(props) {
 // src/new-design/general/TableActions.tsx
 
 function TableActions(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-3` }, /* @__PURE__ */ _react2.default.createElement("img", { className: `w-4 object-contain`, src: EditSVG }), /* @__PURE__ */ _react2.default.createElement("img", { className: `w-4 object-contain`, src: TrashSVG }));
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-3` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onEdit,
+      className: `w-4 object-contain`,
+      src: EditSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onDelete,
+      className: `w-4 object-contain`,
+      src: TrashSVG
+    }
+  ));
 }
 
 // src/new-design/general/TablePagination.tsx

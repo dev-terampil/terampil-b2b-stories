@@ -223,6 +223,7 @@ interface GeneralFormCardProps extends HTMLAttributes<HTMLDivElement> {
     title: string;
     onCancel?(): void;
     onSave?(): void;
+    loadingSave?: boolean;
 }
 declare function GeneralFormCard(props: GeneralFormCardProps): React.JSX.Element;
 
@@ -342,6 +343,8 @@ interface SuccessModalProps extends HTMLAttributes<HTMLDivElement> {
 declare function SuccessModal(props: SuccessModalProps): React.JSX.Element;
 
 interface TableActionsProps {
+    onEdit?(): void;
+    onDelete?(): void;
 }
 declare function TableActions(props: TableActionsProps): React.JSX.Element;
 

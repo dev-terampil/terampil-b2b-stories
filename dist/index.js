@@ -2337,14 +2337,14 @@ function TableActions(props) {
     "img",
     {
       onClick: props.onEdit,
-      className: `w-4 object-contain`,
+      className: `w-4 object-contain cursor-pointer`,
       src: EditSVG
     }
   ), /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
       onClick: props.onDelete,
-      className: `w-4 object-contain`,
+      className: `w-4 object-contain cursor-pointer`,
       src: TrashSVG
     }
   ));

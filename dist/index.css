@@ -2591,6 +2591,7 @@ div.table table thead > tr th {
   color: #0066B9;
   padding: 8px 12px;
   text-align: left;
+  white-space: nowrap;
 }
 div.first-checkbox table thead > tr th:first-child {
   width: 42px;

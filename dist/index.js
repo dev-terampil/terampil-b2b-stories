@@ -1487,7 +1487,7 @@ function GeneralFormCard(props) {
       Button,
       {
         smaller: true,
-        className: `!outline-none !bg-transparent !rounded-[8px] !text-[14px] !p-[8px_24px] !text-[#A1AFC0]`,
+        className: `!outline-none !bg-transparent !rounded-[8px] !border-transparent !text-[14px] !p-[8px_24px] !text-[#A1AFC0]`,
         onClick: props.onCancel
       },
       "Cancel"

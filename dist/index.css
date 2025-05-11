@@ -1196,9 +1196,6 @@ video {
 .whitespace-nowrap {
   white-space: nowrap;
 }
-.\!rounded-\[8px\] {
-  border-radius: 8px !important;
-}
 .\!rounded-\[9px\] {
   border-radius: 9px !important;
 }

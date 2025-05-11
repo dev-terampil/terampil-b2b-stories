@@ -292,7 +292,7 @@ function Button(props) {
         className: `relative border border-px border-[#0066B9] text-white bg-[#0066B9] rounded-[10px] text-[13px] p-[8px_28px] font-[Poppins] ${props.className || ""}`
       }),
       props.children,
-      props.loading && /* @__PURE__ */ _react2.default.createElement("div", { className: `absolute bg-white flex items-center justify-center w-full h-full left-0 top-0 bg-[#FFFD] rounded-full` }, /* @__PURE__ */ _react2.default.createElement("div", { className: "tloading" }))
+      props.loading && /* @__PURE__ */ _react2.default.createElement("div", { className: `absolute bg-white flex items-center justify-center w-full h-full left-0 top-0 bg-[#FFFD] rounded-[10px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: "tloading" }))
     );
   }
   return /* @__PURE__ */ _react2.default.createElement(

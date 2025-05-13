@@ -332,7 +332,8 @@ function NDNavbarOnboardingOKR(props) {
     Button,
     {
       onClick: props.onSave,
-      smaller: true
+      smaller: true,
+      loading: props.loadingSave
     },
     "Save"
   )));

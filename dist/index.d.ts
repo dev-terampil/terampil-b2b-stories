@@ -120,6 +120,7 @@ interface NDNavbarOnboardingOKRProps {
     onBack?(): void;
     onCancel?(): void;
     onSave?(): void;
+    loadingSave?: boolean;
 }
 declare function NDNavbarOnboardingOKR(props: NDNavbarOnboardingOKRProps): React.JSX.Element;
 

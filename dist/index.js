@@ -2196,7 +2196,7 @@ function OKRTreeNode(props) {
 // src/new-design/general/OrganizationTree.tsx
 
 function OrganizationTree(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-[1.5px] border-[#EAEFF5] bg-[#F9FAFB] flex flex-col rounded-[12px] flex flex-col items-center justify-center w-full h-full min-w-full min-h-full font-[Poppins] overflow-auto` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0"), /* @__PURE__ */ _react2.default.createElement(TreeView, { childs: [1, 2] }), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0")), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }));
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-[1.5px] border-[#EAEFF5] bg-[#F9FAFB] flex flex-col rounded-[12px] flex flex-col items-center justify-center w-full h-full min-w-full min-h-full font-[Poppins] overflow-auto` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0"), /* @__PURE__ */ _react2.default.createElement(TreeView, { data: props.root }), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-w-[24px] w-[24px] h-full` }, "\xA0")), /* @__PURE__ */ _react2.default.createElement("div", { className: `min-h-[24px] h-[24px] w-full` }));
 }
 function TreeCard(props) {
   return /* @__PURE__ */ _react2.default.createElement(
@@ -2209,9 +2209,9 @@ function TreeCard(props) {
       "img",
       {
         className: `w-[36px] h-[36px] object-cover rounded-full`,
-        src: "https://img.freepik.com/free-photo/lifestyle-people-office_23-2149173736.jpg?semt=ais_hybrid&w=740"
+        src: props.data.photo
       }
-    ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Budi"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] font-light text-[14px] mt-[-2px]` }, "Managing Director"))),
+    ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, props.data.name), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] font-light text-[14px] mt-[-2px]` }, props.data.title))),
     /* @__PURE__ */ _react2.default.createElement(
       "div",
       {
@@ -2233,16 +2233,22 @@ function TreeView(props) {
     vertical_height: 25,
     line_stroke: 2
   };
-  const total_children = (_b = (_a = props.childs) == null ? void 0 : _a.length) != null ? _b : 0;
+  const total_children = (_b = (_a = props.data.childs) == null ? void 0 : _a.length) != null ? _b : 0;
   const horizontal_width = total_children === 0 ? 0 : (total_children - 1) * (config.card_width + config.card_spaces);
   return /* @__PURE__ */ _react2.default.createElement(
     "div",
     {
-      "data-x": JSON.stringify({ level: (_c = props.level) != null ? _c : 0, total_c: (_e = (_d = props.childs) == null ? void 0 : _d.length) != null ? _e : 0 }),
+      "data-x": JSON.stringify({ level: (_c = props.data.level) != null ? _c : 0, total_c: (_e = (_d = props.data.childs) == null ? void 0 : _d.length) != null ? _e : 0 }),
       className: `flex flex-col items-center`
     },
-    /* @__PURE__ */ _react2.default.createElement(TreeCard, { w: config.card_width }),
-    props.childs && ((_g = (_f = props.childs) == null ? void 0 : _f.length) != null ? _g : 0) > 0 && /* @__PURE__ */ _react2.default.createElement(_react2.default.Fragment, null, /* @__PURE__ */ _react2.default.createElement("div", { style: {
+    /* @__PURE__ */ _react2.default.createElement(
+      TreeCard,
+      {
+        data: props.data,
+        w: config.card_width
+      }
+    ),
+    props.data.childs && ((_g = (_f = props.data.childs) == null ? void 0 : _f.length) != null ? _g : 0) > 0 && /* @__PURE__ */ _react2.default.createElement(_react2.default.Fragment, null, /* @__PURE__ */ _react2.default.createElement("div", { style: {
       height: config.vertical_height * 2 + config.line_stroke,
       minHeight: config.vertical_height * 2 + config.line_stroke,
       width: "100%"
@@ -2254,12 +2260,14 @@ function TreeView(props) {
         },
         className: `flex`
       },
-      props.childs.map((_2, x) => {
+      props.data.childs.map((tv_data, x) => {
         var _a2;
         return /* @__PURE__ */ _react2.default.createElement(
           TreeView,
           {
-            level: ((_a2 = props.level) != null ? _a2 : 0) + 1,
+            data: __spreadProps(__spreadValues({}, tv_data), {
+              level: ((_a2 = props.data.level) != null ? _a2 : 0) + 1
+            }),
             key: x
           }
         );

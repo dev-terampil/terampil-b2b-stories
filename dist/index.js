@@ -1597,7 +1597,7 @@ function InputTextarea(props) {
 // src/new-design/general/KeyResultCard.tsx
 
 function KeyResultCard(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `overflow-hidden relative border border-[1.5px] border-[#EAEFF5] bg-[#F6FBFF] p-[12px_18px] rounded-[8px] border-l-0 flex flex-col gap-2 font-[Poppins]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#0066B9] w-[4px] absolute top-0 left-0 h-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Improve the quality or system products"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `overflow-hidden relative border border-[1.5px] border-[#EAEFF5] bg-[#F6FBFF] p-[12px_18px] rounded-[8px] border-l-0 flex flex-col gap-2 font-[Poppins]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#0066B9] w-[4px] absolute top-0 left-0 h-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, props.title), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
       onClick: props.onEdit,
@@ -1612,10 +1612,10 @@ function KeyResultCard(props) {
       src: TrashSVG
     }
   ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `grid grid-cols-2 gap-2` }, [
-    ["Period", "Monthly"],
-    ["Target", "Rp. 5.000.000.000"],
-    ["Division", "Sales"],
-    ["Target/Period", "Rp. 1.000.000.000"],
+    ["Period", props.period],
+    ["Target", props.target],
+    ["Division", props.division],
+    ["Target/Period", props.targetPeriod],
     ["Competency List", "-"],
     ["Early Warning", "Active Set"]
   ].map(([label, value], i) => /* @__PURE__ */ _react2.default.createElement(

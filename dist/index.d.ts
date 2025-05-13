@@ -267,6 +267,11 @@ declare function InputText(props: InputTextProps): React.JSX.Element;
 interface KeyResultCardProps {
     onEdit?(): void;
     onDelete?(): void;
+    title: string;
+    period: string;
+    target: string;
+    division: string;
+    targetPeriod: string;
 }
 declare function KeyResultCard(props: KeyResultCardProps): React.JSX.Element;
 

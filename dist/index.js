@@ -2433,16 +2433,16 @@ function VerticalStep(props) {
       "List data location"
     ],
     [
-      "Organization Structure",
-      "Detail organizations structure"
-    ],
-    [
       "Job Profile",
       "List data job profile"
     ],
     [
       "Employee",
       "List data employee"
+    ],
+    [
+      "Organization Structure",
+      "Detail organizations structure"
     ]
   ];
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-[2px] font-[Poppins]` }, list_item.map(([label, desc], i) => {

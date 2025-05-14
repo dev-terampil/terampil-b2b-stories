@@ -2726,7 +2726,7 @@ function KeyResultSideCard(props) {
     "div",
     {
       onClick: props.onApprove,
-      className: `text-[#0066B9] border-t border-t-[2px] border-t-[#F1F5F9] text-center p-2 text-[14px] font-medium`
+      className: `text-[#0066B9] border-t border-t-[2px] border-t-[#F1F5F9] text-center p-2 text-[14px] font-medium cursor-pointer`
     },
     "Approve"
   ));

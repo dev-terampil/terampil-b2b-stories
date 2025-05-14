@@ -2725,31 +2725,45 @@ var CloseWhiteSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iM
 
 // src/new-design/general/SubmitKRModal.tsx
 function SubmitKRModal(props) {
+  var _a;
   const input_ref = _react.useRef.call(void 0, null);
   const [file, setFile] = _react.useState.call(void 0, null);
   function inputFileChange(e) {
     if (e.target.files && e.target.files.length > 0) {
       setFile(e.target.files[0]);
+      props.onEvidenceChange(e.target.files[0]);
     }
   }
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white overflow-hidden rounded-[12px] shadow-[0px_1px_15px_1px_rgba(0,0,0,.1)] flex flex-col font-[Poppins] text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_16px] flex flex-col gap-2 bg-white` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between mb-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Submit Key Result"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-red-500 text-[13px]` }, "Clear")), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Achievement` }, /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white overflow-hidden rounded-[12px] shadow-[0px_1px_15px_1px_rgba(0,0,0,.1)] flex flex-col font-[Poppins] text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_16px] flex flex-col gap-2 bg-white` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between mb-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Submit Key Result"), /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      onClick: props.onClear,
+      className: `text-red-500 text-[13px] cursor-pointer`
+    },
+    "Clear"
+  )), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Achievement` }, /* @__PURE__ */ _react2.default.createElement(
     InputText,
     {
+      value: props.value,
+      onChange: (e) => {
+        var _a2;
+        return props.onValueChange(+((_a2 = e.target.value) != null ? _a2 : ""));
+      },
       placeholder: `Input Data`,
       type: "number"
     }
-  )), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Evidence` }, !file && /* @__PURE__ */ _react2.default.createElement(
+  )), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Evidence` }, !(file || props.evidence) && /* @__PURE__ */ _react2.default.createElement(
     Button,
     {
       onClick: () => {
-        var _a;
-        return (_a = input_ref.current) == null ? void 0 : _a.click();
+        var _a2;
+        return (_a2 = input_ref.current) == null ? void 0 : _a2.click();
       },
       className: `border border-[1.5px] !border-[#0066B9] !text-[#0066B9] !bg-transparent !rounded-[9px] font-medium !h-[40px]`,
       smaller: true
     },
     "Select File"
-  ), file && /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[40px] bg-[#0066B9] flex items-center justify-between rounded-[9px] px-4 gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-white text-[13px] font-medium whitespace-nowrap truncate flex-1 w-0` }, file.name), /* @__PURE__ */ _react2.default.createElement(
+  ), (file || props.evidence) && /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[40px] bg-[#0066B9] flex items-center justify-between rounded-[9px] px-4 gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-white text-[13px] font-medium whitespace-nowrap truncate flex-1 w-0` }, (_a = file == null ? void 0 : file.name) != null ? _a : props.evidence), props.loadingUpload && /* @__PURE__ */ _react2.default.createElement("div", { className: `tloading` }), !props.loadingUpload && /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
       onClick: () => setFile(null),
@@ -2768,14 +2782,17 @@ function SubmitKRModal(props) {
     Button,
     {
       className: `border border-[1.5px] !border-transparent !text-[#A1AFC0] !bg-transparent !p-[5px_16px] font-medium`,
-      smaller: true
+      smaller: true,
+      onClick: props.onCancel
     },
     "Cancel"
   ), /* @__PURE__ */ _react2.default.createElement(
     Button,
     {
       className: `border border-[1.5px] !border-[#0066B9] !text-[#0066B9] !bg-transparent !p-[5px_16px] !rounded-[9px]`,
-      smaller: true
+      smaller: true,
+      loading: props.loadingSubmit,
+      onClick: props.onSubmit
     },
     "Submit"
   )));

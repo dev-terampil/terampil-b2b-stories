@@ -482,6 +482,15 @@ interface TaskSideCardProps {
 declare function TaskSideCard(props: TaskSideCardProps): React.JSX.Element;
 
 interface SubmitKRModalProps {
+    value: number;
+    evidence?: string;
+    onValueChange(val: number): void;
+    onEvidenceChange(file: File): void;
+    onClear?(): void;
+    onCancel?(): void;
+    onSubmit?(): void;
+    loadingSubmit?: boolean;
+    loadingUpload?: boolean;
 }
 declare function SubmitKRModal(props: SubmitKRModalProps): React.JSX.Element;
 

@@ -610,7 +610,7 @@ function NDTemplate(props) {
     "div",
     {
       ref: right_sticky,
-      className: `sticky top-0 bg-[#F8FCFF] h-full overflow-y-auto border border-[#EAEFF5]`
+      className: `sticky top-0 bg-[#F8FCFF] h-full z-[99999] overflow-y-auto border border-[#EAEFF5]`
     },
     props.rightStickyElement
   )))));

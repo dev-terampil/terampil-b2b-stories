@@ -485,7 +485,7 @@ interface SubmitKRModalProps {
     value: number;
     evidence?: string;
     onValueChange(val: number): void;
-    onEvidenceChange(file: File): void;
+    onEvidenceChange(file: File | null): void;
     onClear?(): void;
     onCancel?(): void;
     onSubmit?(): void;

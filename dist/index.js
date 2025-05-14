@@ -2763,7 +2763,10 @@ function SubmitKRModal(props) {
   ), (file || props.evidence) && /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[40px] bg-[#0066B9] flex items-center justify-between rounded-[9px] px-4 gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-white text-[13px] font-medium whitespace-nowrap truncate flex-1 w-0` }, (_a = file == null ? void 0 : file.name) != null ? _a : props.evidence), props.loadingUpload && /* @__PURE__ */ _react2.default.createElement("div", { className: `tloading` }), !props.loadingUpload && /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
-      onClick: () => setFile(null),
+      onClick: () => {
+        setFile(null);
+        props.onEvidenceChange(null);
+      },
       className: `w-[16px] h-[16px] object-contain cursor-pointer`,
       src: CloseWhiteSVG
     }

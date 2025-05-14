@@ -230,14 +230,15 @@ function SideOKRCard(props) {
 
 var _lucidereact = require('lucide-react');
 function NDNavbar() {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-3 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins']" }, "B2B Platform"), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center w-[400px] px-4 py-2 bg-[#F9FAFB] rounded-full" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Search, { className: "text-gray-400 w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement(
-    "input",
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-3 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins']" }, "B2B Platform"), /* @__PURE__ */ _react2.default.createElement(
+    "a",
     {
-      type: "text",
-      placeholder: "Ask Terampil Intelligence",
-      className: "font-['Poppins'] ml-2 w-full bg-transparent outline-none text-gray-600 placeholder-gray-400 text-[12px] font-light"
-    }
-  )), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4" }, /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.ClipboardList, { className: "text-[#0066B9] w-5 h-5" })), /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Bell, { className: "text-[#0066B9] w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement("span", { className: "absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" })), /* @__PURE__ */ _react2.default.createElement(
+      href: "/assistant",
+      className: "flex items-center w-[400px] px-4 py-2 bg-[#F9FAFB] rounded-full cursor-pointer"
+    },
+    /* @__PURE__ */ _react2.default.createElement(_lucidereact.Search, { className: "text-gray-400 w-5 h-5" }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: "font-['Poppins'] ml-2 w-full bg-transparent outline-none text-gray-600 placeholder-gray-400 text-[12px] font-light" }, "Ask Terampil Intelligence")
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4" }, /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.ClipboardList, { className: "text-[#0066B9] w-5 h-5" })), /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Bell, { className: "text-[#0066B9] w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement("span", { className: "absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" })), /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
       src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",

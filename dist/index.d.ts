@@ -476,6 +476,12 @@ interface AgendaSideCardProps {
 declare function AgendaSideCard(props: AgendaSideCardProps): React.JSX.Element;
 
 interface KeyResultSideCardProps {
+    employeePhoto?: string;
+    employeeName: string;
+    krTitle: string;
+    file_url: string;
+    submissionDate: string;
+    onApprove?(): void;
 }
 declare function KeyResultSideCard(props: KeyResultSideCardProps): React.JSX.Element;
 

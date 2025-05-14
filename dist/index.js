@@ -2710,7 +2710,26 @@ function AgendaSideCard(props) {
 // src/new-design/general/KeyResultSideCard.tsx
 
 function KeyResultSideCard(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white rounded-[12px] border border-[2px] border-[#F1F5F9] font-[Poppins] flex flex-col overflow-hidden` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_18px] flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium text-[14px]` }, "Increase Product A Revenue"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-0 text-[14px]` }, "Meeting with internal team - Discuss Sales Target"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[13px]` }, "09:00 - 10:00, 10 Des 2024"), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#FF4343] bg-[#FFEFEF] rounded-[6px] p-[4px_9px] text-[#FF4343] font-medium text-[13px]` }, "Behind"))), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] border-t border-t-[2px] border-t-[#F1F5F9] text-center p-2 text-[14px] font-medium` }, "Approve"));
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white rounded-[12px] border border-[2px] border-[#F1F5F9] font-[Poppins] flex flex-col overflow-hidden` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_18px] flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2` }, props.employeePhoto && /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[36px] h-[36px] object-cover rounded-full`,
+      src: props.employeePhoto
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium text-[14px]` }, props.employeeName)), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-0 text-[14px]` }, props.krTitle), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[13px]` }, props.submissionDate), /* @__PURE__ */ _react2.default.createElement("a", { href: props.file_url, download: true }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[14px] h-[14px] object-contain`,
+      src: DownloadSVG
+    }
+  )))), /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    {
+      onClick: props.onApprove,
+      className: `text-[#0066B9] border-t border-t-[2px] border-t-[#F1F5F9] text-center p-2 text-[14px] font-medium`
+    },
+    "Approve"
+  ));
 }
 
 // src/new-design/general/TaskSideCard.tsx

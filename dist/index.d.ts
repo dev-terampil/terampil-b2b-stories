@@ -297,7 +297,8 @@ interface MyOKRAccordionCardData {
     weight: number;
     progress: number;
     list_key_result: {
-        id: string;
+        id_objective: number;
+        id_key_result: number;
         name: string;
         target: string;
         period: string;
@@ -310,9 +311,9 @@ interface MyOKRAccordionCardData {
 interface MyOKRContextMenuData {
     x: number;
     y: number;
-    id_objective?: string;
-    id_key_result?: string;
-    type: 'objective' | 'none';
+    id_objective?: number;
+    id_key_result?: number;
+    type: 'key-result' | 'none';
 }
 interface MyOKRAccordionCardProps {
     data: MyOKRAccordionCardData;

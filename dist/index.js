@@ -1904,7 +1904,9 @@ function MyOKRAccordionCard(props) {
             setCM({
               x: e.pageX,
               y: e.pageY,
-              type: "objective"
+              type: "key-result",
+              id_objective: item.id_objective,
+              id_key_result: item.id_key_result
             });
           },
           className: `h-[20px] w-[20px] object-contain cursor-pointer`,

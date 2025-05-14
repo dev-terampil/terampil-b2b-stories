@@ -353,6 +353,64 @@ function NDNavbarGeneral(props) {
   ), props.leftItem), props.rightItem);
 }
 
+// src/new-design/NDNavbarAssistant.tsx
+
+
+
+// src/new-design/b64-images/ShareSVG.ts
+var ShareSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIHZpZXdCb3g9IjAgMCAxNCAxNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM5OV81NDIwMykiPgo8cGF0aCBkPSJNOC40IDUuNDAwMzNDNy4wNzY1NyA1LjQwMDMzIDYgNC4zMjM5MSA2IDMuMDAwOTVDNiAxLjY3Nzk4IDcuMDc2NTUgMC42MDE1NjIgOC40IDAuNjAxNTYyQzkuNzIzNDUgMC42MDE1NjIgMTAuOCAxLjY3Nzk4IDEwLjggMy4wMDA5NUMxMC44IDQuMzIzOTEgOS43MjM0MyA1LjQwMDMzIDguNCA1LjQwMDMzWk04LjQgMS42Njc5NUM3LjY2NDg0IDEuNjY3OTUgNy4wNjY2NiAyLjI2NTk4IDcuMDY2NjYgMy4wMDA5NUM3LjA2NjY2IDMuNzM1OTIgNy42NjQ4NCA0LjMzMzk1IDguNCA0LjMzMzk1QzkuMTM1MTYgNC4zMzM5NSA5LjczMzM0IDMuNzM1OTIgOS43MzMzNCAzLjAwMDk1QzkuNzMzMzQgMi4yNjU5OCA5LjEzNTE2IDEuNjY3OTUgOC40IDEuNjY3OTVaTTExLjYgMTMuMzk4NEMxMC4yNzY2IDEzLjM5ODQgOS4yIDEyLjMyMiA5LjIgMTAuOTk4OUM5LjIgOS42NzU5NiAxMC4yNzY2IDguNTk5NTQgMTEuNiA4LjU5OTU0QzEyLjkyMzQgOC41OTk1NCAxNCA5LjY3NTk0IDE0IDEwLjk5ODlDMTQgMTIuMzIyIDEyLjkyMzQgMTMuMzk4NCAxMS42IDEzLjM5ODRaTTExLjYgOS42NjU5MkMxMC44NjQ4IDkuNjY1OTIgMTAuMjY2NyAxMC4yNjQgMTAuMjY2NyAxMC45OTg5QzEwLjI2NjcgMTEuNzM0IDEwLjg2NDggMTIuMzMyMSAxMS42IDEyLjMzMjFDMTIuMzM1MiAxMi4zMzIxIDEyLjkzMzMgMTEuNzM0IDEyLjkzMzMgMTAuOTk4OUMxMi45MzMzIDEwLjI2NCAxMi4zMzUyIDkuNjY1OTIgMTEuNiA5LjY2NTkyWiIgZmlsbD0iIzAwNjZCOSIvPgo8cGF0aCBkPSJNMy41OTk5OCA4LjA2NjI0QzMuNDU2MjIgOC4wNjYyNCAzLjMxMyA4LjAwODU3IDMuMjA3NzkgNy44OTQ2N0MzLjAwODA1IDcuNjc4MzEgMy4wMjE1OSA3LjM0MTAzIDMuMjM4IDcuMTQxMjJMNi43MDQ2NyAzLjk0MjAzQzYuOTIxMzQgMy43NDIzNCA3LjI1ODU4IDMuNzU2MTUgNy40NTgzMiAzLjk3MjIzQzcuNjU4MDUgNC4xODg1OSA3LjY0NDUyIDQuNTI1ODcgNy40MjgxMSA0LjcyNTY5TDMuOTYxNDMgNy45MjQ4N0MzLjg2MzA4IDguMDE1ODcgMy43MzM5OCA4LjA2NjM2IDMuNTk5OTggOC4wNjYyNFpNOS43MzM1NyAxMS41MzIyQzkuNjg5NzcgMTEuNTMyMSA5LjY0NjEzIDExLjUyNjggOS42MDM2MiAxMS41MTYyTDQuMjcwMjkgMTAuMTgzMkMzLjk4NDYyIDEwLjExMTcgMy44MTA5MSA5LjgyMjE4IDMuODgyMjcgOS41MzY1OEMzLjk1Mzg4IDkuMjUwNTggNC4yNDM3MiA5LjA3ODEgNC41MjkxNSA5LjE0ODUzTDkuODYyNDggMTAuNDgxNUMxMC4xNDgyIDEwLjU1MyAxMC4zMjE5IDEwLjg0MjUgMTAuMjUwNSAxMS4xMjgxQzEwLjE4OTggMTEuMzcwNSA5Ljk3MjM3IDExLjUzMjIgOS43MzM1NyAxMS41MzIyWiIgZmlsbD0iIzAwNjZCOSIvPgo8cGF0aCBkPSJNMi41MzMzMyAxMS42NjVDMS4xMzY0NiAxMS42NjUgMCAxMC41Mjg4IDAgOS4xMzIzQzAgNy43MzU3OCAxLjEzNjQ2IDYuNTk5NjEgMi41MzMzMyA2LjU5OTYxQzMuOTMwMiA2LjU5OTYxIDUuMDY2NjYgNy43MzU3OCA1LjA2NjY2IDkuMTMyM0M1LjA2NjY2IDEwLjUyODggMy45MzAyIDExLjY2NSAyLjUzMzMzIDExLjY2NVpNMi41MzMzMyA3LjkzMjU5QzEuODcxNjIgNy45MzI1OSAxLjMzMzMyIDguNDcwNzMgMS4zMzMzMiA5LjEzMjNDMS4zMzMzMiA5Ljc5Mzg2IDEuODcxNiAxMC4zMzIgMi41MzMzMyAxMC4zMzJDMy4xOTUwNiAxMC4zMzIgMy43MzMzNCA5Ljc5Mzg2IDMuNzMzMzQgOS4xMzIzQzMuNzMzMzQgOC40NzA3MyAzLjE5NTA1IDcuOTMyNTkgMi41MzMzMyA3LjkzMjU5WiIgZmlsbD0iIzAwNjZCOSIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzM5OV81NDIwMyI+CjxyZWN0IHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgZmlsbD0id2hpdGUiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K";
+
+// src/new-design/NDNavbarAssistant.tsx
+function NDNavbarAssistant(props) {
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-4 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins'] flex items-center gap-4" }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: props.onClose,
+      className: `w-[30px] h-[30px] object-contain cursor-pointer`,
+      src: CloseOutlineSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[40px] h-[40px] object-contain`,
+      src: LogoSingleSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[28px] w-[2px] bg-[#EAEFF5]` }), /* @__PURE__ */ _react2.default.createElement("span", null, "Terampil Intelligence")), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center gap-8 font-[Poppins]" }), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4" }, /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      className: `!bg-transparent !border-[#0066B9] !text-[#0066B9] !px-4 !border-[1.5px]`,
+      smaller: true
+    },
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        className: `w-[13px] h-[13px] object-contain`,
+        src: ShareSVG
+      }
+    ), /* @__PURE__ */ _react2.default.createElement("div", null, "Share"))
+  ), /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      className: `!bg-transparent !border-[#0066B9] !text-[#0066B9] !px-4 !border-[1.5px]`,
+      smaller: true
+    },
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2` }, /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        className: `w-[13px] h-[13px] object-contain`,
+        src: DownloadSVG
+      }
+    ), /* @__PURE__ */ _react2.default.createElement("div", null, "Download"))
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[28px] w-[2px] bg-[#EAEFF5]` }), /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Bell, { className: "text-[#0066B9] w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement("span", { className: "absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" })), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
+      alt: "Avatar",
+      className: "w-8 h-8 rounded-full object-cover"
+    }
+  )));
+}
+
 // src/new-design/NDSidebar.tsx
 
 function NDSidebar(props) {
@@ -592,6 +650,18 @@ function NDTemplateGeneral(props) {
       className: `flex bg-white min-h-screen ${props.className || ""}`
     }),
     /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0  z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarGeneral, __spreadValues({}, props.navbar))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-1 h-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 w-0 overflow-auto` }, props.children)))
+  );
+}
+
+// src/new-design/NDTemplateAssistant.tsx
+
+function NDTemplateAssistant(props) {
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      className: `flex bg-white min-h-screen ${props.className || ""}`
+    }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0 z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarAssistant, __spreadValues({}, props.navbar))), props.children)
   );
 }
 
@@ -2581,6 +2651,53 @@ function ImageUploader(props) {
   );
 }
 
+// src/new-design/general/PromptInputAssistant.tsx
+
+
+// src/new-design/b64-images/SendSVG.ts
+var SendSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzgiIGhlaWdodD0iMzgiIHZpZXdCb3g9IjAgMCAzOCAzOCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjM4IiBoZWlnaHQ9IjM4IiByeD0iMTkiIGZpbGw9IiMwMDY2QjkiLz4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzM5OV81NDE4MSkiPgo8cGF0aCBkPSJNMTEuMTkzMiAxMy45NjAyTDEzLjEyMjMgMTguMTI0MUMxMy4yNDk1IDE4LjM5ODUgMTMuMzE1MyAxOC42OTczIDEzLjMxNTMgMTguOTk5N0MxMy4zMTUzIDE5LjMwMjIgMTMuMjQ5NSAxOS42MDEgMTMuMTIyMyAxOS44NzU0TDExLjE5MzIgMjQuMDM5MkMxMS4wMTE4IDI0LjQzMTYgMTAuOTU2NyAyNC44NzA3IDExLjAzNTYgMjUuMjk1OEMxMS4xMTQ2IDI1LjcyMDggMTEuMzIzNyAyNi4xMTA4IDExLjYzMzkgMjYuNDExOEMxMS45NDQyIDI2LjcxMjggMTIuMzQwMyAyNi45MDk4IDEyLjc2NzQgMjYuOTc1N0MxMy4xOTQ1IDI3LjA0MTUgMTMuNjMxNiAyNi45NzI5IDE0LjAxOCAyNi43Nzk0TDI1Ljg0NjEgMjAuODY3NUMyNi4xOTI4IDIwLjY5NDEgMjYuNDg0NCAyMC40Mjc2IDI2LjY4ODIgMjAuMDk3OEMyNi44OTIgMTkuNzY4IDI3IDE5LjM4NzkgMjcgMTkuMDAwMUMyNyAxOC42MTI0IDI2Ljg5MiAxOC4yMzIzIDI2LjY4ODIgMTcuOTAyNUMyNi40ODQ0IDE3LjU3MjcgMjYuMTkyOCAxNy4zMDYxIDI1Ljg0NjEgMTcuMTMyOEwxNC4wMTggMTEuMjIwOUMxMy42MzE2IDExLjAyNzIgMTMuMTk0NiAxMC45NTg1IDEyLjc2NzQgMTEuMDI0MkMxMi4zNDAzIDExLjA5IDExLjk0NDEgMTEuMjg2OSAxMS42MzM4IDExLjU4NzhDMTEuMzIzNCAxMS44ODg3IDExLjExNDMgMTIuMjc4NiAxMS4wMzUyIDEyLjcwMzdDMTAuOTU2MSAxMy4xMjg3IDExLjAxMTEgMTMuNTY3OCAxMS4xOTI0IDEzLjk2MDJIMTEuMTkzMloiIGZpbGw9IndoaXRlIi8+CjxyZWN0IHg9IjExIiB5PSIxOCIgd2lkdGg9IjYiIGhlaWdodD0iMiIgcng9IjEiIGZpbGw9IiMwMDY2QjkiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8zOTlfNTQxODEiPgo8cmVjdCB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIGZpbGw9IndoaXRlIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMSAxMSkiLz4KPC9jbGlwUGF0aD4KPC9kZWZzPgo8L3N2Zz4K";
+
+// src/new-design/general/PromptInputAssistant.tsx
+function PromptInputAssistant(props) {
+  var _a, _b;
+  const textAreaRef = _react.useRef.call(void 0, null);
+  useAutosizeTextArea(textAreaRef.current, (_a = props.value) != null ? _a : "");
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center relative rounded-[25px] overflow-hidden` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `h-[32px] w-[32px] object-contain absolute right-[10px] top-[9px] z-[2] cursor-pointer`,
+      onClick: () => {
+        props.onSubmit && props.onSubmit();
+      },
+      src: SendSVG
+    }
+  ), /* @__PURE__ */ _react2.default.createElement(
+    "textarea",
+    __spreadProps(__spreadValues({}, props), {
+      rows: 1,
+      ref: textAreaRef,
+      placeholder: (_b = props.placeholder) != null ? _b : `Type anything here...`,
+      onKeyDown: (e) => {
+        if (e.key == "Enter" && !e.shiftKey) {
+          e.stopPropagation();
+          e.preventDefault();
+          props.onSubmit && props.onSubmit();
+        }
+      },
+      className: `w-full min-h-[50px] bg-[#F3F5F7] rounded-[25px] p-[12px_32px] pt-[11px] pr-[56px] outline-none border border-[2px] border-transparent no-scrollbar focus:border-[#60AFEF] font-[Poppins] z-1 ${props.className || ""}`
+    })
+  ));
+}
+var useAutosizeTextArea = (textAreaRef, value) => {
+  _react.useEffect.call(void 0, () => {
+    if (textAreaRef) {
+      textAreaRef.style.height = "0px";
+      const scrollHeight = textAreaRef.scrollHeight;
+      textAreaRef.style.height = scrollHeight + "px";
+    }
+  }, [textAreaRef, value]);
+};
+
 // src/new-design/onboarding/CompanyTemplate.tsx
 
 function CompanyTemplate(props) {
@@ -3461,5 +3578,8 @@ function NDBYouVsTeam(props) {
 
 
 
-exports.AddCircleSVG = AddCircleSVG; exports.AgendaCard = AgendaCard; exports.BackSVG = BackSVG; exports.BgCardBotRigSVG = BgCardBotRigSVG; exports.BudgetCard = BudgetCard; exports.Button = Button; exports.CascadeSVG = CascadeSVG; exports.CascadeTreeSVG = CascadeTreeSVG; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DIcon1SVG = DIcon1SVG; exports.DIcon2SVG = DIcon2SVG; exports.DIcon3SVG = DIcon3SVG; exports.DIcon4SVG = DIcon4SVG; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DetailDocumentSVG = DetailDocumentSVG; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.DoubleCoinSVG = DoubleCoinSVG; exports.DownloadSVG = DownloadSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.FemaleSVG = FemaleSVG; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.IconBoxGenBSVG = IconBoxGenBSVG; exports.IconBoxGenMSVG = IconBoxGenMSVG; exports.IconBoxGenZSVG = IconBoxGenZSVG; exports.IconBoxGlobeSVG = IconBoxGlobeSVG; exports.IconBoxGroupSVG = IconBoxGroupSVG; exports.IconBoxPeopleSVG = IconBoxPeopleSVG; exports.ImageUploader = ImageUploader; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.MaleSVG = MaleSVG; exports.MyOKRAccordionCard = MyOKRAccordionCard; exports.MyTaskAccordionCard = MyTaskAccordionCard; exports.NDB9BoxQuandrant = NDB9BoxQuandrant; exports.NDB9BoxQuandrantWithSummary = NDB9BoxQuandrantWithSummary; exports.NDBCardContainer = NDBCardContainer; exports.NDBCardDoughnut = NDBCardDoughnut; exports.NDBCompetencyGap = NDBCompetencyGap; exports.NDBDetailProgressOKR = NDBDetailProgressOKR; exports.NDBDetailProgressTask = NDBDetailProgressTask; exports.NDBDoughnutChart = NDBDoughnutChart; exports.NDBFinancialCard = NDBFinancialCard; exports.NDBInsight = NDBInsight; exports.NDBMainStatus = NDBMainStatus; exports.NDBMainStatusSimple = NDBMainStatusSimple; exports.NDBMainSummary = NDBMainSummary; exports.NDBOKRTable = NDBOKRTable; exports.NDBOKRTableRow = NDBOKRTableRow; exports.NDBSalesFunnel = NDBSalesFunnel; exports.NDBSimpleDoughnutChart = NDBSimpleDoughnutChart; exports.NDBSimpleHexagonChart = NDBSimpleHexagonChart; exports.NDBTotalAssignedOKRs = NDBTotalAssignedOKRs; exports.NDBYouVsTeam = NDBYouVsTeam; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SubmitPlaneSVG = SubmitPlaneSVG; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.ThreeDotsSVG = ThreeDotsSVG; exports.TotalEmployeeCard = TotalEmployeeCard; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeHeader = WelcomeHeader; exports.WelcomeModal = WelcomeModal; exports.getIcon = getIcon;
+
+
+
+exports.AddCircleSVG = AddCircleSVG; exports.AgendaCard = AgendaCard; exports.BackSVG = BackSVG; exports.BgCardBotRigSVG = BgCardBotRigSVG; exports.BudgetCard = BudgetCard; exports.Button = Button; exports.CascadeSVG = CascadeSVG; exports.CascadeTreeSVG = CascadeTreeSVG; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DIcon1SVG = DIcon1SVG; exports.DIcon2SVG = DIcon2SVG; exports.DIcon3SVG = DIcon3SVG; exports.DIcon4SVG = DIcon4SVG; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DetailDocumentSVG = DetailDocumentSVG; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.DoubleCoinSVG = DoubleCoinSVG; exports.DownloadSVG = DownloadSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.FemaleSVG = FemaleSVG; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.IconBoxGenBSVG = IconBoxGenBSVG; exports.IconBoxGenMSVG = IconBoxGenMSVG; exports.IconBoxGenZSVG = IconBoxGenZSVG; exports.IconBoxGlobeSVG = IconBoxGlobeSVG; exports.IconBoxGroupSVG = IconBoxGroupSVG; exports.IconBoxPeopleSVG = IconBoxPeopleSVG; exports.ImageUploader = ImageUploader; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.MaleSVG = MaleSVG; exports.MyOKRAccordionCard = MyOKRAccordionCard; exports.MyTaskAccordionCard = MyTaskAccordionCard; exports.NDB9BoxQuandrant = NDB9BoxQuandrant; exports.NDB9BoxQuandrantWithSummary = NDB9BoxQuandrantWithSummary; exports.NDBCardContainer = NDBCardContainer; exports.NDBCardDoughnut = NDBCardDoughnut; exports.NDBCompetencyGap = NDBCompetencyGap; exports.NDBDetailProgressOKR = NDBDetailProgressOKR; exports.NDBDetailProgressTask = NDBDetailProgressTask; exports.NDBDoughnutChart = NDBDoughnutChart; exports.NDBFinancialCard = NDBFinancialCard; exports.NDBInsight = NDBInsight; exports.NDBMainStatus = NDBMainStatus; exports.NDBMainStatusSimple = NDBMainStatusSimple; exports.NDBMainSummary = NDBMainSummary; exports.NDBOKRTable = NDBOKRTable; exports.NDBOKRTableRow = NDBOKRTableRow; exports.NDBSalesFunnel = NDBSalesFunnel; exports.NDBSimpleDoughnutChart = NDBSimpleDoughnutChart; exports.NDBSimpleHexagonChart = NDBSimpleHexagonChart; exports.NDBTotalAssignedOKRs = NDBTotalAssignedOKRs; exports.NDBYouVsTeam = NDBYouVsTeam; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarAssistant = NDNavbarAssistant; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateAssistant = NDTemplateAssistant; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.PromptInputAssistant = PromptInputAssistant; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SubmitPlaneSVG = SubmitPlaneSVG; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.ThreeDotsSVG = ThreeDotsSVG; exports.TotalEmployeeCard = TotalEmployeeCard; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeHeader = WelcomeHeader; exports.WelcomeModal = WelcomeModal; exports.getIcon = getIcon;
 //# sourceMappingURL=index.js.map

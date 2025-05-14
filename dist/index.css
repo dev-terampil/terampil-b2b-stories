@@ -392,6 +392,9 @@ video {
 .right-5 {
   right: 1.25rem;
 }
+.right-\[10px\] {
+  right: 10px;
+}
 .right-\[12px\] {
   right: 12px;
 }
@@ -416,8 +419,14 @@ video {
 .top-\[50\%\] {
   top: 50%;
 }
+.top-\[72\.5px\] {
+  top: 72.5px;
+}
 .top-\[8\%\] {
   top: 8%;
+}
+.top-\[9px\] {
+  top: 9px;
 }
 .z-10 {
   z-index: 10;
@@ -716,6 +725,9 @@ video {
 .h-\[9px\] {
   height: 9px;
 }
+.h-\[calc\(100vh-72\.5px\)\] {
+  height: calc(100vh - 72.5px);
+}
 .h-full {
   height: 100%;
 }
@@ -751,6 +763,9 @@ video {
 }
 .min-h-\[4px\] {
   min-height: 4px;
+}
+.min-h-\[50px\] {
+  min-height: 50px;
 }
 .min-h-\[6px\] {
   min-height: 6px;
@@ -877,6 +892,9 @@ video {
 }
 .w-\[40px\] {
   width: 40px;
+}
+.w-\[450px\] {
+  width: 450px;
 }
 .w-\[48px\] {
   width: 48px;
@@ -1223,6 +1241,9 @@ video {
 .rounded-\[24px\] {
   border-radius: 24px;
 }
+.rounded-\[25px\] {
+  border-radius: 25px;
+}
 .rounded-\[3px\] {
   border-radius: 3px;
 }
@@ -1288,6 +1309,9 @@ video {
 }
 .border-r {
   border-right-width: 1px;
+}
+.border-r-\[1\.5px\] {
+  border-right-width: 1.5px;
 }
 .border-t {
   border-top-width: 1px;
@@ -1593,6 +1617,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(241 249 255 / var(--tw-bg-opacity, 1));
 }
+.bg-\[\#F3F5F7\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 245 247 / var(--tw-bg-opacity, 1));
+}
 .bg-\[\#F5F5F5\] {
   --tw-bg-opacity: 1;
   background-color: rgb(245 245 245 / var(--tw-bg-opacity, 1));
@@ -1825,6 +1853,9 @@ video {
 .p-\[12px_20px\] {
   padding: 12px 20px;
 }
+.p-\[12px_32px\] {
+  padding: 12px 32px;
+}
 .p-\[13px_28px\] {
   padding: 13px 28px;
 }
@@ -1860,6 +1891,9 @@ video {
 }
 .p-\[24px\] {
   padding: 24px;
+}
+.p-\[24px_16px\] {
+  padding: 24px 16px;
 }
 .p-\[24px_18px\] {
   padding: 24px 18px;
@@ -2102,6 +2136,12 @@ video {
 }
 .pr-\[200px\] {
   padding-right: 200px;
+}
+.pr-\[56px\] {
+  padding-right: 56px;
+}
+.pt-\[11px\] {
+  padding-top: 11px;
 }
 .pt-\[4px\] {
   padding-top: 4px;
@@ -2638,6 +2678,13 @@ div.table table tbody > tr:nth-child(even) td {
   background-size: 9px 9px;
   background-position: -19px -19px;
 }
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
 .first\:rounded-tl-\[6px\]:first-child {
   border-top-left-radius: 6px;
 }
@@ -2667,6 +2714,10 @@ div.table table tbody > tr:nth-child(even) td {
 .hover\:bg-zinc-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+}
+.focus\:border-\[\#60AFEF\]:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(96 175 239 / var(--tw-border-opacity, 1));
 }
 .focus\:border-zinc-300:focus {
   --tw-border-opacity: 1;

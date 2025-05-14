@@ -2745,10 +2745,7 @@ function SubmitKRModal(props) {
     InputText,
     {
       value: props.value,
-      onChange: (e) => {
-        var _a2;
-        return props.onValueChange(+((_a2 = e.target.value) != null ? _a2 : ""));
-      },
+      onChange: (e) => props.onValueChange(e.target.value),
       placeholder: `Input Data`,
       type: "number"
     }

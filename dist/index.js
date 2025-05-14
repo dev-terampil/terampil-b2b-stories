@@ -1750,7 +1750,7 @@ function MyOKRAccordionCard(props) {
       type: "none"
     });
   });
-  const val = 45;
+  const val = props.data.progress;
   const slider_width = 250;
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col font-[Poppins] rounded-[12px] overflow-hidden border border-[2px] border-[#EAEFF5]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between bg-[#E7F3FD] py-4 px-[20px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement(
     _lucidereact.ChevronDownIcon,
@@ -1759,7 +1759,7 @@ function MyOKRAccordionCard(props) {
       size: 22,
       className: `bg-[#D3E5F4] text-[#0066B9] rounded-full p-[3px] cursor-pointer ${open ? "rotate-180" : ""}`
     }
-  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] font-medium` }, "Increase Product A Revenue")), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, "Bobot 40%"), /* @__PURE__ */ _react2.default.createElement("div", { className: `w-[2px] h-[25px] bg-[#CCDEED]` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, /* @__PURE__ */ _react2.default.createElement(
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] font-medium` }, props.data.objective_name)), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, "Bobot ", props.data.weight, "%"), /* @__PURE__ */ _react2.default.createElement("div", { className: `w-[2px] h-[25px] bg-[#CCDEED]` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `relative flex items-center` }, /* @__PURE__ */ _react2.default.createElement(
     "div",
     {
       style: { width: slider_width },
@@ -1808,7 +1808,7 @@ function MyOKRAccordionCard(props) {
     {
       className: `font-medium py-4`
     },
-    "Bobot (%)"
+    "Weight (%)"
   ), /* @__PURE__ */ _react2.default.createElement(
     "th",
     {
@@ -1833,59 +1833,40 @@ function MyOKRAccordionCard(props) {
       className: `font-medium py-4 w-[76px] text-center pr-4`
     },
     "Action"
-  ))), /* @__PURE__ */ _react2.default.createElement("tbody", null, [
-    [
-      "Expand Client Base in Sumatera",
-      "100%",
-      "Monthly",
-      "40",
-      "90 Client",
-      "40%",
-      "On-track"
-    ],
-    [
-      "Achive Rp. 1.2 Milliar in Product A sales",
-      "Rp. 1.2 M",
-      "Monthly",
-      "40",
-      "Rp. 720 Juta",
-      "60%",
-      "H-20: Progress < 70%"
-    ]
-  ].map(([kr, target, period, bobot, achievement, pr, ews], i) => /* @__PURE__ */ _react2.default.createElement(
+  ))), /* @__PURE__ */ _react2.default.createElement("tbody", null, props.data.list_key_result.map((item, i) => /* @__PURE__ */ _react2.default.createElement(
     "tr",
     {
       className: `border-t border-t-[2px] border-t-[#EAEFF5] text-[14px] font-medium text-[#121D26]`,
       key: i
     },
-    /* @__PURE__ */ _react2.default.createElement("td", { className: `pl-[59px] py-4` }, kr),
+    /* @__PURE__ */ _react2.default.createElement("td", { className: `pl-[59px] py-4` }, item.name),
     /* @__PURE__ */ _react2.default.createElement(
       "td",
       {
         className: `py-4`
       },
-      target
+      item.target
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",
       {
         className: `py-4`
       },
-      period
+      item.period
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",
       {
         className: `py-4`
       },
-      bobot
+      item.weight
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",
       {
         className: `py-4`
       },
-      achievement
+      item.achievement
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",
@@ -1896,19 +1877,19 @@ function MyOKRAccordionCard(props) {
         "div",
         {
           style: {
-            width: `${val}%`,
+            width: `${item.progress}%`,
             background: "#0066B9"
           },
           className: `h-full w-full rounded-full`
         }
-      )), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-normal` }, pr))
+      )), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-normal` }, item.progress))
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",
       {
         className: `py-4`
       },
-      ews
+      item.ews
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",

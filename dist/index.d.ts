@@ -311,6 +311,7 @@ interface MyOKRContextMenuData {
     x: number;
     y: number;
     id_objective?: string;
+    id_key_result?: string;
     type: 'objective' | 'none';
 }
 interface MyOKRAccordionCardProps {

@@ -2717,6 +2717,70 @@ function TaskSideCard(props) {
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white rounded-[12px] border border-[2px] border-[#F1F5F9] font-[Poppins] flex flex-col overflow-hidden` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_18px] flex flex-col gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-semibold text-[14px]` }, "Follow up 10 leads"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-0 text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4]` }, "Related to KR:"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] underline text-[14px]` }, "Meeting with internal team - Discuss Sales Target")), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center justify-between` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-0` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#8DA6C4] text-[13px]` }, "Deadline:"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[13px]` }, "10 Des 2024 - 2 day ago")), /* @__PURE__ */ _react2.default.createElement("div", { className: `border border-px border-[#FF4343] bg-[#FFEFEF] rounded-[6px] p-[4px_9px] text-[#FF4343] font-medium text-[13px]` }, "High"))), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#0066B9] underline border-t border-t-[2px] border-t-[#F1F5F9] text-center p-2 text-[14px] font-medium` }, "See Detail"));
 }
 
+// src/new-design/general/SubmitKRModal.tsx
+
+
+// src/new-design/b64-images/CloseWhiteSVG.ts
+var CloseWhiteSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiByeD0iMTAiIGZpbGw9IiNGNUY3RjkiLz4KPHBhdGggZD0iTTYuMjA5MzUgNy4yMjAxOUM1LjkzMDIyIDYuOTQxMDYgNS45MzAyMiA2LjQ4ODQ5IDYuMjA5MzUgNi4yMDkzNUM2LjQ4ODQ5IDUuOTMwMjIgNi45NDEwNiA1LjkzMDIyIDcuMjIwMTkgNi4yMDkzNUwxMy43OTA2IDEyLjc3OThDMTQuMDY5OCAxMy4wNTg5IDE0LjA2OTggMTMuNTExNSAxMy43OTA2IDEzLjc5MDZDMTMuNTExNSAxNC4wNjk4IDEzLjA1ODkgMTQuMDY5OCAxMi43Nzk4IDEzLjc5MDZMNi4yMDkzNSA3LjIyMDE5WiIgZmlsbD0iIzAwNjZCOSIvPgo8cGF0aCBkPSJNMTIuNzc5OCA2LjIwOTM1QzEzLjA1ODkgNS45MzAyMiAxMy41MTE1IDUuOTMwMjIgMTMuNzkwNiA2LjIwOTM1QzE0LjA2OTggNi40ODg0OSAxNC4wNjk4IDYuOTQxMDYgMTMuNzkwNiA3LjIyMDE5TDcuMjIwMTkgMTMuNzkwNkM2Ljk0MTA2IDE0LjA2OTggNi40ODg0OSAxNC4wNjk4IDYuMjA5MzUgMTMuNzkwNkM1LjkzMDIyIDEzLjUxMTUgNS45MzAyMiAxMy4wNTg5IDYuMjA5MzUgMTIuNzc5OEwxMi43Nzk4IDYuMjA5MzVaIiBmaWxsPSIjMDA2NkI5Ii8+Cjwvc3ZnPgo=";
+
+// src/new-design/general/SubmitKRModal.tsx
+function SubmitKRModal(props) {
+  const input_ref = _react.useRef.call(void 0, null);
+  const [file, setFile] = _react.useState.call(void 0, null);
+  function inputFileChange(e) {
+    if (e.target.files && e.target.files.length > 0) {
+      setFile(e.target.files[0]);
+    }
+  }
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `overflow-hidden rounded-[12px] shadow-[0px_1px_15px_1px_rgba(0,0,0,.1)] flex flex-col font-[Poppins] text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_16px] flex flex-col gap-2 bg-white` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between mb-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Submit Key Result"), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-red-500 text-[13px]` }, "Clear")), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Achievement` }, /* @__PURE__ */ _react2.default.createElement(
+    InputText,
+    {
+      placeholder: `Input Data`,
+      type: "number"
+    }
+  )), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Evidence` }, !file && /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      onClick: () => {
+        var _a;
+        return (_a = input_ref.current) == null ? void 0 : _a.click();
+      },
+      className: `border border-[1.5px] !border-[#0066B9] !text-[#0066B9] !bg-transparent !rounded-[9px] font-medium !h-[40px]`,
+      smaller: true
+    },
+    "Select File"
+  ), file && /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[40px] bg-[#0066B9] flex items-center justify-between rounded-[9px] px-4 gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-white text-[13px] font-medium whitespace-nowrap truncate flex-1 w-0` }, file.name), /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      onClick: () => setFile(null),
+      className: `w-[16px] h-[16px] object-contain cursor-pointer`,
+      src: CloseWhiteSVG
+    }
+  )), /* @__PURE__ */ _react2.default.createElement(
+    "input",
+    {
+      ref: input_ref,
+      onChange: inputFileChange,
+      type: "file",
+      hidden: true
+    }
+  ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4 justify-end p-[12px_16px] bg-[#F9FAFB] mt-9` }, /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      className: `border border-[1.5px] !border-transparent !text-[#A1AFC0] !bg-transparent !p-[5px_16px] font-medium`,
+      smaller: true
+    },
+    "Cancel"
+  ), /* @__PURE__ */ _react2.default.createElement(
+    Button,
+    {
+      className: `border border-[1.5px] !border-[#0066B9] !text-[#0066B9] !bg-transparent !p-[5px_16px] !rounded-[9px]`,
+      smaller: true
+    },
+    "Submit"
+  )));
+}
+
 // src/new-design/onboarding/CompanyTemplate.tsx
 
 function CompanyTemplate(props) {
@@ -3604,5 +3668,6 @@ function NDBYouVsTeam(props) {
 
 
 
-exports.AddCircleSVG = AddCircleSVG; exports.AgendaCard = AgendaCard; exports.AgendaSideCard = AgendaSideCard; exports.AssistantChatHistory = AssistantChatHistory; exports.BackSVG = BackSVG; exports.BgCardBotRigSVG = BgCardBotRigSVG; exports.BudgetCard = BudgetCard; exports.Button = Button; exports.CascadeSVG = CascadeSVG; exports.CascadeTreeSVG = CascadeTreeSVG; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DIcon1SVG = DIcon1SVG; exports.DIcon2SVG = DIcon2SVG; exports.DIcon3SVG = DIcon3SVG; exports.DIcon4SVG = DIcon4SVG; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DetailDocumentSVG = DetailDocumentSVG; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.DoubleCoinSVG = DoubleCoinSVG; exports.DownloadSVG = DownloadSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.FemaleSVG = FemaleSVG; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.IconBoxGenBSVG = IconBoxGenBSVG; exports.IconBoxGenMSVG = IconBoxGenMSVG; exports.IconBoxGenZSVG = IconBoxGenZSVG; exports.IconBoxGlobeSVG = IconBoxGlobeSVG; exports.IconBoxGroupSVG = IconBoxGroupSVG; exports.IconBoxPeopleSVG = IconBoxPeopleSVG; exports.ImageUploader = ImageUploader; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.KeyResultSideCard = KeyResultSideCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.MaleSVG = MaleSVG; exports.MyOKRAccordionCard = MyOKRAccordionCard; exports.MyTaskAccordionCard = MyTaskAccordionCard; exports.NDB9BoxQuandrant = NDB9BoxQuandrant; exports.NDB9BoxQuandrantWithSummary = NDB9BoxQuandrantWithSummary; exports.NDBCardContainer = NDBCardContainer; exports.NDBCardDoughnut = NDBCardDoughnut; exports.NDBCompetencyGap = NDBCompetencyGap; exports.NDBDetailProgressOKR = NDBDetailProgressOKR; exports.NDBDetailProgressTask = NDBDetailProgressTask; exports.NDBDoughnutChart = NDBDoughnutChart; exports.NDBFinancialCard = NDBFinancialCard; exports.NDBInsight = NDBInsight; exports.NDBMainStatus = NDBMainStatus; exports.NDBMainStatusSimple = NDBMainStatusSimple; exports.NDBMainSummary = NDBMainSummary; exports.NDBOKRTable = NDBOKRTable; exports.NDBOKRTableRow = NDBOKRTableRow; exports.NDBSalesFunnel = NDBSalesFunnel; exports.NDBSimpleDoughnutChart = NDBSimpleDoughnutChart; exports.NDBSimpleHexagonChart = NDBSimpleHexagonChart; exports.NDBTotalAssignedOKRs = NDBTotalAssignedOKRs; exports.NDBYouVsTeam = NDBYouVsTeam; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarAssistant = NDNavbarAssistant; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateAssistant = NDTemplateAssistant; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.PromptInputAssistant = PromptInputAssistant; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SubmitPlaneSVG = SubmitPlaneSVG; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.TaskSideCard = TaskSideCard; exports.ThreeDotsSVG = ThreeDotsSVG; exports.TotalEmployeeCard = TotalEmployeeCard; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeHeader = WelcomeHeader; exports.WelcomeModal = WelcomeModal; exports.getIcon = getIcon;
+
+exports.AddCircleSVG = AddCircleSVG; exports.AgendaCard = AgendaCard; exports.AgendaSideCard = AgendaSideCard; exports.AssistantChatHistory = AssistantChatHistory; exports.BackSVG = BackSVG; exports.BgCardBotRigSVG = BgCardBotRigSVG; exports.BudgetCard = BudgetCard; exports.Button = Button; exports.CascadeSVG = CascadeSVG; exports.CascadeTreeSVG = CascadeTreeSVG; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DIcon1SVG = DIcon1SVG; exports.DIcon2SVG = DIcon2SVG; exports.DIcon3SVG = DIcon3SVG; exports.DIcon4SVG = DIcon4SVG; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DetailDocumentSVG = DetailDocumentSVG; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.DoubleCoinSVG = DoubleCoinSVG; exports.DownloadSVG = DownloadSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.FemaleSVG = FemaleSVG; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.IconBoxGenBSVG = IconBoxGenBSVG; exports.IconBoxGenMSVG = IconBoxGenMSVG; exports.IconBoxGenZSVG = IconBoxGenZSVG; exports.IconBoxGlobeSVG = IconBoxGlobeSVG; exports.IconBoxGroupSVG = IconBoxGroupSVG; exports.IconBoxPeopleSVG = IconBoxPeopleSVG; exports.ImageUploader = ImageUploader; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.KeyResultSideCard = KeyResultSideCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.MaleSVG = MaleSVG; exports.MyOKRAccordionCard = MyOKRAccordionCard; exports.MyTaskAccordionCard = MyTaskAccordionCard; exports.NDB9BoxQuandrant = NDB9BoxQuandrant; exports.NDB9BoxQuandrantWithSummary = NDB9BoxQuandrantWithSummary; exports.NDBCardContainer = NDBCardContainer; exports.NDBCardDoughnut = NDBCardDoughnut; exports.NDBCompetencyGap = NDBCompetencyGap; exports.NDBDetailProgressOKR = NDBDetailProgressOKR; exports.NDBDetailProgressTask = NDBDetailProgressTask; exports.NDBDoughnutChart = NDBDoughnutChart; exports.NDBFinancialCard = NDBFinancialCard; exports.NDBInsight = NDBInsight; exports.NDBMainStatus = NDBMainStatus; exports.NDBMainStatusSimple = NDBMainStatusSimple; exports.NDBMainSummary = NDBMainSummary; exports.NDBOKRTable = NDBOKRTable; exports.NDBOKRTableRow = NDBOKRTableRow; exports.NDBSalesFunnel = NDBSalesFunnel; exports.NDBSimpleDoughnutChart = NDBSimpleDoughnutChart; exports.NDBSimpleHexagonChart = NDBSimpleHexagonChart; exports.NDBTotalAssignedOKRs = NDBTotalAssignedOKRs; exports.NDBYouVsTeam = NDBYouVsTeam; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarAssistant = NDNavbarAssistant; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateAssistant = NDTemplateAssistant; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.PromptInputAssistant = PromptInputAssistant; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SubmitKRModal = SubmitKRModal; exports.SubmitPlaneSVG = SubmitPlaneSVG; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.TaskSideCard = TaskSideCard; exports.ThreeDotsSVG = ThreeDotsSVG; exports.TotalEmployeeCard = TotalEmployeeCard; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeHeader = WelcomeHeader; exports.WelcomeModal = WelcomeModal; exports.getIcon = getIcon;
 //# sourceMappingURL=index.js.map

@@ -503,6 +503,8 @@ interface SubmitKRModalProps {
 declare function SubmitKRModal(props: SubmitKRModalProps): React.JSX.Element;
 
 interface FeedbackKRModalProps {
+    status: 'Approve' | 'Reject';
+    onStatusChange(status: 'Approve' | 'Reject'): void;
     feedback: string;
     onFeedbackChange(val: string): void;
     onCancel?(): void;

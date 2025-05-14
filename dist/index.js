@@ -2825,12 +2825,21 @@ function SubmitKRModal(props) {
 // src/new-design/general/FeedbackKRModal.tsx
 
 function FeedbackKRModal(props) {
-  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white overflow-hidden rounded-[12px] shadow-[0px_1px_15px_1px_rgba(0,0,0,.1)] flex flex-col font-[Poppins] text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_16px] flex flex-col gap-2 bg-white` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium flex justify-between mb-2` }, "Approve/Reject KR Submission"), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Achievement` }, /* @__PURE__ */ _react2.default.createElement(
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white overflow-hidden rounded-[12px] shadow-[0px_1px_15px_1px_rgba(0,0,0,.1)] flex flex-col font-[Poppins] text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_16px] flex flex-col gap-2 bg-white` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium flex justify-between mb-2` }, "Approve/Reject KR Submission"), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Status` }, /* @__PURE__ */ _react2.default.createElement(
+    InputSelect,
+    {
+      value: props.status,
+      onChange: (e) => props.onStatusChange(e.target.value)
+    },
+    /* @__PURE__ */ _react2.default.createElement("option", { value: "", selected: true, disabled: true }, "Choose Status"),
+    /* @__PURE__ */ _react2.default.createElement("option", { value: "Approve" }, "Approve"),
+    /* @__PURE__ */ _react2.default.createElement("option", { value: "Reject" }, "Reject")
+  )), /* @__PURE__ */ _react2.default.createElement(Label, { label: `Feedback` }, /* @__PURE__ */ _react2.default.createElement(
     InputTextarea,
     {
       value: props.feedback,
       onChange: (e) => props.onFeedbackChange(e.target.value),
-      placeholder: `Input Data`
+      placeholder: `Input Feedback`
     }
   ))), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4 justify-end p-[12px_16px] bg-[#F9FAFB] mt-9` }, /* @__PURE__ */ _react2.default.createElement(
     Button,

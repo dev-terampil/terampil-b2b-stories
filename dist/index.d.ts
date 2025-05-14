@@ -330,8 +330,9 @@ interface OKRTreeNodeData {
     photo: string;
     name: string;
     position: string;
-    okr_target: number;
+    okr_target?: number;
     cascading_percentage?: number;
+    partial?: boolean;
 }
 interface OKRTreeNodeProps {
     data: OKRTreeNodeData;

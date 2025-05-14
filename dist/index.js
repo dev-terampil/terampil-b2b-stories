@@ -2255,13 +2255,13 @@ function OKRTreeNode(props) {
       className: `w-[40px] h-[40px] rounded-full object-cover`,
       src: props.data.photo
     }
-  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[15px] font-medium` }, props.data.name), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[13px] text-[#8DA6C4]` }, props.data.position))), /* @__PURE__ */ _react2.default.createElement(
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[15px] font-medium` }, props.data.name), props.data.partial && /* @__PURE__ */ _react2.default.createElement("div", { className: `text-sky-500 text-[10px] rounded-full bg-sky-100 p-[1px_10px]` }, "Partial KR")), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[13px] text-[#8DA6C4]` }, props.data.position))), /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
       className: `h-[20px] object-contain`,
       src: ThreeDotsSVG
     }
-  )), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-1` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 bg-[#E9F5FF] p-[4px_10px] rounded-[8px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#0066B9] w-[8px] h-[8px] rounded-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, props.data.okr_target)), props.data.cascading_percentage && /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 bg-[#E9FFF3] p-[4px_10px] rounded-[8px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#00EB61] w-[8px] h-[8px] rounded-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, props.data.cascading_percentage, "%"))));
+  )), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col gap-1` }, props.data.okr_target && /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 bg-[#E9F5FF] p-[4px_10px] rounded-[8px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#0066B9] w-[8px] h-[8px] rounded-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, props.data.okr_target)), props.data.cascading_percentage && /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-2 bg-[#E9FFF3] p-[4px_10px] rounded-[8px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-[#00EB61] w-[8px] h-[8px] rounded-full` }), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, props.data.cascading_percentage, "%"))));
 }
 
 // src/new-design/general/OrganizationTree.tsx

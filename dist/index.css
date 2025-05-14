@@ -1880,6 +1880,9 @@ video {
 .p-\[18px_32px\] {
   padding: 18px 32px;
 }
+.p-\[1px_10px\] {
+  padding: 1px 10px;
+}
 .p-\[1px_6px\] {
   padding: 1px 6px;
 }
@@ -2361,6 +2364,10 @@ video {
 .text-red-500 {
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity, 1));
+}
+.text-sky-500 {
+  --tw-text-opacity: 1;
+  color: rgb(14 165 233 / var(--tw-text-opacity, 1));
 }
 .text-slate-300 {
   --tw-text-opacity: 1;

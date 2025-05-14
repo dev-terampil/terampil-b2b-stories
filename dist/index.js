@@ -2737,7 +2737,10 @@ function SubmitKRModal(props) {
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `bg-white overflow-hidden rounded-[12px] shadow-[0px_1px_15px_1px_rgba(0,0,0,.1)] flex flex-col font-[Poppins] text-[14px]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `p-[12px_16px] flex flex-col gap-2 bg-white` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex justify-between mb-2` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `font-medium` }, "Submit Key Result"), /* @__PURE__ */ _react2.default.createElement(
     "div",
     {
-      onClick: props.onClear,
+      onClick: () => {
+        setFile(null);
+        props.onClear && props.onClear();
+      },
       className: `text-red-500 text-[13px] cursor-pointer`
     },
     "Clear"

@@ -449,6 +449,8 @@ interface VerticalStepProps {
 declare function VerticalStep(props: VerticalStepProps): React.JSX.Element;
 
 interface WelcomeHeaderProps {
+    name?: string;
+    position?: string;
 }
 declare function WelcomeHeader(props: WelcomeHeaderProps): React.JSX.Element;
 

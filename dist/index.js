@@ -1783,7 +1783,7 @@ function MyOKRAccordionCard(props) {
       },
       className: `w-[40px] text-center absolute border border-[2px] text-[#0066B9] font-medium border-[#0066B9] rounded-[4px] p-[1px_6px] text-[10px] bg-white`
     },
-    val,
+    val.toFixed(2),
     "%"
   )))), /* @__PURE__ */ _react2.default.createElement("div", { className: `overflow-x-auto overflow-y-hidden ${open ? "max-h-[999px]" : "max-h-[0px]"} transition transition-all` }, /* @__PURE__ */ _react2.default.createElement("table", { className: `w-full` }, /* @__PURE__ */ _react2.default.createElement("thead", null, /* @__PURE__ */ _react2.default.createElement("tr", { className: `text-[#538AB9] text-left text-[14px]` }, /* @__PURE__ */ _react2.default.createElement(
     "th",
@@ -1877,7 +1877,7 @@ function MyOKRAccordionCard(props) {
         "div",
         {
           style: {
-            width: `${item.progress}%`,
+            width: `${item.progress.toFixed(2)}%`,
             background: "#0066B9"
           },
           className: `h-full w-full rounded-full`
@@ -2667,7 +2667,7 @@ function PromptInputAssistant(props) {
           props.onSubmit && props.onSubmit();
         }
       },
-      className: `w-full min-h-[50px] bg-[#F3F5F7] rounded-[25px] p-[12px_32px] pt-[11px] pr-[56px] outline-none border border-[2px] border-transparent no-scrollbar focus:border-[#60AFEF] font-[Poppins] z-1 ${props.className || ""}`
+      className: `text-[14px] w-full min-h-[50px] bg-[#F3F5F7] rounded-[25px] p-[12px_32px] pr-[56px] outline-none border border-[2px] border-transparent no-scrollbar focus:border-[#60AFEF] font-[Poppins] z-1 ${props.className || ""}`
     })
   ));
 }

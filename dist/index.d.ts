@@ -110,6 +110,8 @@ declare function SideOKRCard(props: SideOKRCardProps): React.JSX.Element;
 
 interface NDNavbarProps {
     menuElement?: JSX.Element;
+    updateTemporaryZIndex?(): void;
+    restoreTemporaryZIndex?(): void;
 }
 declare function NDNavbar(props: NDNavbarProps): React.JSX.Element;
 
@@ -137,6 +139,8 @@ declare function NDNavbarGeneral(props: NDNavbarGeneralProps): React.JSX.Element
 interface NDNavbarAssistantProps {
     onClose?(): void;
     menuElement?: JSX.Element;
+    updateTemporaryZIndex?(): void;
+    restoreTemporaryZIndex?(): void;
 }
 declare function NDNavbarAssistant(props: NDNavbarAssistantProps): React.JSX.Element;
 

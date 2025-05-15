@@ -253,6 +253,7 @@ function NDNavbar(props) {
   const profile_popup_ref = _react.useRef.call(void 0, null);
   useOutsideClick(profile_popup_ref, () => {
     setOpenProfile(false);
+    props.restoreTemporaryZIndex && props.restoreTemporaryZIndex();
   });
   return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-3 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins']" }, "B2B Platform"), /* @__PURE__ */ _react2.default.createElement(
     "a",
@@ -272,6 +273,11 @@ function NDNavbar(props) {
       {
         onClick: (e) => {
           e.stopPropagation();
+          if (!open_profile) {
+            props.updateTemporaryZIndex && props.updateTemporaryZIndex();
+          } else {
+            props.restoreTemporaryZIndex && props.restoreTemporaryZIndex();
+          }
           setOpenProfile(!open_profile);
         },
         src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
@@ -407,6 +413,7 @@ function NDNavbarAssistant(props) {
   const profile_popup_ref = _react.useRef.call(void 0, null);
   useOutsideClick(profile_popup_ref, () => {
     setOpenProfile(false);
+    props.restoreTemporaryZIndex && props.restoreTemporaryZIndex();
   });
   return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-4 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins'] flex items-center gap-4" }, /* @__PURE__ */ _react2.default.createElement(
     "img",
@@ -457,6 +464,11 @@ function NDNavbarAssistant(props) {
       {
         onClick: (e) => {
           e.stopPropagation();
+          if (!open_profile) {
+            props.updateTemporaryZIndex && props.updateTemporaryZIndex();
+          } else {
+            props.restoreTemporaryZIndex && props.restoreTemporaryZIndex();
+          }
           setOpenProfile(!open_profile);
         },
         src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
@@ -633,7 +645,17 @@ function NDTemplate(props) {
       ref: nav_ref,
       className: `sticky top-0  z-[998]`
     },
-    /* @__PURE__ */ _react2.default.createElement(NDNavbar, __spreadValues({}, props.navbar))
+    /* @__PURE__ */ _react2.default.createElement(
+      NDNavbar,
+      __spreadProps(__spreadValues({}, props.navbar), {
+        updateTemporaryZIndex: () => {
+          nav_ref.current.style.zIndex = 999999;
+        },
+        restoreTemporaryZIndex: () => {
+          nav_ref.current.style.zIndex = 998;
+        }
+      })
+    )
   ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `relative` }, /* @__PURE__ */ _react2.default.createElement(
     "div",
     {
@@ -719,12 +741,30 @@ function NDTemplateGeneral(props) {
 // src/new-design/NDTemplateAssistant.tsx
 
 function NDTemplateAssistant(props) {
+  const nav_ref = _react.useRef.call(void 0, null);
   return /* @__PURE__ */ _react2.default.createElement(
     "div",
     __spreadProps(__spreadValues({}, props), {
       className: `flex bg-white min-h-screen ${props.className || ""}`
     }),
-    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `sticky top-0 z-[998]` }, /* @__PURE__ */ _react2.default.createElement(NDNavbarAssistant, __spreadValues({}, props.navbar))), props.children)
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `flex-1 flex flex-col relative` }, /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      {
+        ref: nav_ref,
+        className: `sticky top-0 z-[998]`
+      },
+      /* @__PURE__ */ _react2.default.createElement(
+        NDNavbarAssistant,
+        __spreadProps(__spreadValues({}, props.navbar), {
+          updateTemporaryZIndex: () => {
+            nav_ref.current.style.zIndex = 999999;
+          },
+          restoreTemporaryZIndex: () => {
+            nav_ref.current.style.zIndex = 998;
+          }
+        })
+      )
+    ), props.children)
   );
 }
 

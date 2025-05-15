@@ -774,9 +774,10 @@ function NDTemplateAssistant(props) {
 // src/new-design/new-dashboard/NDBMainSummary.tsx
 
 function NDBMainSummary(props) {
+  var _a, _b;
   return /* @__PURE__ */ _react2.default.createElement("div", { className: `flex rounded-full border border-[2px] border-[#EAEFF5]` }, [
-    ["Performance Progress", "80%", true],
-    ["Learning Progress", "80%", false]
+    ["Performance Progress", `${((_a = props.perfProgress) != null ? _a : 0).toFixed(0)}%`, true],
+    ["Learning Progress", `${((_b = props.learnProgress) != null ? _b : 0).toFixed(0)}%`, false]
   ].map(([label, progress, active], i) => /* @__PURE__ */ _react2.default.createElement(
     "div",
     {

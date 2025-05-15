@@ -607,6 +607,8 @@ interface NDBMainStatusProps {
 declare function NDBMainStatus(props: NDBMainStatusProps): React.JSX.Element;
 
 interface NDBMainSummaryProps {
+    perfProgress?: number;
+    learnProgress?: number;
 }
 declare function NDBMainSummary(props: NDBMainSummaryProps): React.JSX.Element;
 

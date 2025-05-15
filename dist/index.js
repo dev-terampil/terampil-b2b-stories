@@ -1877,12 +1877,12 @@ function MyOKRAccordionCard(props) {
         "div",
         {
           style: {
-            width: `${item.progress.toFixed(2)}%`,
+            width: `${item.progress}%`,
             background: "#0066B9"
           },
           className: `h-full w-full rounded-full`
         }
-      )), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-normal` }, item.progress))
+      )), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-normal` }, item.progress.toFixed(2), "%"))
     ),
     /* @__PURE__ */ _react2.default.createElement(
       "td",

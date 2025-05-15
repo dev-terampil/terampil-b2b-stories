@@ -435,6 +435,7 @@ interface TECBottomType2 {
     subdivision: string;
 }
 interface TotalEmployeeCardProps {
+    label?: string;
     value: TECValueType1 | TECValueType2;
     bottom: TECBottomType0 | TECBottomType1 | TECBottomType2;
     icon: 'people' | 'group' | 'globe' | 'genz' | 'genm' | 'genb';

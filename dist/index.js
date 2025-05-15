@@ -229,7 +229,31 @@ function SideOKRCard(props) {
 // src/new-design/NDNavbar.tsx
 
 var _lucidereact = require('lucide-react');
-function NDNavbar() {
+
+// src/hooks/useOutsideClick.ts
+
+function useOutsideClick(ref, callback) {
+  _react.useEffect.call(void 0, () => {
+    function handleClickOutside(event) {
+      var _a;
+      if ((ref == null ? void 0 : ref.current) && !((_a = ref == null ? void 0 : ref.current) == null ? void 0 : _a.contains(event == null ? void 0 : event.target))) {
+        callback(event == null ? void 0 : event.target);
+      }
+    }
+    document.addEventListener("click", handleClickOutside);
+    return () => {
+      document.removeEventListener("click", handleClickOutside);
+    };
+  }, [ref]);
+}
+
+// src/new-design/NDNavbar.tsx
+function NDNavbar(props) {
+  const [open_profile, setOpenProfile] = _react.useState.call(void 0, false);
+  const profile_popup_ref = _react.useRef.call(void 0, null);
+  useOutsideClick(profile_popup_ref, () => {
+    setOpenProfile(false);
+  });
   return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-3 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins']" }, "B2B Platform"), /* @__PURE__ */ _react2.default.createElement(
     "a",
     {
@@ -238,13 +262,30 @@ function NDNavbar() {
     },
     /* @__PURE__ */ _react2.default.createElement(_lucidereact.Search, { className: "text-gray-400 w-5 h-5" }),
     /* @__PURE__ */ _react2.default.createElement("div", { className: "font-['Poppins'] ml-2 w-full bg-transparent outline-none text-gray-600 placeholder-gray-400 text-[12px] font-light" }, "Ask Terampil Intelligence")
-  ), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4" }, /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.ClipboardList, { className: "text-[#0066B9] w-5 h-5" })), /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Bell, { className: "text-[#0066B9] w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement("span", { className: "absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" })), /* @__PURE__ */ _react2.default.createElement(
-    "img",
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center space-x-4 relative" }, /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.ClipboardList, { className: "text-[#0066B9] w-5 h-5" })), /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Bell, { className: "text-[#0066B9] w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement("span", { className: "absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" })), /* @__PURE__ */ _react2.default.createElement(
+    "div",
     {
-      src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
-      alt: "Avatar",
-      className: "w-8 h-8 rounded-full object-cover"
-    }
+      ref: profile_popup_ref
+    },
+    /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        onClick: (e) => {
+          e.stopPropagation();
+          setOpenProfile(!open_profile);
+        },
+        src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
+        alt: "Avatar",
+        className: "w-8 h-8 rounded-full object-cover cursor-pointer"
+      }
+    ),
+    open_profile && /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      {
+        className: `absolute right-0 top-[100%] mt-1`
+      },
+      props.menuElement
+    )
   )));
 }
 
@@ -362,6 +403,11 @@ var ShareSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iMTQiIH
 
 // src/new-design/NDNavbarAssistant.tsx
 function NDNavbarAssistant(props) {
+  const [open_profile, setOpenProfile] = _react.useState.call(void 0, false);
+  const profile_popup_ref = _react.useRef.call(void 0, null);
+  useOutsideClick(profile_popup_ref, () => {
+    setOpenProfile(false);
+  });
   return /* @__PURE__ */ _react2.default.createElement("div", { className: "flex items-center justify-between px-6 py-4 bg-white border-b border-b-[#EAEFF5]" }, /* @__PURE__ */ _react2.default.createElement("div", { className: "text-lg font-semibold text-gray-900 font-['Poppins'] flex items-center gap-4" }, /* @__PURE__ */ _react2.default.createElement(
     "img",
     {
@@ -402,12 +448,29 @@ function NDNavbarAssistant(props) {
       }
     ), /* @__PURE__ */ _react2.default.createElement("div", null, "Download"))
   ), /* @__PURE__ */ _react2.default.createElement("div", { className: `h-[28px] w-[2px] bg-[#EAEFF5]` }), /* @__PURE__ */ _react2.default.createElement("button", { className: "relative p-[10px] bg-[#F1F9FF] rounded-[10px]" }, /* @__PURE__ */ _react2.default.createElement(_lucidereact.Bell, { className: "text-[#0066B9] w-5 h-5" }), /* @__PURE__ */ _react2.default.createElement("span", { className: "absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full" })), /* @__PURE__ */ _react2.default.createElement(
-    "img",
+    "div",
     {
-      src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
-      alt: "Avatar",
-      className: "w-8 h-8 rounded-full object-cover"
-    }
+      ref: profile_popup_ref
+    },
+    /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        onClick: (e) => {
+          e.stopPropagation();
+          setOpenProfile(!open_profile);
+        },
+        src: "https://upload.jaknot.com/2023/12/images/products/817815/original/masker-gas-respirator-full-face-6002cn-6800.jpg",
+        alt: "Avatar",
+        className: "w-8 h-8 rounded-full object-cover cursor-pointer"
+      }
+    ),
+    open_profile && /* @__PURE__ */ _react2.default.createElement(
+      "div",
+      {
+        className: `absolute right-0 top-[100%] mt-1`
+      },
+      props.menuElement
+    )
   )));
 }
 
@@ -570,7 +633,7 @@ function NDTemplate(props) {
       ref: nav_ref,
       className: `sticky top-0  z-[998]`
     },
-    /* @__PURE__ */ _react2.default.createElement(NDNavbar, null)
+    /* @__PURE__ */ _react2.default.createElement(NDNavbar, __spreadValues({}, props.navbar))
   ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `relative` }, /* @__PURE__ */ _react2.default.createElement(
     "div",
     {
@@ -1716,25 +1779,6 @@ function KeyResultCard(props) {
 // src/new-design/general/MyOKRAccordionCard.tsx
 
 
-
-// src/hooks/useOutsideClick.ts
-
-function useOutsideClick(ref, callback) {
-  _react.useEffect.call(void 0, () => {
-    function handleClickOutside(event) {
-      var _a;
-      if ((ref == null ? void 0 : ref.current) && !((_a = ref == null ? void 0 : ref.current) == null ? void 0 : _a.contains(event == null ? void 0 : event.target))) {
-        callback(event == null ? void 0 : event.target);
-      }
-    }
-    document.addEventListener("click", handleClickOutside);
-    return () => {
-      document.removeEventListener("click", handleClickOutside);
-    };
-  }, [ref]);
-}
-
-// src/new-design/general/MyOKRAccordionCard.tsx
 function MyOKRAccordionCard(props) {
   const [open, setOpen] = _react.useState.call(void 0, false);
   const cm_ref = _react.useRef.call(void 0, null);
@@ -2861,6 +2905,122 @@ function FeedbackKRModal(props) {
   )));
 }
 
+// src/new-design/general/UserProfileMenu.tsx
+
+
+// src/new-design/b64-images/User2SVG.ts
+var User2SVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05Ljk4MTA2IDEyLjQwNDlMMTAuMTE1NSAxMi40MDVMMTAuNDE2MyAxMi40MDZDMTIuNzE1MiAxMi40MjExIDE3Ljk2ODggMTIuNjUzNCAxNy45Njg4IDE2LjIxNTVDMTcuOTY4OCAxOS43NTQyIDEyLjg5ODMgMTkuOTg0OSAxMC40NTIxIDIwTDkuNTQ1ODIgMjBDNy4yNDY4IDE5Ljk4NDkgMS45OTIxOSAxOS43NTI4IDEuOTkyMTkgMTYuMTk1MkMxLjk5MjE5IDEyLjY1MjEgNy4yNDY4IDEyLjQyMSA5LjU0NTgyIDEyLjQwNkw5Ljg0NjYxIDEyLjQwNUM5Ljg5MzI3IDEyLjQwNDkgOS45MzgxMiAxMi40MDQ5IDkuOTgxMDYgMTIuNDA0OVpNOS45ODEwNiAxNC4xOTE3QzcuMTUxNzkgMTQuMTkxNyAzLjc3ODM0IDE0LjUzOTUgMy43NzgzNCAxNi4xOTUyQzMuNzc4MzQgMTcuODEzNSA2Ljk1MDQ0IDE4LjE5MTggOS43MjI0NyAxOC4yMTMzTDkuOTgxMDYgMTguMjE0M0MxMi44MTAzIDE4LjIxNDMgMTYuMTgyNiAxNy44Njc3IDE2LjE4MjYgMTYuMjE1NUMxNi4xODI2IDE0LjU0MzEgMTIuODEwMyAxNC4xOTE3IDkuOTgxMDYgMTQuMTkxN1pNOS45ODEwNiAwQzEyLjk4MTggMCAxNS40MjE3IDIuNDQxOTEgMTUuNDIxNyA1LjQ0MjQ5QzE1LjQyMTcgOC40NDMwNiAxMi45ODE4IDEwLjg4NSA5Ljk4MTA2IDEwLjg4NUg5Ljk0ODkxQzguNDk2MTcgMTAuODgwMiA3LjEzNTEyIDEwLjMxMDggNi4xMTU4MiA5LjI4MTY1QzUuMDk0MTQgOC4yNTM2NiA0LjUzNTY3IDYuODg4NTggNC41NDE1OCA1LjQzODkxQzQuNTQxNTggMi40NDE5MSA2Ljk4MTUxIDAgOS45ODEwNiAwWk05Ljk4MTA2IDEuNzg2NzdDNy45NjYyOCAxLjc4Njc3IDYuMzI3NzYgMy40MjcwMiA2LjMyNzc2IDUuNDQyNDlDNi4zMjQyMSA2LjQxOTI1IDYuNjk4MTEgNy4zMzI4OCA3LjM4MjggOC4wMjI1OEM4LjA2NzUgOC43MTIyNyA4Ljk4OTI3IDkuMDk3OTkgOS45NjA5NCA5LjEwMTU2QzExLjk3NTcgOS4xMDE1NiAxMy42MzU1IDcuNDU5MTUgMTMuNjM1NSA1LjQ0MjQ5QzEzLjYzNTUgMy40MjcwMiAxMS45OTU4IDEuNzg2NzcgOS45ODEwNiAxLjc4Njc3WiIgZmlsbD0iIzhEQTZDNCIvPgo8L3N2Zz4K";
+
+// src/new-design/b64-images/SettingSVG.ts
+var SettingSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzU0MV81MTY5MCkiPgo8cGF0aCBkPSJNMTguNTAzOSA3LjM2NzU0QzE4LjI1MDUgNy4yMTQ4OSAxOC4wNTI4IDYuOTg0NzUgMTcuOTQwMiA2LjcxMTEzQzE3LjgyNzYgNi40Mzc1MSAxNy44MDYgNi4xMzQ5MiAxNy44Nzg2IDUuODQ4MDhDMTguMDEwNyA1LjMzMjY4IDE4LjAwNjIgNC43OTE3NSAxNy44NjU1IDQuMjc4NjRDMTcuNzI0OCAzLjc2NTUyIDE3LjQ1MjcgMy4yOTc5NSAxNy4wNzYyIDIuOTIyMDRDMTYuNjk5NiAyLjU0NjE0IDE2LjIzMTYgMi4yNzQ4OCAxNS43MTgzIDIuMTM1MDJDMTUuMjA0OSAxLjk5NTE2IDE0LjY2NCAxLjk5MTUzIDE0LjE0ODggMi4xMjQ0OUMxMy44NjI0IDIuMTk2ODggMTMuNTYwMyAyLjE3NTE2IDEzLjI4NzIgMi4wNjI1NUMxMy4wMTQyIDEuOTQ5OTQgMTIuNzg0NiAxLjc1MjQxIDEyLjYzMjUgMS40OTkyQzEyLjM2MTUgMS4wNDIzOCAxMS45NzYzIDAuNjYzOTM1IDExLjUxNDcgMC40MDEwNzlDMTEuMDUzMiAwLjEzODIyMiAxMC41MzEyIDAgMTAgMEM5LjQ2ODg1IDAgOC45NDY4MyAwLjEzODIyMiA4LjQ4NTI4IDAuNDAxMDc5QzguMDIzNzMgMC42NjM5MzUgNy42Mzg1MyAxLjA0MjM4IDcuMzY3NTQgMS40OTkyQzcuMjE1NjIgMS43NTM0IDYuOTg1NTYgMS45NTE2NCA2LjcxMTcxIDIuMDY0MzNDNi40Mzc4NiAyLjE3NzAzIDYuMTM0OTEgMi4xOTgxMyA1Ljg0ODA4IDIuMTI0NDlDNS4zMzMgMS45OTI2MyA0Ljc5MjQ1IDEuOTk3MjMgNC4yNzk2OSAyLjEzNzgyQzMuNzY2OTIgMi4yNzg0MSAzLjI5OTYyIDIuNTUwMTUgMi45MjM4MSAyLjkyNjI3QzIuNTQ4MDEgMy4zMDIzOSAyLjI3NjY2IDMuNzY5OTIgMi4xMzY1IDQuMjgyOEMxLjk5NjM0IDQuNzk1NjkgMS45OTIyIDUuMzM2MjQgMi4xMjQ0OSA1Ljg1MTIxQzIuMTk3MzkgNi4xMzc1OSAyLjE3NTkyIDYuNDM5ODUgMi4wNjMyNiA2LjcxMzA1QzEuOTUwNiA2Ljk4NjI1IDEuNzUyNzggNy4yMTU3OSAxLjQ5OTIgNy4zNjc1NEMxLjA0MjM4IDcuNjM4NTMgMC42NjM5MzUgOC4wMjM3MyAwLjQwMTA3OSA4LjQ4NTI4QzAuMTM4MjIyIDguOTQ2ODMgMCA5LjQ2ODg1IDAgMTBDMCAxMC41MzEyIDAuMTM4MjIyIDExLjA1MzIgMC40MDEwNzkgMTEuNTE0N0MwLjY2MzkzNSAxMS45NzYzIDEuMDQyMzggMTIuMzYxNSAxLjQ5OTIgMTIuNjMyNUMxLjc1MzAzIDEyLjc4NDcgMS45NTA5NyAxMy4wMTQ4IDIuMDYzNjIgMTMuMjg4NkMyLjE3NjI3IDEzLjU2MjMgMi4xOTc2MSAxMy44NjUxIDIuMTI0NDkgMTQuMTUxOUMxLjk5MjYzIDE0LjY2NyAxLjk5NzIzIDE1LjIwNzUgMi4xMzc4MiAxNS43MjAzQzIuMjc4NDEgMTYuMjMzMSAyLjU1MDE1IDE2LjcwMDQgMi45MjYyNyAxNy4wNzYyQzMuMzAyMzkgMTcuNDUyIDMuNzY5OTIgMTcuNzIzMyA0LjI4MjggMTcuODYzNUM0Ljc5NTY5IDE4LjAwMzcgNS4zMzYyNCAxOC4wMDc4IDUuODUxMjEgMTcuODc1NUM2LjEzNzU5IDE3LjgwMzEgNi40Mzk2NyAxNy44MjQ4IDYuNzEyNzYgMTcuOTM3NUM2Ljk4NTg0IDE4LjA1MDEgNy4yMTU0MiAxOC4yNDc2IDcuMzY3NTQgMTguNTAwOEM3LjYzODUzIDE4Ljk1NzYgOC4wMjM3MyAxOS4zMzYxIDguNDg1MjggMTkuNTk4OUM4Ljk0NjgzIDE5Ljg2MTggOS40Njg4NSAyMCAxMCAyMEMxMC41MzEyIDIwIDExLjA1MzIgMTkuODYxOCAxMS41MTQ3IDE5LjU5ODlDMTEuOTc2MyAxOS4zMzYxIDEyLjM2MTUgMTguOTU3NiAxMi42MzI1IDE4LjUwMDhDMTIuNzg1MSAxOC4yNDczIDEzLjAxNTMgMTguMDQ5NyAxMy4yODg5IDE3LjkzNzFDMTMuNTYyNSAxNy44MjQ1IDEzLjg2NTEgMTcuODAyOSAxNC4xNTE5IDE3Ljg3NTVDMTQuNjY3IDE4LjAwNzQgMTUuMjA3NSAxOC4wMDI4IDE1LjcyMDMgMTcuODYyMkMxNi4yMzMxIDE3LjcyMTYgMTYuNzAwNCAxNy40NDk5IDE3LjA3NjIgMTcuMDczN0MxNy40NTIgMTYuNjk3NiAxNy43MjMzIDE2LjIzMDEgMTcuODYzNSAxNS43MTcyQzE4LjAwMzcgMTUuMjA0MyAxOC4wMDc4IDE0LjY2MzggMTcuODc1NSAxNC4xNDg4QzE3LjgwMzEgMTMuODYyNCAxNy44MjQ4IDEzLjU2MDMgMTcuOTM3NSAxMy4yODcyQzE4LjA1MDEgMTMuMDE0MiAxOC4yNDc2IDEyLjc4NDYgMTguNTAwOCAxMi42MzI1QzE4Ljk1NzYgMTIuMzYxNSAxOS4zMzYxIDExLjk3NjMgMTkuNTk4OSAxMS41MTQ3QzE5Ljg2MTggMTEuMDUzMiAyMCAxMC41MzEyIDIwIDEwQzIwIDkuNDY4ODUgMTkuODYxOCA4Ljk0NjgzIDE5LjU5ODkgOC40ODUyOEMxOS4zMzYxIDguMDIzNzMgMTguOTU3NiA3LjYzODUzIDE4LjUwMDggNy4zNjc1NEgxOC41MDM5Wk0xNy42NDEgMTEuMTc1NUMxNy4wNzUxIDExLjUxNzYgMTYuNjM0NSAxMi4wMzI5IDE2LjM4NDUgMTIuNjQ1QzE2LjEzNDUgMTMuMjU3MiAxNi4wODgzIDEzLjkzMzYgMTYuMjUyOSAxNC41NzRDMTYuMzExNSAxNC44MDQxIDE2LjMwOTIgMTUuMDQ1NSAxNi4yNDYyIDE1LjI3NDRDMTYuMTgzMSAxNS41MDMzIDE2LjA2MTUgMTUuNzExOCAxNS44OTMyIDE1Ljg3OTRDMTUuNzI1IDE2LjA0NyAxNS41MTYxIDE2LjE2NzggMTUuMjg2OSAxNi4yM0MxNS4wNTc4IDE2LjI5MjIgMTQuODE2NCAxNi4yOTM2IDE0LjU4NjUgMTYuMjM0MUMxMy45NDQ1IDE2LjA3MyAxMy4yNjc3IDE2LjEyMjkgMTIuNjU2MiAxNi4zNzYzQzEyLjA0NDggMTYuNjI5NiAxMS41MzExIDE3LjA3MzEgMTEuMTkxMiAxNy42NDFDMTEuMDcwOSAxNy44NDU5IDEwLjg5OTEgMTguMDE1OCAxMC42OTI5IDE4LjEzMzlDMTAuNDg2NyAxOC4yNTIgMTAuMjUzMiAxOC4zMTQxIDEwLjAxNTYgMTguMzE0MUM5Ljc3ODAyIDE4LjMxNDEgOS41NDQ1NCAxOC4yNTIgOS4zMzgzNCAxOC4xMzM5QzkuMTMyMTQgMTguMDE1OCA4Ljk2MDM4IDE3Ljg0NTkgOC44NDAwOSAxNy42NDFDOC41NjcwNyAxNy4xODM4IDguMTgwMTYgMTYuODA1MiA3LjcxNzEzIDE2LjU0MjJDNy4yNTQwOSAxNi4yNzkyIDYuNzMwNzcgMTYuMTQwNyA2LjE5ODI1IDE2LjE0MDNDNS45NDI5NCAxNi4xNDAyIDUuNjg4NjcgMTYuMTcyOCA1LjQ0MTY1IDE2LjIzNzNDNS4yMTE1NiAxNi4yOTU5IDQuOTcwMTcgMTYuMjkzNiA0Ljc0MTI1IDE2LjIzMDVDNC41MTIzNCAxNi4xNjc1IDQuMzAzODIgMTYuMDQ1OCA0LjEzNjI0IDE1Ljg3NzZDMy45Njg2NiAxNS43MDk0IDMuODQ3ODEgMTUuNTAwNCAzLjc4NTYgMTUuMjcxM0MzLjcyMzQgMTUuMDQyMSAzLjcyMTk5IDE0LjgwMDcgMy43ODE1MSAxNC41NzA5QzMuOTQzMSAxMy45Mjg5IDMuODkzNSAxMy4yNTE5IDMuNjQwMDggMTIuNjQwM0MzLjM4NjY3IDEyLjAyODcgMi45NDI5MSAxMS41MTUxIDIuMzc0NjEgMTEuMTc1NUMyLjE2OTcgMTEuMDU1MyAxLjk5OTc5IDEwLjg4MzUgMS44ODE3MyAxMC42NzczQzEuNzYzNjcgMTAuNDcxMSAxLjcwMTU2IDEwLjIzNzYgMS43MDE1NiAxMEMxLjcwMTU2IDkuNzYyMzkgMS43NjM2NyA5LjUyODkxIDEuODgxNzMgOS4zMjI3MUMxLjk5OTc5IDkuMTE2NTEgMi4xNjk3IDguOTQ0NzUgMi4zNzQ2MSA4LjgyNDQ2QzIuOTQzMzIgOC40ODQ2NiAzLjM4NzE1IDcuOTcwMzUgMy42NDAwOCA3LjM1ODAzQzMuODkzIDYuNzQ1NzIgMy45NDE1MSA2LjA2ODExIDMuNzc4MzggNS40MjYwMUMzLjcyMDQ2IDUuMTk1NzMgMy43MjM0MSA0Ljk1NDM0IDMuNzg2OTYgNC43MjU1NEMzLjg1MDUgNC40OTY3NCAzLjk3MjQ1IDQuMjg4NCA0LjE0MDgzIDQuMTIwOTdDNC4zMDkyMSAzLjk1MzUzIDQuNTE4MjQgMy44MzI3NiA0Ljc0NzM5IDMuNzcwNUM0Ljk3NjU0IDMuNzA4MjUgNS4yMTc5NCAzLjcwNjY1IDUuNDQ3OSAzLjc2NTg3QzYuMDg5NDQgMy45MjY3MyA2Ljc2NTcyIDMuODc2NzcgNy4zNzY2NSAzLjYyMzM5QzcuOTg3NTkgMy4zNyA4LjUwMDcxIDIuOTI2NjYgOC44NDAwOSAyLjM1ODk3QzguOTYwMzggMi4xNTQwNiA5LjEzMjE0IDEuOTg0MTYgOS4zMzgzNCAxLjg2NjFDOS41NDQ1NCAxLjc0ODA0IDkuNzc4MDIgMS42ODU5MyAxMC4wMTU2IDEuNjg1OTNDMTAuMjUzMiAxLjY4NTkzIDEwLjQ4NjcgMS43NDgwNCAxMC42OTI5IDEuODY2MUMxMC44OTkxIDEuOTg0MTYgMTEuMDcwOSAyLjE1NDA2IDExLjE5MTIgMi4zNTg5N0MxMS41MzEgMi45Mjc2OSAxMi4wNDUzIDMuMzcxNTIgMTIuNjU3NiAzLjYyNDQ0QzEzLjI2OTkgMy44NzczNyAxMy45NDc1IDMuOTI1ODcgMTQuNTg5NiAzLjc2Mjc1QzE0LjgxOTggMy43MDQzOSAxNS4wNjEyIDMuNzA2OSAxNS4yOTAxIDMuNzcwMDFDMTUuNTE5IDMuODMzMTMgMTUuNzI3NiAzLjk1NDY4IDE1Ljg5NTMgNC4xMjI3NUMxNi4wNjMxIDQuMjkwODEgMTYuMTg0MiA0LjQ5OTYxIDE2LjI0NjkgNC43Mjg2NEMxNi4zMDk2IDQuOTU3NjggMTYuMzExNyA1LjE5OTA4IDE2LjI1MjkgNS40MjkxNEMxNi4wOSA2LjA3MDc5IDE2LjEzODYgNi43NDc4OCAxNi4zOTE1IDcuMzU5NjZDMTYuNjQ0NSA3Ljk3MTQ0IDE3LjA4ODIgOC40ODUxOSAxNy42NTY3IDguODI0NDZDMTcuODYxNiA4Ljk0NDc1IDE4LjAzMTUgOS4xMTY1MSAxOC4xNDk1IDkuMzIyNzFDMTguMjY3NiA5LjUyODkxIDE4LjMyOTcgOS43NjIzOSAxOC4zMjk3IDEwQzE4LjMyOTcgMTAuMjM3NiAxOC4yNjc2IDEwLjQ3MTEgMTguMTQ5NSAxMC42NzczQzE4LjAzMTUgMTAuODgzNSAxNy44NjE2IDExLjA1NTMgMTcuNjU2NyAxMS4xNzU1SDE3LjY0MVoiIGZpbGw9IiM4REE2QzQiLz4KPHBhdGggZD0iTTkuOTk5NjEgNS43Njk1M0M5LjE2Mjk4IDUuNzY5NTMgOC4zNDUxNCA2LjAxNzYyIDcuNjQ5NTEgNi40ODI0M0M2Ljk1Mzg3IDYuOTQ3MjMgNi40MTE2OSA3LjYwNzg4IDYuMDkxNTMgOC4zODA4M0M1Ljc3MTM2IDkuMTUzNzcgNS42ODc1OSAxMC4wMDQzIDUuODUwODEgMTAuODI0OUM2LjAxNDAzIDExLjY0NTQgNi40MTY5MSAxMi4zOTkxIDcuMDA4NDkgMTIuOTkwN0M3LjYwMDA4IDEzLjU4MjMgOC4zNTM4MSAxMy45ODUyIDkuMTc0MzYgMTQuMTQ4NEM5Ljk5NDkyIDE0LjMxMTYgMTAuODQ1NCAxNC4yMjc5IDExLjYxODQgMTMuOTA3N0MxMi4zOTEzIDEzLjU4NzUgMTMuMDUyIDEzLjA0NTMgMTMuNTE2OCAxMi4zNDk3QzEzLjk4MTYgMTEuNjU0MSAxNC4yMjk3IDEwLjgzNjIgMTQuMjI5NyA5Ljk5OTYxQzE0LjIyOCA4Ljg3ODIzIDEzLjc4MTggNy44MDMyNSAxMi45ODg5IDcuMDEwMzJDMTIuMTk2IDYuMjE3MzggMTEuMTIxIDUuNzcxMTkgOS45OTk2MSA1Ljc2OTUzWk05Ljk5OTYxIDEyLjUzODNDOS40OTc1MSAxMi41MzgzIDkuMDA2NjggMTIuMzg5NCA4LjU4OTIgMTIuMTEwNEM4LjE3MTcyIDExLjgzMTUgNy44NDYzMyAxMS40MzUgNy42NTQxOCAxMC45NzExQzcuNDYyMDQgMTAuNTA3MiA3LjQxMTc2IDkuOTk2NzkgNy41MDk3MiA5LjUwNDM0QzcuNjA3NjcgOS4wMTE4OCA3Ljg0OTQ2IDguNTU5NTQgOC4yMDQ1IDguMjA0NUM4LjU1OTU0IDcuODQ5NDYgOS4wMTE4OSA3LjYwNzY3IDkuNTA0MzQgNy41MDk3MkM5Ljk5Njc5IDcuNDExNzYgMTAuNTA3MiA3LjQ2MjA0IDEwLjk3MTEgNy42NTQxOEMxMS40MzUgNy44NDYzMyAxMS44MzE1IDguMTcxNzIgMTIuMTEwNCA4LjU4OTJDMTIuMzg5NCA5LjAwNjY4IDEyLjUzODMgOS40OTc1MSAxMi41MzgzIDkuOTk5NjFDMTIuNTM3NSAxMC42NzI3IDEyLjI2OTcgMTEuMzE3OSAxMS43OTM4IDExLjc5MzhDMTEuMzE3OSAxMi4yNjk3IDEwLjY3MjcgMTIuNTM3NSA5Ljk5OTYxIDEyLjUzODNaIiBmaWxsPSIjOERBNkM0Ii8+CjwvZz4KPGRlZnM+CjxjbGlwUGF0aCBpZD0iY2xpcDBfNTQxXzUxNjkwIj4KPHJlY3Qgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSJ3aGl0ZSIvPgo8L2NsaXBQYXRoPgo8L2RlZnM+Cjwvc3ZnPgo=";
+
+// src/new-design/b64-images/LogoutSVG.ts
+var LogoutSVG = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGcgY2xpcC1wYXRoPSJ1cmwoI2NsaXAwXzU0MV81MTY5NykiPgo8cGF0aCBkPSJNMTQuNDE5NCA0VjUuNDU0NTVDMTQuNDE5NCA2LjAwMTQyIDEzLjk0NTMgNi40MzExMSAxMy4zOTg0IDYuNDMxMTFDMTIuODUxNiA2LjQzMTExIDEyLjQxOTUgNS45NjIzNiAxMi40MTk1IDUuNDU0NTVWNEMxMi40MTk1IDMuNDY5NTcgMTIuMjA4OCAyLjk2MDg2IDExLjgzMzcgMi41ODU3OUMxMS40NTg3IDIuMjEwNzEgMTAuOTUgMiAxMC40MTk2IDJIMy45OTk4M0MzLjQ2OTQyIDIgMi45NjA3NCAyLjIxMDcxIDIuNTg1NjggMi41ODU3OUMyLjIxMDYyIDIuOTYwODYgMS45OTk5MiAzLjQ2OTU3IDEuOTk5OTIgNFYxNkMxLjk5OTkyIDE2LjUzMDQgMi4yMTA2MiAxNy4wMzkxIDIuNTg1NjggMTcuNDE0MkMyLjk2MDc0IDE3Ljc4OTMgMy40Njk0MiAxOCAzLjk5OTgzIDE4SDEwLjQxOTZDMTAuOTUgMTggMTEuNDU4NyAxNy43ODkzIDExLjgzMzcgMTcuNDE0MkMxMi4yMDg4IDE3LjAzOTEgMTIuNDE5NSAxNi41MzA0IDEyLjQxOTUgMTZMMTIuNDE5NSAxNS40NTQ1QzEyLjQxOTUgMTQuOTQ2NyAxMi44OTA2IDE0LjUxNyAxMy40Mzc1IDE0LjUxN0MxMy45NDUzIDE0LjUxNyAxNC40MTk0IDE0Ljk0NjcgMTQuNDE5NCAxNS40NTQ1VjE2QzE0LjQxOTQgMTYuNTI1MyAxNC4zMTU5IDE3LjA0NTQgMTQuMTE0OSAxNy41MzA3QzEzLjkxMzkgMTguMDE2IDEzLjYxOTMgMTguNDU3IDEzLjI0NzkgMTguODI4NEMxMi44NzY1IDE5LjE5OTkgMTIuNDM1NSAxOS40OTQ1IDExLjk1MDIgMTkuNjk1NUMxMS40NjUgMTkuODk2NSAxMC45NDQ4IDIwIDEwLjQxOTYgMjBIMy45OTk4M0MyLjkzOTAxIDIwIDEuOTIxNjQgMTkuNTc4NiAxLjE3MTUyIDE4LjgyODRDMC40MjE0MSAxOC4wNzgzIDAgMTcuMDYwOSAwIDE2VjRDMCAyLjkzOTEzIDAuNDIxNDEgMS45MjE3MiAxLjE3MTUyIDEuMTcxNTdDMS45MjE2NCAwLjQyMTQyNyAyLjkzOTAxIDAgMy45OTk4MyAwSDEwLjQxOTZDMTEuNDgwNCAwIDEyLjQ5NzggMC40MjE0MjcgMTMuMjQ3OSAxLjE3MTU3QzEzLjk5OCAxLjkyMTcyIDE0LjQxOTQgMi45MzkxMyAxNC40MTk0IDRaIiBmaWxsPSIjRkY0MzQzIi8+CjxwYXRoIGQ9Ik0xNy40NTk3IDcuNTM4MzdMMTkuNzA5NiA5Ljc4ODM3QzE5LjgwMjcgOS44ODE5OSAxOS44NzYzIDkuOTkzMTEgMTkuOTI2MiAxMC4xMTUzQzE5Ljk3NjEgMTAuMjM3NSAyMC4wMDE0IDEwLjM2ODQgMjAuMDAwNCAxMC41MDA1QzE5Ljk5OTUgMTAuNjMyNSAxOS45NzI0IDEwLjc2MyAxOS45MjA4IDEwLjg4NDVDMTkuODY5MiAxMS4wMDYgMTkuNzk0IDExLjExNjEgMTkuNjk5NiAxMS4yMDg0TDE3LjQ2OTcgMTMuNDM4NEMxNy4zODAxIDEzLjU0MyAxNy4yNjk4IDEzLjYyODEgMTcuMTQ1NyAxMy42ODgxQzE3LjAyMTcgMTMuNzQ4MSAxNi44ODY1IDEzLjc4MTggMTYuNzQ4OCAxMy43ODcyQzE2LjYxMTEgMTMuNzkyNSAxNi40NzM4IDEzLjc2OTMgMTYuMzQ1NSAxMy43MTlDMTYuMjE3MSAxMy42Njg3IDE2LjEwMDYgMTMuNTkyNSAxNi4wMDMxIDEzLjQ5NUMxNS45MDU3IDEzLjM5NzYgMTUuODI5NCAxMy4yODEgMTUuNzc5MiAxMy4xNTI3QzE1LjcyODkgMTMuMDI0NCAxNS43MDU3IDEyLjg4NyAxNS43MTEgMTIuNzQ5M0MxNS43MTYzIDEyLjYxMTYgMTUuNzUwMSAxMi40NzY1IDE1LjgxMDEgMTIuMzUyNEMxNS44NzAxIDEyLjIyODMgMTUuOTU1MSAxMi4xMTggMTYuMDU5OCAxMi4wMjg0TDE2LjU5OTggMTEuNDg4NEgxNC40MTk5SDguMTYwMTJDNy44OTQ5MSAxMS40ODg0IDcuNjQwNTcgMTEuMzgzIDcuNDUzMDQgMTEuMTk1NUM3LjI2NTUxIDExLjAwNzkgNy4xNjAxNiAxMC43NTM2IDcuMTYwMTYgMTAuNDg4NEM3LjE2MDE2IDEwLjIyMzIgNy4yNjU1MSA5Ljk2ODggNy40NTMwNCA5Ljc4MTI2QzcuNjQwNTcgOS41OTM3MiA3Ljg5NDkxIDkuNDg4MzcgOC4xNjAxMiA5LjQ4ODM3SDE0LjQxOTlIMTYuNTM5OEwxNS45OTk4IDguOTQ4MzdDMTUuODEyOCA4Ljc1NDc2IDE1LjcxMDQgOC40OTQ4IDE1LjcxNTEgOC4yMjU2OUMxNS43MTk4IDcuOTU2NTcgMTUuODMxMiA3LjcwMDM0IDE2LjAyNDggNy41MTMzN0MxNi4yMTg0IDcuMzI2MzkgMTYuNDc4MyA3LjIyMzk4IDE2Ljc0NzQgNy4yMjg2N0MxNy4wMTY1IDcuMjMzMzYgMTcuMjcyOCA3LjM0NDc2IDE3LjQ1OTcgNy41MzgzN1oiIGZpbGw9IiNGRjQzNDMiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF81NDFfNTE2OTciPgo8cmVjdCB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIGZpbGw9IndoaXRlIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==";
+
+// src/new-design/general/LogoutModal.tsx
+
+
+// src/new-design/b64-images/CharacterLogoutPNG.ts
+var CharacterLogoutPNG = "data:image/png;base64,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";
+
+// src/new-design/general/LogoutModal.tsx
+function LogoutModal(props) {
+  return /* @__PURE__ */ _react2.default.createElement(
+    "div",
+    __spreadProps(__spreadValues({}, props), {
+      style: __spreadValues({
+        background: "linear-gradient(138deg, rgba(10, 133, 233, 1) 0%, rgba(30, 231, 253, 1) 100%)"
+      }, props.style),
+      className: `rounded-[24px] p-[4px] font-[Poppins] max-w-[380px] ${props.className || ""}`
+    }),
+    /* @__PURE__ */ _react2.default.createElement("div", { className: `rounded-[20px] p-[48px_32px] flex flex-col gap-12 bg-white items-center` }, /* @__PURE__ */ _react2.default.createElement(
+      "img",
+      {
+        className: `h-[150px] object-contain`,
+        src: CharacterLogoutPNG
+      }
+    ), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-center text-[15px] text-[#121D26]` }, "Are you sure you want to log out of the system?"), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-4` }, /* @__PURE__ */ _react2.default.createElement(
+      Button,
+      {
+        onClick: props.onNo,
+        className: `!border-[#8DA6C4] !text-[#8DA6C4] !bg-transparent !px-[36px]`,
+        smaller: true
+      },
+      "No"
+    ), /* @__PURE__ */ _react2.default.createElement(
+      Button,
+      {
+        onClick: props.onYes,
+        className: `!px-[36px]`,
+        smaller: true
+      },
+      "Yes, Logout"
+    )))
+  );
+}
+
+// src/new-design/general/UserProfileMenu.tsx
+function UserProfileMenu(props) {
+  const logout_modal_ref = _react.useRef.call(void 0, null);
+  function logout() {
+    var _a;
+    (_a = logout_modal_ref.current) == null ? void 0 : _a.open();
+  }
+  return /* @__PURE__ */ _react2.default.createElement("div", { className: `w-[280px] flex flex-col gap-5 p-[12px_20px] pb-[20px] font-[Poppins] rounded-[15px] rounded-tr-[3px] bg-white shadow-[0px_1px_15px_rgba(0,0,0,.1)]` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `flex items-center gap-3` }, /* @__PURE__ */ _react2.default.createElement(
+    "img",
+    {
+      className: `w-[36px] h-[36px] object-cover rounded-full`,
+      src: props.userPhoto
+    }
+  ), /* @__PURE__ */ _react2.default.createElement("div", { className: `flex flex-col` }, /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[14px] font-medium` }, props.userName), /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[11px] text-[#8DA6C4]` }, props.userEmail))), [
+    [User2SVG, "Manage Profile", "/"],
+    [SettingSVG, "Settings & Privacy", "/"],
+    null,
+    [LogoutSVG, "Logout", "/", logout]
+  ].map((data, i) => {
+    if (data == null) {
+      return /* @__PURE__ */ _react2.default.createElement("div", { className: `w-full h-[2px] bg-[#F1F5F9] rounded-full` });
+    }
+    return /* @__PURE__ */ _react2.default.createElement(
+      "a",
+      {
+        href: !data[3] ? data[2] : void 0,
+        onClick: (e) => {
+          e.preventDefault();
+          data[3] && data[3]();
+        },
+        key: i,
+        className: `flex items-center gap-4 cursor-pointer`
+      },
+      /* @__PURE__ */ _react2.default.createElement(
+        "img",
+        {
+          className: `w-[18px] h-[18px] object-contain`,
+          src: data[0]
+        }
+      ),
+      /* @__PURE__ */ _react2.default.createElement("div", { className: `text-[#A1AFC0] text-[13px] font-medium` }, data[1])
+    );
+  }), /* @__PURE__ */ _react2.default.createElement(
+    Popup,
+    {
+      className: `self-center`,
+      parentClassName: `flex justify-center`,
+      ref: logout_modal_ref
+    },
+    /* @__PURE__ */ _react2.default.createElement(
+      LogoutModal,
+      {
+        onNo: () => {
+          var _a;
+          return (_a = logout_modal_ref.current) == null ? void 0 : _a.close();
+        },
+        onYes: () => props.onLogout && props.onLogout()
+      }
+    )
+  ));
+}
+
 // src/new-design/onboarding/CompanyTemplate.tsx
 
 function CompanyTemplate(props) {
@@ -3750,5 +3910,6 @@ function NDBYouVsTeam(props) {
 
 
 
-exports.AddCircleSVG = AddCircleSVG; exports.AgendaCard = AgendaCard; exports.AgendaSideCard = AgendaSideCard; exports.AssistantChatHistory = AssistantChatHistory; exports.BackSVG = BackSVG; exports.BgCardBotRigSVG = BgCardBotRigSVG; exports.BudgetCard = BudgetCard; exports.Button = Button; exports.CascadeSVG = CascadeSVG; exports.CascadeTreeSVG = CascadeTreeSVG; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DIcon1SVG = DIcon1SVG; exports.DIcon2SVG = DIcon2SVG; exports.DIcon3SVG = DIcon3SVG; exports.DIcon4SVG = DIcon4SVG; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DetailDocumentSVG = DetailDocumentSVG; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.DoubleCoinSVG = DoubleCoinSVG; exports.DownloadSVG = DownloadSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.FeedbackKRModal = FeedbackKRModal; exports.FemaleSVG = FemaleSVG; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.IconBoxGenBSVG = IconBoxGenBSVG; exports.IconBoxGenMSVG = IconBoxGenMSVG; exports.IconBoxGenZSVG = IconBoxGenZSVG; exports.IconBoxGlobeSVG = IconBoxGlobeSVG; exports.IconBoxGroupSVG = IconBoxGroupSVG; exports.IconBoxPeopleSVG = IconBoxPeopleSVG; exports.ImageUploader = ImageUploader; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.KeyResultSideCard = KeyResultSideCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.MaleSVG = MaleSVG; exports.MyOKRAccordionCard = MyOKRAccordionCard; exports.MyTaskAccordionCard = MyTaskAccordionCard; exports.NDB9BoxQuandrant = NDB9BoxQuandrant; exports.NDB9BoxQuandrantWithSummary = NDB9BoxQuandrantWithSummary; exports.NDBCardContainer = NDBCardContainer; exports.NDBCardDoughnut = NDBCardDoughnut; exports.NDBCompetencyGap = NDBCompetencyGap; exports.NDBDetailProgressOKR = NDBDetailProgressOKR; exports.NDBDetailProgressTask = NDBDetailProgressTask; exports.NDBDoughnutChart = NDBDoughnutChart; exports.NDBFinancialCard = NDBFinancialCard; exports.NDBInsight = NDBInsight; exports.NDBMainStatus = NDBMainStatus; exports.NDBMainStatusSimple = NDBMainStatusSimple; exports.NDBMainSummary = NDBMainSummary; exports.NDBOKRTable = NDBOKRTable; exports.NDBOKRTableRow = NDBOKRTableRow; exports.NDBSalesFunnel = NDBSalesFunnel; exports.NDBSimpleDoughnutChart = NDBSimpleDoughnutChart; exports.NDBSimpleHexagonChart = NDBSimpleHexagonChart; exports.NDBTotalAssignedOKRs = NDBTotalAssignedOKRs; exports.NDBYouVsTeam = NDBYouVsTeam; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarAssistant = NDNavbarAssistant; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateAssistant = NDTemplateAssistant; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.PromptInputAssistant = PromptInputAssistant; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SubmitKRModal = SubmitKRModal; exports.SubmitPlaneSVG = SubmitPlaneSVG; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.TaskSideCard = TaskSideCard; exports.ThreeDotsSVG = ThreeDotsSVG; exports.TotalEmployeeCard = TotalEmployeeCard; exports.TrashSVG = TrashSVG; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeHeader = WelcomeHeader; exports.WelcomeModal = WelcomeModal; exports.getIcon = getIcon;
+
+exports.AddCircleSVG = AddCircleSVG; exports.AgendaCard = AgendaCard; exports.AgendaSideCard = AgendaSideCard; exports.AssistantChatHistory = AssistantChatHistory; exports.BackSVG = BackSVG; exports.BgCardBotRigSVG = BgCardBotRigSVG; exports.BudgetCard = BudgetCard; exports.Button = Button; exports.CascadeSVG = CascadeSVG; exports.CascadeTreeSVG = CascadeTreeSVG; exports.CascadingTree = CascadingTree; exports.Character2PNG = Character2PNG; exports.CharacterPNG = CharacterPNG; exports.CheckSVG = CheckSVG; exports.ChevronRightSVG = ChevronRightSVG; exports.CloseOutlineSVG = CloseOutlineSVG; exports.CloseSVG = CloseSVG; exports.CompanyTemplate = CompanyTemplate; exports.DIcon1SVG = DIcon1SVG; exports.DIcon2SVG = DIcon2SVG; exports.DIcon3SVG = DIcon3SVG; exports.DIcon4SVG = DIcon4SVG; exports.DashboardIS1SVG = DashboardIS1SVG; exports.DashboardIS2SVG = DashboardIS2SVG; exports.DashboardISBG1SVG = DashboardISBG1SVG; exports.DashboardISBG2SVG = DashboardISBG2SVG; exports.DashboardInformationSummary = DashboardInformationSummary; exports.DetailDocumentSVG = DetailDocumentSVG; exports.DoubleChevronRightSVG = DoubleChevronRightSVG; exports.DoubleCoinSVG = DoubleCoinSVG; exports.DownloadSVG = DownloadSVG; exports.EditSVG = EditSVG; exports.EmployeeFormCard = EmployeeFormCard; exports.EmptyOKR = EmptyOKR; exports.FeedbackKRModal = FeedbackKRModal; exports.FemaleSVG = FemaleSVG; exports.GeneralFormCard = GeneralFormCard; exports.GeneralTab = GeneralTab; exports.IconBoxGenBSVG = IconBoxGenBSVG; exports.IconBoxGenMSVG = IconBoxGenMSVG; exports.IconBoxGenZSVG = IconBoxGenZSVG; exports.IconBoxGlobeSVG = IconBoxGlobeSVG; exports.IconBoxGroupSVG = IconBoxGroupSVG; exports.IconBoxPeopleSVG = IconBoxPeopleSVG; exports.ImageUploader = ImageUploader; exports.InputSelect = InputSelect; exports.InputText = InputText; exports.InputTextarea = InputTextarea; exports.ItemKeyResult = ItemKeyResult; exports.KeyResultCard = KeyResultCard; exports.KeyResultSideCard = KeyResultSideCard; exports.Label = Label; exports.LoginPage = LoginPage; exports.LogoPNG = LogoPNG; exports.LogoSingleSVG = LogoSingleSVG; exports.MailSVG = MailSVG; exports.MaleSVG = MaleSVG; exports.MyOKRAccordionCard = MyOKRAccordionCard; exports.MyTaskAccordionCard = MyTaskAccordionCard; exports.NDB9BoxQuandrant = NDB9BoxQuandrant; exports.NDB9BoxQuandrantWithSummary = NDB9BoxQuandrantWithSummary; exports.NDBCardContainer = NDBCardContainer; exports.NDBCardDoughnut = NDBCardDoughnut; exports.NDBCompetencyGap = NDBCompetencyGap; exports.NDBDetailProgressOKR = NDBDetailProgressOKR; exports.NDBDetailProgressTask = NDBDetailProgressTask; exports.NDBDoughnutChart = NDBDoughnutChart; exports.NDBFinancialCard = NDBFinancialCard; exports.NDBInsight = NDBInsight; exports.NDBMainStatus = NDBMainStatus; exports.NDBMainStatusSimple = NDBMainStatusSimple; exports.NDBMainSummary = NDBMainSummary; exports.NDBOKRTable = NDBOKRTable; exports.NDBOKRTableRow = NDBOKRTableRow; exports.NDBSalesFunnel = NDBSalesFunnel; exports.NDBSimpleDoughnutChart = NDBSimpleDoughnutChart; exports.NDBSimpleHexagonChart = NDBSimpleHexagonChart; exports.NDBTotalAssignedOKRs = NDBTotalAssignedOKRs; exports.NDBYouVsTeam = NDBYouVsTeam; exports.NDDashboard = NDDashboard; exports.NDNavbar = NDNavbar; exports.NDNavbarAssistant = NDNavbarAssistant; exports.NDNavbarGeneral = NDNavbarGeneral; exports.NDNavbarOnboarding = NDNavbarOnboarding; exports.NDNavbarOnboardingOKR = NDNavbarOnboardingOKR; exports.NDSidebar = NDSidebar; exports.NDTemplate = NDTemplate; exports.NDTemplateAssistant = NDTemplateAssistant; exports.NDTemplateGeneral = NDTemplateGeneral; exports.NDTemplateOnboarding = NDTemplateOnboarding; exports.NDTemplateOnboardingOKR = NDTemplateOnboardingOKR; exports.OKRDetailView = OKRDetailView; exports.OKRTreeNode = OKRTreeNode; exports.OrganizationTree = OrganizationTree; exports.PasswordSVG = PasswordSVG; exports.Popup = Popup; exports.PromptInputAssistant = PromptInputAssistant; exports.SearchSVG = SearchSVG; exports.SideOKRCard = SideOKRCard; exports.SubmitKRModal = SubmitKRModal; exports.SubmitPlaneSVG = SubmitPlaneSVG; exports.SuccessModal = SuccessModal; exports.SuccessSVG = SuccessSVG; exports.TableActions = TableActions; exports.TablePagination = TablePagination; exports.TableSearchFilter = TableSearchFilter; exports.TaskSideCard = TaskSideCard; exports.ThreeDotsSVG = ThreeDotsSVG; exports.TotalEmployeeCard = TotalEmployeeCard; exports.TrashSVG = TrashSVG; exports.UserProfileMenu = UserProfileMenu; exports.UserSVG = UserSVG; exports.Utility = Utility; exports.VerticalStep = VerticalStep; exports.WelcomeHeader = WelcomeHeader; exports.WelcomeModal = WelcomeModal; exports.getIcon = getIcon;
 //# sourceMappingURL=index.js.map

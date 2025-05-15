@@ -108,7 +108,10 @@ interface SideOKRCardProps {
 }
 declare function SideOKRCard(props: SideOKRCardProps): React.JSX.Element;
 
-declare function NDNavbar(): React.JSX.Element;
+interface NDNavbarProps {
+    menuElement?: JSX.Element;
+}
+declare function NDNavbar(props: NDNavbarProps): React.JSX.Element;
 
 interface NDNavbarOnboardingProps {
     activeIndex: number;
@@ -133,6 +136,7 @@ declare function NDNavbarGeneral(props: NDNavbarGeneralProps): React.JSX.Element
 
 interface NDNavbarAssistantProps {
     onClose?(): void;
+    menuElement?: JSX.Element;
 }
 declare function NDNavbarAssistant(props: NDNavbarAssistantProps): React.JSX.Element;
 
@@ -147,6 +151,7 @@ interface NDTemplateProps {
     active: NDSidebarOptions;
     children?: any;
     rightStickyElement?: JSX.Element;
+    navbar?: NDNavbarProps;
 }
 declare function NDTemplate(props: NDTemplateProps): React.JSX.Element;
 
@@ -513,6 +518,14 @@ interface FeedbackKRModalProps {
 }
 declare function FeedbackKRModal(props: FeedbackKRModalProps): React.JSX.Element;
 
+interface UserProfileMenuProps {
+    onLogout?(): void;
+    userName: string;
+    userEmail: string;
+    userPhoto: string;
+}
+declare function UserProfileMenu(props: UserProfileMenuProps): React.JSX.Element;
+
 interface CompanyTemplateProps {
 }
 declare function CompanyTemplate(props: CompanyTemplateProps): React.JSX.Element;
@@ -666,4 +679,4 @@ interface NDBYouVsTeamProps {
 }
 declare function NDBYouVsTeam(props: NDBYouVsTeamProps): React.JSX.Element;
 
-export { AddCircleSVG, AgendaCard, AgendaSideCard, AssistantChatHistory, type AssistantChatHistoryItem, BackSVG, BgCardBotRigSVG, BudgetCard, Button, CascadeSVG, CascadeTreeSVG, CascadingTree, type CascadingTreeDataType, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DIcon1SVG, DIcon2SVG, DIcon3SVG, DIcon4SVG, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DetailDocumentSVG, DoubleChevronRightSVG, DoubleCoinSVG, DownloadSVG, EditSVG, EmployeeFormCard, EmptyOKR, FeedbackKRModal, FemaleSVG, GeneralFormCard, GeneralTab, IconBoxGenBSVG, IconBoxGenMSVG, IconBoxGenZSVG, IconBoxGlobeSVG, IconBoxGroupSVG, IconBoxPeopleSVG, ImageUploader, type InputIconType, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, KeyResultSideCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, MaleSVG, MyOKRAccordionCard, type MyOKRAccordionCardData, type MyOKRContextMenuActionType, type MyOKRContextMenuData, MyTaskAccordionCard, type MyTaskContextMenuActionType, type MyTaskContextMenuData, NDB9BoxQuandrant, NDB9BoxQuandrantWithSummary, NDBCardContainer, NDBCardDoughnut, NDBCompetencyGap, NDBDetailProgressOKR, NDBDetailProgressTask, NDBDoughnutChart, NDBFinancialCard, NDBInsight, NDBMainStatus, NDBMainStatusSimple, NDBMainSummary, NDBOKRTable, NDBOKRTableRow, type NDBOKRTableRowProps, NDBSalesFunnel, NDBSimpleDoughnutChart, NDBSimpleHexagonChart, NDBTotalAssignedOKRs, NDBYouVsTeam, NDDashboard, NDNavbar, NDNavbarAssistant, type NDNavbarAssistantProps, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, type NDOKRKeyResultData, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateAssistant, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, type OKRContextMenuActionType, type OKRContextMenuData, OKRDetailView, OKRTreeNode, type OKRTreeNodeData, OrganizationTree, PasswordSVG, Popup, type PopupAction, PromptInputAssistant, SearchSVG, SideOKRCard, SubmitKRModal, SubmitPlaneSVG, SuccessModal, SuccessSVG, type TECBottomType0, type TECBottomType1, type TECBottomType2, type TECValueType1, type TECValueType2, TableActions, TablePagination, TableSearchFilter, TaskSideCard, ThreeDotsSVG, TotalEmployeeCard, TrashSVG, type TreeViewData, UserSVG, Utility, VerticalStep, WelcomeHeader, WelcomeModal, getIcon };
+export { AddCircleSVG, AgendaCard, AgendaSideCard, AssistantChatHistory, type AssistantChatHistoryItem, BackSVG, BgCardBotRigSVG, BudgetCard, Button, CascadeSVG, CascadeTreeSVG, CascadingTree, type CascadingTreeDataType, Character2PNG, CharacterPNG, CheckSVG, ChevronRightSVG, CloseOutlineSVG, CloseSVG, CompanyTemplate, DIcon1SVG, DIcon2SVG, DIcon3SVG, DIcon4SVG, DashboardIS1SVG, DashboardIS2SVG, DashboardISBG1SVG, DashboardISBG2SVG, DashboardInformationSummary, DetailDocumentSVG, DoubleChevronRightSVG, DoubleCoinSVG, DownloadSVG, EditSVG, EmployeeFormCard, EmptyOKR, FeedbackKRModal, FemaleSVG, GeneralFormCard, GeneralTab, IconBoxGenBSVG, IconBoxGenMSVG, IconBoxGenZSVG, IconBoxGlobeSVG, IconBoxGroupSVG, IconBoxPeopleSVG, ImageUploader, type InputIconType, InputSelect, InputText, InputTextarea, ItemKeyResult, KeyResultCard, KeyResultSideCard, Label, type LoginData, LoginPage, LogoPNG, LogoSingleSVG, MailSVG, MaleSVG, MyOKRAccordionCard, type MyOKRAccordionCardData, type MyOKRContextMenuActionType, type MyOKRContextMenuData, MyTaskAccordionCard, type MyTaskContextMenuActionType, type MyTaskContextMenuData, NDB9BoxQuandrant, NDB9BoxQuandrantWithSummary, NDBCardContainer, NDBCardDoughnut, NDBCompetencyGap, NDBDetailProgressOKR, NDBDetailProgressTask, NDBDoughnutChart, NDBFinancialCard, NDBInsight, NDBMainStatus, NDBMainStatusSimple, NDBMainSummary, NDBOKRTable, NDBOKRTableRow, type NDBOKRTableRowProps, NDBSalesFunnel, NDBSimpleDoughnutChart, NDBSimpleHexagonChart, NDBTotalAssignedOKRs, NDBYouVsTeam, NDDashboard, NDNavbar, NDNavbarAssistant, type NDNavbarAssistantProps, NDNavbarGeneral, type NDNavbarGeneralProps, NDNavbarOnboarding, NDNavbarOnboardingOKR, type NDNavbarOnboardingOKRProps, type NDNavbarOnboardingProps, type NDNavbarProps, type NDOKRKeyResultData, NDSidebar, type NDSidebarOptions, NDTemplate, NDTemplateAssistant, NDTemplateGeneral, NDTemplateOnboarding, NDTemplateOnboardingOKR, type OKRContextMenuActionType, type OKRContextMenuData, OKRDetailView, OKRTreeNode, type OKRTreeNodeData, OrganizationTree, PasswordSVG, Popup, type PopupAction, PromptInputAssistant, SearchSVG, SideOKRCard, SubmitKRModal, SubmitPlaneSVG, SuccessModal, SuccessSVG, type TECBottomType0, type TECBottomType1, type TECBottomType2, type TECValueType1, type TECValueType2, TableActions, TablePagination, TableSearchFilter, TaskSideCard, ThreeDotsSVG, TotalEmployeeCard, TrashSVG, type TreeViewData, UserProfileMenu, UserSVG, Utility, VerticalStep, WelcomeHeader, WelcomeModal, getIcon };

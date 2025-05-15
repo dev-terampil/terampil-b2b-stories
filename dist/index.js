@@ -282,7 +282,7 @@ function NDNavbar(props) {
     open_profile && /* @__PURE__ */ _react2.default.createElement(
       "div",
       {
-        className: `absolute right-0 top-[100%] mt-1`
+        className: `absolute z-[9999999999] right-0 top-[100%] mt-1`
       },
       props.menuElement
     )
@@ -467,7 +467,7 @@ function NDNavbarAssistant(props) {
     open_profile && /* @__PURE__ */ _react2.default.createElement(
       "div",
       {
-        className: `absolute right-0 top-[100%] mt-1`
+        className: `absolute z-[9999999999] right-0 top-[100%] mt-1`
       },
       props.menuElement
     )
